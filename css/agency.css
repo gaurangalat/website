@@ -526,7 +526,7 @@ section h3.section-subheading {
     min-height: 170px;
   }
   .timeline > li .timeline-panel {
-    padding: 0 20px 20px 100px;
+    padding: 10 20px 20px 100px;
   }
   .timeline > li .timeline-image {
     width: 170px;
@@ -540,7 +540,7 @@ section h3.section-subheading {
     padding: 0 100px 20px 20px;
   }
 }
-.team-member {
+/*.team-member {
   text-align: center;
   margin-bottom: 50px;
 }
@@ -555,10 +555,10 @@ section h3.section-subheading {
 }
 .team-member p {
   margin-top: 0;
-}
-aside.clients img {
+}*/
+/*aside.clients img {
   margin: 50px auto;
-}
+}*/
 section#contact {
   background-color: #222222;
   background-image: url('../img/map-image.png');
