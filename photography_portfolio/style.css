@@ -1,0 +1,37 @@
+body {
+  overflow-x: hidden;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #000;
+}
+h2 {
+    margin-bottom: 15px;
+    font-size: 3em;
+}
+img {
+    margin-bottom: 30px;
+}
+.test {
+	text-align: center;
+	border-radius: 0;
+	background-clip: border-box;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: none;
+	min-height: 100%;
+	padding: 100px 0;
+	text-align: center;
+}
+top-text{
+	line-height: 2.75;
+	font-size: 16px;
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+p{
+	line-height: 1.75;
+}
+p.item-intro {
+    margin: 20px 0 30px;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-size: 16px;
+}
