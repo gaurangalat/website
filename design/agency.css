@@ -233,7 +233,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('esoc8mkplpa-jackson-jost.jpg');
+  /*background-image: url('esoc8mkplpa-jackson-jost.jpg');*/
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -242,7 +242,6 @@ header {
   background-size: cover;
   -o-background-size: cover;
   text-align: left;
-  color: white;
 }
 header .intro-text {
   padding-top: 50px;
