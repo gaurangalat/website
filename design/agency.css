@@ -31,7 +31,7 @@ a.active {
 }*/
 a {
   color: #9f9f9f;
-
+ 
 }
 a:hover,
 a:focus,
@@ -51,6 +51,12 @@ h6 {
   font-family: "Open Source Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+}
+.img-rotated{
+  -webkit-transform: rotate(90deg);
+  padding-top: 30px;
+  padding-bottom: 30px;
+
 }
 .img-centered {
   margin: 0 auto;
@@ -233,7 +239,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  /*background-image: url('esoc8mkplpa-jackson-jost.jpg');*/
+  background-image: url('bgimage.png');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -243,10 +249,10 @@ header {
   -o-background-size: cover;
   text-align: left;
 }
-header .intro-text {
+/*header .intro-text {
   padding-top: 50px;
   padding-bottom: 50px;
-}
+}*/
 /*header .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -265,18 +271,18 @@ header .intro-text .intro-heading {
 @media (min-width: 768px) {
   header .intro-text {
     padding-top: 50px;
-    padding-bottom: 250px;
+    padding-bottom: 700px;
   
   }
-/*  header .intro-text .intro-lead-in {
+  header .intro-text .intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 40px;
     line-height: 40px;
-    margin-bottom: 25px;*/
+    margin-bottom: 25px;
   }
   header .intro-text .intro-heading {
-    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-family: inherit;
     font-weight: 700;
     font-size: 48px;
@@ -428,7 +434,7 @@ section#contact ::-webkit-input-placeholder {
   color: #eeeeee;
 }
 section#contact :-moz-placeholder {
-  /* Firefox 18- */
+  /* Firefox 18- 
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -456,14 +462,13 @@ footer {
 }
 footer span.copyright {
   line-height: 40px;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-transform: none;
+  font-size: 16px;
 }
 footer ul.quicklinks {
   margin-bottom: 0;
   line-height: 40px;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-transform: none;
 }
