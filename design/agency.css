@@ -31,7 +31,7 @@ a.active {
 }*/
 a {
   color: #9f9f9f;
- 
+
 }
 a:hover,
 a:focus,
@@ -593,11 +593,4 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
-header .intro-text .para {
-  font-family: inherit;
-  margin-right:200px;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 300; 
-  justify-content: space-around;
-}
+
