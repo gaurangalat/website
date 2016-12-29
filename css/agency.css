@@ -20,14 +20,6 @@ p {
 p.large {
   font-size: 16px;
 }
-/*a,
-a:hover,
-a:focus,
-a:active,
-a.active {
-  outline: none;
-  color:#000;
-}*/
 a {
   color: #ffffff;
 }
@@ -247,12 +239,12 @@ header .intro-text {
   padding-top: 100px;
   padding-bottom: 50px;
 }
-/*header .intro-text .intro-lead-in {
+header .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 22px;
   line-height: 22px;
-  margin-bottom: 25px;*/
+  margin-bottom: 25px;
 }
 header .intro-text .intro-heading {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -268,12 +260,12 @@ header .intro-text .intro-heading {
     padding-bottom: 200px;
   
   }
-/*  header .intro-text .intro-lead-in {
+  header .intro-text .intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
-    font-size: 40px;
+    font-size: 20px;
     line-height: 40px;
-    margin-bottom: 25px;*/
+    margin-bottom: 25px;
   }
   header .intro-text .intro-heading {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -289,14 +281,13 @@ section {
 }
 section h2.section-heading {
   font-size: 40px;
-  margin-top: -20px;
-  margin-bottom: 35px;
+  margin-top: 0px;
+  margin-bottom: 15px;
 }
 section h3.section-subheading {
   font-size: 16px;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
-
   font-weight: 400;
   margin-bottom: 75px;
   color: #e5e5e5 !important;
