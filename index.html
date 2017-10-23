@@ -11,302 +11,142 @@
 
     <title>Gaurang Alat</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
- 
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" type='text/css'>
-  
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="css/agency.css" rel="stylesheet">
-    
+     <link href="web.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
 
 </head>
 
-<body id="page-top" class="index">
+<body>
+	<!-- NAVIGATION -->
+	<nav class="nav">
+	    <div class="Logo">
+	    	<a href="#">
+	    	<img src="logo.png" alt="logo"></a>
+	    	<span class="Logotext navLinks" style="font-size: 16px;font-weight: 700;letter-spacing:-0.5px;margin-left: 5px;">Gaurang Alat
+	    	</span>
+	    </div>
+	    <div class="Portfolio">
+	    	<a href="#portfolio" class="navLinks">Portfolio</a>
+	    </div>
+	    <div class="AboutMe">
+	    	<a href="#aboutme" class="navLinks">About Me</a>
+	    </div>
+	</nav>
 
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="">Gaurang Alat</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About Me</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#resume">Resume</a>
-                    </li>
-                    
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <!-- <div class="intro-lead-in">(Website under construction)
-                </div>  -->
-                <div class="intro-heading">
-                <a href="/design/" > Designer</a>
-                    <a>|</a>
-                    <a href="/photography/">Photographer</a>
-                    <a>|</a>
-                    <a href="https://www.linkedin.com/in/gaurangalat" >Maker</a>
-                </div>
-                <a href="#tellmemore" class="page-scroll btn btn-xl">Tell Me More</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Services Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About Me</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-                </div>
-            </div>
-            <div class="row text-center">
-            <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Designer</h4>
-                    <p class="text-muted">Aspiring UX /Product Designer studying at University of Michigan School of Information</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-camera fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Photographer</h4>
-                    <p class="text-muted">Freelancing music photographer having covered over 100 different local and international artists</p>
-                </div>
-                
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-gamepad fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Maker</h4>
-                    <p class="text-muted">An engineer, who spends his free time working on interactive electronic projects</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
-                </div>
-            </div>
-            <div class="row">
+	<!-- GRID -->
+	<div class="wrapper" id="portfolio">
+		<div class="box duo">
+			<a href="Projects/duo.html"> 
+				<div class="Panellabel">
+					DUO SECURITY
+				</div>
+  				<div class="Paneldesc">UX Design (Mobile)
+  					<h4>Redesigned the Security Checkup feature on Duo Mobile</h4>
+  				</div>
+  			</a>
+  		</div>
+		<div class="box rhythm">
+			<a href="Projects/rhythm.html"> 
+				<div class="Panellabel">
+					RHYTHM
+				</div>
+  				<div class="Paneldesc">UX Design (Mobile), User Research
+  					<h4>Conceptualized and designed a networking app for musicians</h4>
+  				</div>
+  			</a>
+  		</div>
+		<div class="box expedia">
+			<a href="Projects/expedia.html"> 
+				<div class="Panellabel">
+					EXPEDIA
+				</div>
+  				<div class="Paneldesc">User Research (Mobile)
+  					<h4>Worked with Expedia to analyze usability of their iOS App</h4>
+  				</div>
+  			</a>
+  		</div>
+		<div class="box emosense">
+			<a href="Projects/emosense.html"> 
+				<div class="Panellabel">
+					EMOSENSE
+				</div>
+  				<div class="Paneldesc">UX Design
+  					<h4>Developed a wearable device for sharing emotions</h4>
+  				</div>
+  			</a>
+  		</div>
+		<div class="box umhs">
+			<a href="Projects/umhs.html"> 
+				<div class="Panellabel">
+					UMHS
+				</div>
+  				<div class="Paneldesc">User Research
+  					<h4>Performed contextual inquiry for UM Health System</h4>
+  				</div>
+  			</a>
+  		</div>
+  		<div class="box igniteux" style="background-color: #4CAF50;">
+			<a href="https://youtu.be/9Z5bTOZt850" target="_blank"> 
+				<div class="Panellabel">
+					Help! My Mobile UI is turning upside down
+				</div>
+  				<div class="Paneldesc" style="color:#f5f5f5;margin-top: -28px;">
+  					<h4>Watch my Ignite UX talk &#x2192;</h4>
+  				</div>
+  			</a>
+  		</div>
 
 
-                <div class="col-md-6 col-sm-6 portfolio-item">
-                    <a href="/design/" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="design/Portfolioimgs/Rhythm.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Design</h4>
-                        <p class="text-muted">Interaction Design, Product Design, UX</p>
-                    </div>
-                </div>
+		<div id="aboutme" class="box1 aboutme">
+			<div class="aboutphoto">
+				<h1>About Me<h1>
+				<div class="inabout">
+					<img src="face.png" alt="profile_photo" style="width:150px;height:150px;float:right">
+					<h3>"I am interested in simplifying user journeys and building quality relationships"</h3>
+					<p>Hi, I am Gaurang, a Master's student at the University of Michigan, exploring the wonderful world of UX Design (and <a href="http://gaurangalat.com/photography/" target="_blank" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px">music photography</a>). I am looking for full-time opportunities beginning May 2018 or later.</p>
+					<p>Over the course of a year, I have applied human-centered design principles to projects in the domains of technology, social networks, games and healthcare. Through these projects, I learnt how to adapt to various environments and employ my skills as a designer. I further got an opportunity to polish my skills when I interned as a Product Designer at Duo Security in the summer of 2017.</p> 
+					<p>I enjoy working in a diverse environment surrounded by people with different skill sets and lots of coffee. If you are interested in having a chat, please reach out via <a href="mailto:gaurang.alat@gmail.com" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">email</a> or any of my social media profiles!
+					</p>
+					<p>
+					<br>
+					<a href="https://drive.google.com/file/d/0BwnOqZI4EzKVS28xX3dSTDFOX28/view?usp=sharing" target="_blank" style="text-decoration: none;padding: 8px; padding-left:10px;border-style: solid;border-radius:10px;border-width: 1.2px;"> View my Resume  &#x2192;</a>
+					</p>
+				</div>
+  			</div>
+		</div>
+  	</div>
 
-                <div class="col-md-6 col-sm-6 portfolio-item">
-                    <a href="/photography/" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="photoport.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Music Photography</h4>
-                        <p class="text-muted">Photography</p>
-                    </div>
-                </div>
+		<div class="box2 social">
+			<a href="https://linkedin.com/in/gaurangalat" class="linkedin"><h2>LinkedIn</h2></a>
+			<a href="https://dribbble.com/gaurangalat" class="dribbble"><h2>Dribbble</h2></a>
+			<a href="https://medium.com/gaurangalat" class="medium"><h2>Medium</h2></a>
+			<a href="https://twitter.com/@gaurangalat" class="twitter'"><h2>Twitter</h2></a>
+		</div>
 
-                
-               <!--  <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="photography/index.html" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                         <img src="img/portfolio/treehouse.png" class="img-responsive" alt=""> -->
-                    <!-- </a>
-                    <div class="portfolio-caption">
-                        <h4>Projects</h4>
-                        <p class="text-muted">Electronics</p>
-                    </div>
-                </div> --> 
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-                </div> 
-            </div>
-        </div>
-    </section>
+ga('create', 'UA-108361371-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
 
-    <!-- About Section -->
-    <section id="resume">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Resume</h2>
-                    <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/education.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-body">
-                                    <p>School of Information, University of Michigan </p>
-                                    <p class="text-muted">Master of Science in Information</p>
-                                
-                                    <p>Sardar Patel Institute of Technology, University of Mumbai</p>
-                                    <p class="text-muted">Bachelor of Electronics Engineering</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/photography.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <!-- <h4>Photography</h4> -->
-                                    <h4 class="subheading"></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Worked with top agencies and brands in India such as Vh1 Supersonic, Budweiser India, Phaidon (UK), Submerge Ent, WMS Ent, Ankytrixx and Friends Ent. as a music photographer</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/graphicdesign.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4></h4>
-                                    <h4 class="subheading"></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Head of Graphics for Blubears.org and inter-collegiate festivals Udaan'16, Matrix '15. Designed web graphics for GetProfessor.com </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div  class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/otherskills.png" alt=""> 
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading"></h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Sketching, Personas, Storyboarding, Wireframing, Lo-fi and Hi-fi Prototyping, User Interviews, Affinity Diagrams, Programming</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <p>View my Resume in pdf form<a style= "color:#e5e5e5" href="https://drive.google.com/file/d/0BwpAOQIxmniAa25Vcmt2SkI4UVU/view?usp=sharing"> here</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Gaurang Alat 2016</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/gaurangalat"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="https://facebook.com/gaurangalat"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="https://linkedin.com/in/gaurangalat"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                        <li><a href="https://behance.net/gaurangalat"><i class="fa fa-behance"></i></a>
-                        </li>
-                        <li><a href="https://github.com/gaurangalat"><i class="fa fa-github"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div> -->
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/agency.min.js"></script>
-
+<!-- Hotjar Tracking Code for www.gaurangalat.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:661481,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 </body>
 
 </html>
