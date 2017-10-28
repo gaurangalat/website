@@ -5,7 +5,7 @@ body {
 
 .wrapper {
   /*height: 1600px;*/
-  margin: 50px 10% 100px 10%;
+  margin: 50px 10% 60px 10%;
   display: grid;
   grid-gap: 20px;
   grid-template-rows: 1fr;
@@ -73,6 +73,22 @@ img{
   width: 100%;
   height: auto;
 }
+.bottomnavlinks a{
+  margin-top: 30px;
+  color: #565656;
+  font-size: 10px;
+  font-weight: 600;
+  border-bottom-style: none;
+}
+.bottomnavlinksleft a{
+  float:left;
+}
+.bottomnavlinksright a{
+  float:right;
+}
+.bottomnavlinks a:hover{
+  text-decoration: underline;
+}
 .list-inline {
   list-style-type: none;
   margin: 0;
@@ -86,12 +102,6 @@ a {
 }
 p a:hover {
   border-bottom-style: solid;
-}
-.bottomnavlinksleft{
-  font-size: 8px;
-}
-.bottomnavlinksright{
-  font-size: 8px;
 }
 
 /*TABLET */
@@ -117,8 +127,6 @@ h4{
   font-weight: 600;
 }
 p, li {
-/*  padding-right:20px; 
-  padding-left:20px;*/
   font-size: 16px;
   line-height: 28px;
 }
@@ -126,10 +134,10 @@ p, li {
   padding-left:20px;
   padding-right:20px; 
 }
-/*ul{
-  padding-left:20px;
-  list-style-type: inside;
-}*/
+.bottomnavlinks a{
+  margin-top: 40px;
+  font-size: 12px;
+}
 
 /*TABLET/ DESKTOP */
 @media only screen and (min-width: 768px)  {
@@ -158,14 +166,16 @@ h4{
   font-weight: 600;
 }
 p, li {
-/*  padding-right:50px; 
-  padding-left:50px;*/
   font-size: 18px;
   line-height: 36px;
 }
 .contents{
   padding-left:50px;
   padding-right:50px; 
+}
+.bottomnavlinks a{
+  margin-top: 50px;
+  font-size: 14px;
 }
 
 /*DESKTOP */
@@ -201,6 +211,6 @@ p, li{
   line-height: 36px;
 }
 .contents{
-  padding-left:75px;
-  padding-right:75px; 
+  padding-left:70px;
+  padding-right:70px; 
 }

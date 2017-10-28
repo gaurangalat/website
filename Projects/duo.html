@@ -33,31 +33,49 @@
                 </div>
                 <p><b>Project under NDA, please come back later</b></p>
                 <!-- <img class="img-responsive img-centered" src="ideas.jpg" alt="IMAGE" style="max-height:400px"> -->
-                <!-- <p>Duo Mobile works with Duo Security's 2-factor authentication service and can generate passcodes for login, receive push notifications for easy, one-tap authentication. My primary project was to redesign the Security Checkup feature, which was a released as a Beta only feature (Admin only) in early 2017, to make it suitable for all Duo users (GA release). Since this project involved changing the target audience of the feature completely, I had to work on various aspects of the feature such as language, iconography and interactions.</p>              
-                <p>&mdash;&mdash;</p>
-                <h4>WHAT DOES SECURITY CHECKUP DO?</h4>
-                <p>Security Checkup informs the user about the security hygiene of their device by alerting them to issues such as no passcode, out of date OS, etc and providing instructions for remediation of the detected issue. The objective of the feature is to caution the user about the security issues while being unobstrusive i.e. not compromising on any functionality of the app.  -->
-
-                    <!-- The Security Checkup feature, used to check the security hygiene of a device, had two aspects to it – WHY and HOW. After alerting the user to issues such as no passcode, out of date OS, etc, it aimed to highlight practices (WHY) and provide instructions for remediation of the detected issue (HOW). The objective of the feature is to caution the user about the security issues while being unobstrusive i.e. not compromising on any functionality of the app. -->
-
-                <!-- Image -->
-                <!-- <img class="img-responsive img-centered" src="ideas.jpg" alt="IMAGE" style="max-height:400px; align-items: center"> -->
-
-                <!-- p>&mdash;&mdash;</p>
-                <h4>WHAT WAS THE ISSUE?</h4>
-                <p>An important aspect of the feature is to provide instructions for remediation of the detected issues. Since Duo's users come from a variety of backgrounds, it was essential that the instructions were concise and easy to understand. The feature in the Beta version failed to provide the remediation instructions </p>
-                <p>We wanted the Security Checkup feature to not 
-                </p>
-                
+               <!--  <p style="font-size: 14px;line-height:22px; "><i>Duo Mobile works with Duo Security's 2-factor authentication service and can generate passcodes for login and receive push notifications for easy, one-tap authentication.</i></p> 
                 <br>
-                <p>Android OS having different versions, coupled with manufacturer specific OS versions proved to be a challenge while writing</p>
+                <p>My primary project as a designer on the mobile team, was to redesign the Security Checkup feature. This feature was released as a Beta feature (Admin account only) in early 2017, and was slated for a GA release in Fall 2017. Since this project involved changing the target audience of the feature completely, I got to work on various aspects of the project such as language, iconography and interactions.</p> -->              
+                <!-- <p>&mdash;&mdash;</p>
+                <h4>THE SECURITY CHECKUP FEATURE</h4> -->
+                <!-- Security Checkup informs the user about the security hygiene of their device by alerting them to issues such as no passcode, out of date OS, etc and providing instructions for remediation of the detected issue. The objective of the feature is to caution the user about the security issues while being unobstrusive i.e. not compromising on any functionality of the app.-->
+
+                <!-- <p>The Security Checkup feature, meant to check security hygiene of a device, had two aspects to it – Why and How. By alerting the user to security issues on their device such as no passcode, out of date OS, etc. it aimed to highlight good practices (eg. Why should you have a passcode?) and provide instructions for remediation of the detected issue (How to enable a passcode?).</p> --> <!-- The objective of the feature was to caution the user about the security issues while being unobstrusive i.e. not compromising on any functionality of the app. -->
+
+
+                <!-- <p>&mdash;&mdash;</p>
+                <h4>NOT SUITABLE FOR A GA RELEASE</h4>
+                <p>The feature did a good job at explaining why a particular good security practice was important but did not provide detailed enough instructions for remediation of the issue. Moreover, the feature was grouped on the home screen, with another feature, that was going to be taken out for the GA release. This meant that it was necessary to rethink where the Security Checkup feature would be located and how would a user interact with it. Lastly, we wanted users to perceive the feature as a 'helper' rather than just an alert. We found out that this could be achieved by using a different alert icon and changing the text.
+                </p>
                 <p>&mdash;&mdash;</p>
-                <h3>Expedia turned out to be the most popular choice among users for booking flights and hotels but not necessarily the app</h3>    
+                <h4>WHAT I DELIVERED</h4>
+                <p>By the end of my internship, I had -
+                <ul>
+                    <li>Redesigned the flow, icons, text and delivered high quality assets for Security Checkup feature on Duo Mobile (Android)</li>
+                    <li>Designed a small functionality in the Duo Admin Panel for turning on the feature </li>
+                    <li>Moderated 4 usability testing sessions</li>
+                    <li>Worked collaboratively with user researchers and developers</li>
+                </ul></p>
                 <p>&mdash;&mdash;</p>
-                 -->
-
-
-
+                <h4>HOW I DID IT</h4>
+                <p>My mentor played a huge role in shaping the project - through regular 1:1 meetings, we were able to narrow down the scope of the project and establish a timeline. The timeline accounted for various phases such as brainstorming, designing and frequent feedback/ standup sessions. I rapidly designed and verified the prototypes by hallway testing them and also showing it to the much experienced designers in the Product Design team. I also found it beneficial to get opinions on my designs from a different perspective such as a developer's. </p>
+                <br>
+                <p><b>I. Changing the Alert icon</b></p>
+                <p>Some users had no control over a few security issues (such as manufacturers discontinuing OS updates for old phones, especially for Android). The strong language and red alert icons made such users feel helpless and agitated. To alleviate this issue, I decided to change the color of the alert icon from red to yellow and use an exclamation mark instead of an X to make it resemble a warning. The shape of the icon was also changed from a circle to a triangle to distinguish it from the green (all okay) icon. Factoring in feedback from people on other teams, I decided to choose the icon that provided a high contrast.</p>
+               
+                <p><b>II. Changing the landing text and instructions</b></p>
+                <p>There were cases where Android users had enabled Full Disk Encryption (FDE) but saw an issue being detected regarding it. The problem was that if those users had no passcode/ gesture lock pattern, the feature would show that an issue was detected with FDE. The language in the feature confused the user as it said 'FDE not enabled' when they had FDE already enabled, but improper device lock pattern. To factor in such cases, I changed the label text from 'not enabled' to 'issue detected' and provided more context in the dropdown text.</p>
+                <p>The landing text was also modified to provide some context to the text label, additional information and lead the user to further actions. The remediation instructions (How) and the importance of a good security measure (Why) was bundled into different pages. This helped reduce the amount of text under each dropdown label.</p>
+                <p>It was challenging to design for the CTA links for How and Why as we wanted the users to understand that it was a link that would lead to a new page in app and not open a new page in the browser. I had to also play around with the language of the links to make it stand out from the landing text on the top under each label. Changing the tone of the text to first person, and adding a background fill was found to be the optimal solution to this problem, as proved by hallway testing.</p>
+                <p><b>III. Changing the interaction</b></p>
+                <p>There were two ways a user could access the feature in the Beta version – by clicking on the feature on the main screen or by going to Settings menu of Duo Mobile. We did not want the feature to persist on the main screen as it would take up space and also distract the user from approving push notifications. I worked closely with an engineering intern on the Mobile team and we brainstormed different ways of showing the feature. The idea of the feature popping-up on the main screen tested poorly in hallway testing. The users felt that they would need to dismiss the pop-up before approving any notifications in the app. This exploration did not work well, so we got back to the whiteboard.</p>
+                <p>Through a feedback session with my mentor, we resolved the issue and tested out the feature with a toast-like functionality. This prototype tested well with the users and was easily mocked up by the engineering intern. To iron out the kinks, we designed a user journey map to determine the complete behavior of the feature. By putting ourselves in the user's shoes, we were able to find out any pain points that would make us rethink the feature's behavior.</p>
+                <p>&mdash;&mdash;</p>
+                <h4>LOOKING BACK AT A WONDERFUL SUMMER</h4>
+                <p>I am fortunate to have spent my summer at a wonderful company being surrounded by some of the kindest people I have ever met. Working on the Security Checkup feature with almost full autonomy was daunting, as I always had the mindset that I might mess something up. But my mentor's guidance and support was something that I will always be grateful for.</p> 
+                <p>I learnt some things about the various aspects of design (interaction design, typography, color theory) from my mentor and the rest of the Product Design Team. Working in a professional environment at Duo made me aware of my weaknesses as a designer and helped polish my communication skills while collaborative work with developers taught me about proper methods for documentation and handing over design assets.
+                But my most important takeaway from this internship is learning how to be confident in my design decision and be able to defend them while still respecting other’s opinions.
+                </p> -->
 			</div>
 		</div>
 		
