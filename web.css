@@ -180,7 +180,9 @@ p, li {
 }
 .duo{
   grid-area:duo;
-  background-color: #4CAF50;
+  /*background-color: #4CAF50;*/
+  background-image: url('duothumb2.png');
+  background-position: center; 
 }
 .rhythm{
   background-color: #009688;
