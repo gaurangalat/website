@@ -364,14 +364,14 @@ p, li{
   font-size: 16px;
   line-height: 27px;
 }
-}
 
 a:hover {
   text-decoration:underline; 
 }
-a:active{
-    font-weight: bold;
-  }
+.active{
+  background-color: #3740ff;
+  color: #fff;
+}
 .inabout a{
   color: #808080;
   font-weight: 400;
