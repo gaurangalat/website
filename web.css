@@ -16,7 +16,7 @@ body {
 }
 
 nav.nav{
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.97);
 }
 .Logotext{
   display: none;
@@ -55,12 +55,13 @@ img{
 }
 .Panellabel {
   letter-spacing: 0.2px;
-  margin-top: 60px;
-  text-align: center;
+  margin-top: 160px;
+  margin-left: 20px;
+/*  text-align: center;*/
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 40px;
 }
 .igniteux .Panellabel{
@@ -106,7 +107,7 @@ img{
   "linkedin dribbble medium twitter"    
 }
 .inabout img{
-  padding-left: 8px;
+/*  padding-left: 8px;*/
   padding-bottom: 10px;
   max-width: 75px;
   max-height: 75px;
@@ -166,7 +167,7 @@ p, li {
 }
 .box1 {
 /*  background-color: #f5f5f5;*/
-  /*margin-top: 40px;*/
+  margin-top: 40px;
   margin-bottom: 100px;
   height: 700px;
   border-radius: 2px;
@@ -180,23 +181,85 @@ p, li {
 }
 .duo{
   grid-area:duo;
-  background-color: #4CAF50;
-  /*background-image: url('duothumb2.png');
-  background-position: center; */
+/*  background-color: #4CAF50;*/
+  background-image: url('duo1.png');
+  background-position: center; 
+  background-size: 375px 250px;
+  background-repeat: no-repeat;
 }
 .rhythm{
-  background-color: #009688;
+/*  background-color: #009688;*/
+  background-image: url('test2.png');
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .expedia{
-  background-color: #00BCD4;
+/*  background-color: #00BCD4;*/
+/*  background-size: 300px 200px;*/
+  background-image: url('expediatest.png');
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 .emosense{
 /*  background-color: #3F51B5;*/
-  background-color: #00BCD4;
+/*  background-color: #00BCD4;*/
+  background-image: url('emosense.png');
+  background-position: center; 
+  background-size: cover;
 }
 .umhs{
 /*  background-color: #2196F3;*/
-  background-color: #009688;
+/*  background-color: #009688;*/
+  background-image: url('umhs.png');
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.igniteux{
+/*  background-color: #2196F3;*/
+/*  background-color: #009688;*/
+  background-image: url('igniteux.png');
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.overlaid {
+/*  transition: .1s ease;*/
+  opacity: 0;
+  position: absolute;
+  bottom: 10%;
+  left: 8%;
+/*margin-left: 20px;
+  margin-top: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)*/
+}
+.overlaid a{
+  color: black;
+  font-size: 12px;
+  border-bottom-style: dotted;
+  border-width: 1px;
+}
+.box:hover .overlaid {
+  opacity: 1;
+/*  background: rgba(255,255,255,0.95);*/
+}
+.testtext{
+  font-weight: 600;
+  margin-left: 20px;
+  margin-top: 60px;
+  font-size: 20px;
+}
+.testtext2{
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: 200;
 }
 
 
@@ -245,6 +308,9 @@ img{
   font-size: 18px;
   line-height: 28px;
 }
+.duo{
+  background-size: 750px 500px;
+}
 .Paneldesc{
   font-size: 14px;
   line-height: 22px;
@@ -272,10 +338,11 @@ img{
   padding-top: 40px;
   height: 600px;
 }
-.inabout{
-  padding-left: 30px;
-  padding-right: 30px;
+.inabouttext{
+/*  padding-left: 30px;
+  padding-right: 30px;*/
   padding-top: 20px;
+  padding-right: 150px;
 }
 .inabout img{
   max-width: 120px;
@@ -303,7 +370,25 @@ p, li {
   font-size: 16px;
   line-height: 26px;
 }
+.duo .testtext{
+  font-weight: 600;
+  margin-left: 20px;
+  margin-top: 150px;
+  font-size: 40px;
 }
+.duo .testtext2{
+  margin-left: 20px;
+  margin-top: -5px;
+  font-size: 24px;
+  font-weight: 200;
+}
+.duo .overlaid {
+  opacity: 0;
+  position: absolute;
+  bottom: 5%;
+  left: 4%;
+}
+
 
 @media only screen and (min-width: 991px)  {
 .nav{
@@ -322,8 +407,8 @@ p, li {
   margin-right: 15%;
   padding-top: 100px;
   grid-template-areas:
-    "duo duo rhythm"
     "duo duo expedia"
+    "duo duo rhythm"
     "emosense umhs igniteux"
     "aboutme aboutme aboutme"
     "aboutme aboutme aboutme"
@@ -360,17 +445,18 @@ h3{
   line-height: 30px;
   font-weight: 600;
 }
-p, li{
+`{
   font-size: 16px;
   line-height: 27px;
 }
 
-a:hover {
+/*a:hover {
+
+}*/
+a.active{
   text-decoration:underline; 
-}
-.active{
-  background-color: #3740ff;
-  color: #fff;
+/*  background-color: #3740ff;*/
+/*  color: #fff;*/
 }
 .inabout a{
   color: #808080;
@@ -383,3 +469,17 @@ a:hover {
   color: #000;
   text-decoration: underline;
 }
+
+.image{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.box:hover .image{
+  opacity: 0.3;
+}
+
+

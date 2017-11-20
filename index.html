@@ -16,38 +16,17 @@
      <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"/>
 
-	<script type="text/javascript">
-// 	$(document).ready(function(){
-//   	$('.nav a').click(function(){
-//     $('a').removeClass("active");
-//     $(this).addClass("active");
-// });
-// });
+<script type="text/javascript">
 
-// 	$(document).ready(function() {
-// 	// get current URL path and assign 'active' class
-// 	var pathname = window.location.pathname;
-// 	$('.nav a[href="'+pathname+'"]').parent().addClass('active');
-// });
+		$(document).ready(function () {
+			$('.navLinks').click(function (e) {
+				$('.navLinks').removeClass('active');
+				$(e.target).addClass('active');
+			});
+		});
 
-// $(".nav a").on("click", function(){
-//    $(".nav").find(".active").removeClass("active");
-//    $(this).parent().addClass("active");
-// });
-// 	$(document).ready(function() {
-//   $('li.active').removeClass('active');
-//   $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
-// });
-
-
-$(".nav .test a").click(function() {
-    if ($(".nav .test a").removeClass("active")) {
-        $(this).removeClass("active");
-    }
-    $(this).addClass("active");
-});
-
-	</script>
+</script>
+     
 </head>
 
 
@@ -70,57 +49,77 @@ $(".nav .test a").click(function() {
 
 	<!-- GRID -->
 	<div class="wrapper" id="portfolio">
+
+
 		<div class="box duo">
-			<a href="Projects/duo.html"> 
-				<div class="Panellabel">
-					DUO SECURITY
-				</div>
-  				<div class="Paneldesc">UX Design (Mobile)
-  					<h4>Redesigned the Security Checkup feature on Duo Mobile</h4>
-  				</div>
-  			</a>
+			<div class="testtext">
+				Duo Security
+			</div>
+			<div class="testtext2">
+				UX Design
+			</div>
+	<!-- 		<img src="test.png" class="image"> -->
+			<div class="overlaid">
+				<a href="Projects/duo.html">View Project</a>
+  			</div>
   		</div>
-		<div class="box rhythm">
-			<a href="Projects/rhythm.html"> 
-				<div class="Panellabel">
-					RHYTHM
-				</div>
-  				<div class="Paneldesc">UX Design (Mobile), User Research
-  					<h4>Conceptualized and designed a networking app for musicians</h4>
-  				</div>
-  			</a>
-  		</div>
+		
 		<div class="box expedia">
-			<a href="Projects/expedia.html"> 
-				<div class="Panellabel">
-					EXPEDIA
-				</div>
-  				<div class="Paneldesc">User Research (Mobile)
-  					<h4>Worked with Expedia to analyze usability of their iOS App</h4>
-  				</div>
-  			</a>
+			<div class="testtext">
+				Expedia
+			</div>
+			<div class="testtext2">
+				UX Research
+			</div>
+	<!-- 		<img src="test.png" class="image"> -->
+			<div class="overlaid">
+				<a href="Projects/expedia.html">View Project</a>
+  			</div>
   		</div>
+
+  		<div class="box rhythm">
+			<div class="testtext">
+				Rhythm
+			</div>
+			<div class="testtext2">
+				UX Design 
+				<br>
+				User Research
+			</div>
+	<!-- 		<img src="test.png" class="image"> -->
+			<div class="overlaid">
+				<a href="Projects/rhythm.html">View Project</a>
+  			</div>
+  		</div>
+
+  		<div class="box umhs">
+			<div class="testtext">
+				UMHS
+			</div>
+			<div class="testtext2">
+				User Research
+			</div>
+	<!-- 		<img src="test.png" class="image"> -->
+			<div class="overlaid">
+				<a href="Projects/umhs.html">View Project</a> 
+  			</div>
+  		</div>
+
 		<div class="box emosense">
-			<a href="Projects/emosense.html"> 
-				<div class="Panellabel">
-					EMOSENSE
-				</div>
-  				<div class="Paneldesc">UX Design
-  					<h4>Developed a wearable device for sharing emotions</h4>
-  				</div>
-  			</a>
+			<div class="testtext">
+				Emosense
+			</div>
+			<div class="testtext2">
+				UX Design
+			</div>
+	<!-- 		<img src="test.png" class="image"> -->
+			<div class="overlaid">
+				<a href="Projects/emosense.html">View Project</a>
+  			</div>
   		</div>
-		<div class="box umhs">
-			<a href="Projects/umhs.html"> 
-				<div class="Panellabel">
-					UMHS
-				</div>
-  				<div class="Paneldesc">User Research
-  					<h4>Performed contextual inquiry for UM Health System</h4>
-  				</div>
-  			</a>
-  		</div>
-  		<div class="box igniteux" style="background-color: #4CAF50;">
+
+
+  		<!-- <div class="box igniteux" style="background-color: #4CAF50;">
 			<a href="https://youtu.be/9Z5bTOZt850" target="_blank"> 
 				<div class="Panellabel">
 					Help! My Mobile UI is turning upside down
@@ -129,23 +128,37 @@ $(".nav .test a").click(function() {
   					<h4>Watch my Ignite UX talk &#x2192;</h4>
   				</div>
   			</a>
-  		</div>
+  		</div> -->
 
+  		<div class="box igniteux">
+			<div class="testtext">
+				Ignite UX 
+			</div>
+			<div class="testtext2">
+				UX Design
+			</div>
+	<!-- 		<img src="test.png" class="image"> -->
+			<div class="overlaid">
+				<a href="https://youtu.be/9Z5bTOZt850">Watch my talk</a>
+  			</div>
+  		</div>
 
 		<div id="aboutme" class="box1 aboutme">
 			<div class="aboutphoto">
 				<h1>About Me<h1>
 				<div class="inabout">
-					<img src="face.png" alt="profile_photo" style="width:150px;height:150px;float:right">
+					<!-- <img src="face.png" alt="profile_photo" style="width:150px;height:150px;float:right"> -->
+					<div class="inabouttext">
 					<h3>"I am interested in simplifying user journeys and building quality relationships"</h3>
 					<p>Hi, I am Gaurang, a Master's student at the University of Michigan, exploring the wonderful world of UX Design (and <a href="http://gaurangalat.com/photography/" target="_blank" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px">music photography</a>). I am looking for full-time opportunities beginning May 2018 or later.</p>
-					<p>Over the course of a year, I have applied human-centered design principles to projects in the domains of technology, social networks, games and healthcare. Through these projects, I learnt how to adapt to various environments and employ my skills as a designer. I further got an opportunity to polish my skills when I interned as a Product Designer at Duo Security in the summer of 2017.</p> 
+					<p>Over the course of a year, I have applied human-centered design principles to projects in the domains of technology, social networks, games and healthcare. Through these projects, I have learnt how to adapt to various environments and employ my skills as a designer.</p> 
 					<p>I enjoy working in a diverse environment surrounded by people with different skill sets and lots of coffee. If you are interested in having a chat, please reach out via <a href="mailto:gaurang.alat@gmail.com" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">email</a> or any of my social media profiles!
 					</p>
 					<p>
 					<br>
 					<a href="https://drive.google.com/file/d/1iYUPC6llfur1hCqt01ofCd3TGanE1uTE/view?usp=sharing" target="_blank" style="text-decoration: none;padding: 8px; padding-left:10px;border-style: solid;border-radius:10px;border-width: 1.2px;color: white;background: rgba(76,175,80,0.85);"> View my Resume &#x2192;</a>
 					</p>
+					</div>
 				</div>
   			</div>
 		</div>
@@ -156,8 +169,21 @@ $(".nav .test a").click(function() {
 			<a href="https://dribbble.com/gaurangalat" target="_blank" class="dribbble"><h2>Dribbble</h2></a>
 			<a href="https://medium.com/gaurangalat" target="_blank" class="medium"><h2>Medium</h2></a>
 			<a href="https://twitter.com/@gaurangalat" target="_blank" class="twitter'"><h2>Twitter</h2></a>
+<!-- 			<p>2017 Copyright </p> -->
 		</div>
 
+
+
+<script type="text/javascript">
+
+		$(document).ready(function () {
+			$('.navLinks').click(function (e) {
+				$('.navLinks').removeClass('active');
+				$(e.target).addClass('active');
+			});
+		});
+
+</script>
 
 <!-- Google Analytics -->
 <script>
