@@ -182,10 +182,10 @@ p, li {
 .duo{
   grid-area:duo;
 /*  background-color: #4CAF50;*/
-  background-image: url('duo1.png');
+  background-image: url('duosmall.png');
   background-position: center; 
-  background-size: 375px 250px;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .rhythm{
 /*  background-color: #009688;*/
@@ -388,7 +388,12 @@ p, li {
   bottom: 5%;
   left: 4%;
 }
-
+.duo{
+  background-image: url('duo1.png');
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+}
 
 @media only screen and (min-width: 991px)  {
 .nav{
