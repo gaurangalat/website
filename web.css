@@ -374,10 +374,10 @@ a.active{
   padding-left: 80px;
   padding-right: 80px;
 }
-/*h1{
+h1{
   font-size: 36px;
   line-height: 54px
-}*/
+}
 h2{
   font-size: 14px;
   line-height: 22px;
@@ -460,17 +460,17 @@ p, li {
   text-align: left;
 }*/
 .box1{
-  padding-top: 60px;
+  padding-top: 80px;
   height: 600px;
 }
 .inabout img{
   max-width: 150px;
   max-height: 150px;
 }
-/*h1{
+h1{
   font-size: 40px;
   line-height: 60px;
-}*/
+}
 h3{
   font-size: 20px;
   line-height: 30px;
