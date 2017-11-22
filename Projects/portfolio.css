@@ -27,9 +27,9 @@ body {
   font-weight: 200;
   margin-bottom: 40px;
 }
-.links li{
+/*.links li{
   display:inline;
-}
+}*/
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
