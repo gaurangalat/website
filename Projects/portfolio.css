@@ -11,57 +11,7 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
 }
-.aboutme{
-  grid-area:aboutme;
-}
-.AboutMe{
-  grid-area:AboutMe;
-}
-.Portfolio{
-  grid-area:Portfolio;
-}
-.Logo{
-  grid-area:Logo;
-}
 
-nav.nav{
-  background: rgba(255,255,255,0.95);
-}
-.Logotext{
-  display: none;
-}
-img{
-  width: 20px;
-  height: 10.5px;
-}
-.nav{
-  background: rgba(255,255,255,0.95);
-  padding-top: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-right:15%;
-  margin-left: 15%;
-  display: grid;
-  grid-auto-rows: 30px;
-  grid-auto-columns: minmax(1fr, auto);
-  grid-template-areas:
-      "Logo Portfolio AboutMe";
-  text-align: center;
-}
-.nav {
- position: fixed;
- top:0;
- right: 0;
- left: 0;
- z-index: 1000;
-}
-.navLinks{
-  font-size: 10px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
 /*Portfolio modal contents*/
 .box {
   background-color: #fff;
@@ -116,7 +66,7 @@ p, li {
   color: #2b2b2b;
   font-family: "Lora", serif;
 }
-img{
+.contents img{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -129,6 +79,7 @@ img{
   font-size: 10px;
   font-weight: 600;
   border-bottom-style: none;
+  text-decoration: none;
 }
 .bottomnavlinksleft a{
   float:left;
@@ -144,7 +95,7 @@ img{
   margin: 0;
   padding: 0;
 }
-a {
+.text a{
   color:black;
   text-decoration: none;
   border-bottom-style: dotted;
@@ -153,6 +104,64 @@ a {
 p a:hover {
   border-bottom-style: solid;
 }
+
+/*NAVBAR START*/
+.AboutMe{
+  grid-area:AboutMe;
+}
+.Portfolio{
+  grid-area:Portfolio;
+}
+.Logo{
+  grid-area:Logo;
+}
+.Photography{
+  grid-area:Photography;
+}
+.nav{
+  background: rgba(255,255,255,0.95);
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0px 10% 0px;
+  display: grid;
+  grid-auto-rows: 30px;
+  grid-template-areas:
+      "Logo Logo Logo"
+      "Portfolio AboutMe Photography";
+}
+.nav {
+ position:fixed;
+ top:0;
+ right: 0;
+ left: 0;
+ z-index: 1000;
+}
+.navLinks{
+  font-size: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.Logotext{
+  display: none;
+}
+.AboutMe{
+  text-align: center;
+}
+.Portfolio{
+  text-align: left;
+}
+.Photography{
+  text-align: right;
+}
+.Logo{
+  text-align: center;
+}
+/*.logoimg{
+  width: 20px;
+  height: 10.5px;
+}*/
 
 /*TABLET */
 @media only screen and (min-width: 480px) {
@@ -188,6 +197,7 @@ p, li {
   margin-top: 40px;
   font-size: 12px;
 }
+}
 
 /*TABLET/ DESKTOP */
 @media only screen and (min-width: 768px)  {
@@ -196,6 +206,48 @@ p, li {
     margin-right: 75px;
     grid-gap: 20px;
     grid-auto-columns:1fr;
+}
+.Logotext{
+  display: inline;
+}
+img{
+  width: 40px;
+  height: 21px;
+}
+.nav{
+  padding-top: 20px;
+  margin: 0px 6%;
+  display: grid;
+  grid-template-rows: 40px;
+  grid-template-columns-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);
+  grid-template-areas:
+      "Logo Portfolio AboutMe Photography";
+}
+.navLinks{
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.AboutMe{
+  text-align: right;
+}
+.Portfolio{
+  text-align: right;
+}
+.Photography{
+  text-align: right;
+}
+.Logo{
+  text-align: left;
+}
+.Logotext{
+  display: inline;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing:-0.5px;
+  margin-left: 5px;
 }
 h1{
   font-size: 36px;
@@ -227,6 +279,8 @@ p, li {
   margin-top: 50px;
   font-size: 14px;
 }
+}
+
 
 /*DESKTOP */
 @media only screen and (min-width: 991px)  {
@@ -235,6 +289,26 @@ p, li {
     margin-right: 15%;
     grid-gap: 20px;
     grid-column:1fr;
+}
+.nav{
+  padding-top: 20px;
+/*  padding-left: 5px;
+  padding-right: 5px;*/
+  margin-left: 15%;
+    margin-right: 15%;
+  grid-auto-rows: 40px;
+  grid-template-columns: minmax(380px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
+  display: grid;
+  /*grid-auto-columns: minmax(500px,3fr) minmax(135px,1fr) minmax(135px,1fr);*/
+  grid-template-areas:
+      "Logo Portfolio AboutMe Photography";
+}
+.navLinks{
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
 h1{
   font-size: 36px;
@@ -263,4 +337,5 @@ p, li{
 .contents{
   padding-left:70px;
   padding-right:70px; 
+}
 }

@@ -14,10 +14,12 @@ body {
 .Logo{
   grid-area:Logo;
 }
-
-nav.nav{
-  background: rgba(255,255,255,0.97);
+.Photography{
+  grid-area:Photography;
 }
+/*nav.nav{
+  background: rgba(255,255,255,0.97);
+}*/
 .Logotext{
   display: none;
 }
@@ -27,17 +29,17 @@ img{
 }
 .nav{
   background: rgba(255,255,255,0.95);
-  padding-top: 10px;
   padding-left: 5px;
   padding-right: 5px;
-  margin-right:15%;
-  margin-left: 15%;
+/*  margin-right:15%;
+  margin-left: 15%;*/
+  margin: 0px 10% 0px;
   display: grid;
   grid-auto-rows: 30px;
-  grid-auto-columns: minmax(1fr, auto);
+/*  grid-auto-columns: minmax(84px,auto);*/
   grid-template-areas:
-      "Logo Portfolio AboutMe";
-  text-align: center;
+      "Logo Logo Logo"
+      "Portfolio AboutMe Photography";
 }
 .nav {
  position: fixed;
@@ -53,11 +55,22 @@ img{
   color: black;
   font-weight: 500;
 }
-.Panellabel {
+.AboutMe{
+  text-align: center;
+}
+.Portfolio{
+  text-align: left;
+}
+.Photography{
+  text-align: right;
+}
+.Logo{
+  text-align: center;
+}
+/*.Panellabel {
   letter-spacing: 0.2px;
   margin-top: 160px;
   margin-left: 20px;
-/*  text-align: center;*/
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -68,8 +81,8 @@ img{
   margin-top: 30px;
   padding: 20px;
   color: white;
-}
-.Paneldesc{
+}*/
+/*.Paneldesc{
   padding-top: 2px;
   letter-spacing: 0.2px;
   color: #F5F5F5;
@@ -77,11 +90,11 @@ img{
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;
-}
+}*/
 .wrapper {
   display: grid;
   padding-top: 80px;
-  margin: 0px 15% 0px;
+  margin: 0px 10% 0px;
   grid-gap: 10px;
   grid-auto-columns: minmax(250px, auto);
   grid-auto-rows: 250px;
@@ -94,13 +107,12 @@ img{
       "umhs"
       "aboutme"
       "aboutme"
-      "aboutme"
       "aboutme";
 }
 .social{
   display: grid;
   text-align: center;
-  margin: 10px 15% 10px;
+  margin: 25px 15% 10px;
   grid-gap: 10px;
   grid-auto-columns: 3fr 3fr 3fr 3fr;
   grid-template-areas:
@@ -167,13 +179,13 @@ p, li {
 }
 .box1 {
 /*  background-color: #f5f5f5;*/
-  margin-top: 40px;
-  margin-bottom: 100px;
-  height: 700px;
+/*  margin-top: 40px;*/
+  margin-bottom: 10px;
+  height: 300px;
   border-radius: 2px;
   padding-left: : 20px;
   padding-right: 20px;
-  padding-top: 160px;
+  padding-top: 60px;
   font-size: 150%;
 }
 .box2 {
@@ -232,8 +244,8 @@ p, li {
   opacity: 0;
   position: absolute;
   bottom: 10%;
-  left: 8%;
-/*margin-left: 20px;
+  left: 20px;
+/*  margin-left: 20px;
   margin-top: 60px;
   top: 50%;
   left: 50%;
@@ -254,33 +266,39 @@ p, li {
   font-weight: 600;
   margin-left: 20px;
   margin-top: 60px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .testtext2{
   margin-left: 20px;
   font-size: 12px;
   font-weight: 200;
 }
+a.active{
+ font-weight: 600;
+ text-decoration: underline;
+}
 
 
 @media only screen and (min-width: 600px){
 .Logotext{
   display: inline;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing:-0.5px;
+  margin-left: 5px;
 }
-img{
+/*img{
   width: 40px;
   height: 21px;
-}
+}*/
 .nav{
   padding-top: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 0px 10%;
+  margin: 0px 6%;
   display: grid;
-  grid-auto-rows: 40px;
-  grid-auto-columns: minmax(250px,2fr) minmax(131px,1fr) minmax(131px,1fr);
+  grid-template-rows: 40px;
+  grid-template-columns-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);
   grid-template-areas:
-      "Logo Portfolio AboutMe";
+      "Logo Portfolio AboutMe Photography";
 }
 .navLinks{
   font-size: 12px;
@@ -295,10 +313,13 @@ img{
 .Portfolio{
   text-align: right;
 }
+.Photography{
+  text-align: right;
+}
 .Logo{
   text-align: left;
 }
-.duo .Panellabel {
+/*.duo .Panellabel {
   margin-top: 180px;
   font-size: 36px;
   line-height: 60px;
@@ -307,17 +328,17 @@ img{
   padding-top: 5px;
   font-size: 18px;
   line-height: 28px;
-}
+}*/
 .duo{
   background-size: 750px 500px;
 }
-.Paneldesc{
+/*.Paneldesc{
   font-size: 14px;
   line-height: 22px;
-}
+}*/
 .wrapper {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 6%;
+    margin-right: 6%;
     grid-template-areas:
       "duo duo"
       "duo duo"
@@ -353,10 +374,10 @@ img{
   padding-left: 80px;
   padding-right: 80px;
 }
-h1{
+/*h1{
   font-size: 36px;
   line-height: 54px
-}
+}*/
 h2{
   font-size: 14px;
   line-height: 22px;
@@ -393,19 +414,24 @@ p, li {
   background-position: center; 
   background-repeat: no-repeat;
 }
+.overlaid a{
+  font-size: 14px;
+}
 }
 
 @media only screen and (min-width: 991px)  {
 .nav{
   padding-top: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 0 15%;
+/*  padding-left: 5px;
+  padding-right: 5px;*/
+  margin-left: 15%;
+    margin-right: 15%;
   grid-auto-rows: 40px;
+  grid-template-columns: minmax(380px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
   display: grid;
-  grid-auto-columns: minmax(500px,3fr) minmax(135px,1fr) minmax(135px,1fr);
+  /*grid-auto-columns: minmax(500px,3fr) minmax(135px,1fr) minmax(135px,1fr);*/
   grid-template-areas:
-      "Logo Portfolio AboutMe";
+      "Logo Portfolio AboutMe Photography";
 }
 .wrapper {
   margin-left: 15%;
@@ -424,7 +450,7 @@ p, li {
   margin-left: 30%;
   margin-right: 30%;
 }
-.AboutMe{
+/*.AboutMe{
   text-align: right;
 }
 .Portfolio{
@@ -432,7 +458,7 @@ p, li {
 }
 .Logo{
   text-align: left;
-}
+}*/
 .box1{
   padding-top: 60px;
   height: 600px;
@@ -441,28 +467,21 @@ p, li {
   max-width: 150px;
   max-height: 150px;
 }
-h1{
+/*h1{
   font-size: 40px;
   line-height: 60px;
-}
+}*/
 h3{
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
 }
-`{
+p, li{
   font-size: 16px;
   line-height: 27px;
 }
-
-/*a:hover {
-
-}*/
-a.active{
-  text-decoration:underline; 
-/*  background-color: #3740ff;*/
-/*  color: #fff;*/
 }
+
 .inabout a{
   color: #808080;
   font-weight: 400;
@@ -475,7 +494,7 @@ a.active{
   text-decoration: underline;
 }
 
-.image{
+/*.image{
   opacity: 1;
   display: block;
   width: 100%;
@@ -486,5 +505,4 @@ a.active{
 .box:hover .image{
   opacity: 0.3;
 }
-
-
+*/
