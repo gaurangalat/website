@@ -403,12 +403,12 @@ p, li {
   font-size: 24px;
   font-weight: 200;
 }
-.duo .overlaid {
-  opacity: 0;
+/*.duo .overlaid {
+  opacity: 1;
   position: absolute;
   bottom: 5%;
   left: 4%;
-}
+}*/
 .duo{
   background-image: url('duo1.png');
   background-position: center; 
