@@ -116,6 +116,7 @@ p a:hover {
   grid-area:Portfolio;
 }
 .Logo{
+  padding-top: 5px;
   grid-area:Logo;
 }
 .Photography{
