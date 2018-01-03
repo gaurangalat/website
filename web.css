@@ -279,6 +279,11 @@ a.active{
 .rhythm > .overlaid{
   margin-top: 80px; 
 }
+.copyfooter p{
+  font-size: 8px;
+  text-align: center;
+  padding:none;
+}
 
 @media only screen and (min-width: 600px){
 .Logotext{
@@ -417,6 +422,9 @@ p, li {
 }
 .duo > .overlaid{
   margin-top: 220px; 
+}
+.copyfooter p{
+  font-size: 10px;
 }
 }
 
