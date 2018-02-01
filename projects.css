@@ -1,0 +1,79 @@
+.wrapper{
+	display: grid;
+	margin-top: 5%;
+	margin-left: 10%;
+    margin-right: 10%;
+	grid-gap: 5px;
+	grid-auto-rows: 160px;
+	grid-template-columns: 0.25fr 1fr;
+}
+h1{
+	font-family: "Istok Web", sans-serif;
+	font-size: 20px;
+}
+h2{
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+	margin: 0;
+	color: #000;
+}
+h3{
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 300;
+}
+.box {
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+@media only screen and (min-width: 480px)  {
+.wrapper{
+	margin-left: 10%;
+    margin-right: 15%;
+	grid-gap: 5px;
+	grid-auto-rows: 150px;
+}
+h1{
+	font-size: 20px;
+}
+h2{
+	font-size: 16px;
+	line-height: 18px;
+}
+h3{
+	font-size: 14px;
+	line-height: 20px;
+}
+}
+
+@media only screen and (min-width: 768px)  {
+.wrapper{
+	margin-left: 15%;
+    margin-right: 15%;
+	grid-gap: 5px;
+	grid-auto-rows: 1fr;
+}
+h1{
+	font-size: 24px;
+}
+h2{
+	font-size: 18px;
+	line-height: 20px;
+}
+h3{
+	font-size: 16px;
+	line-height: 24px;
+}
+}
+
+@media only screen and (min-width: 991px)  {
+.wrapper{
+	margin-left: 18%;
+    margin-right: 20%;
+	grid-gap: 25px;
+}
+}
