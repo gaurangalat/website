@@ -39,9 +39,12 @@
 
 			<div span class="contents">
                 <div class="text">
-				<h1>OleOle- Web App for watching live sports</h1>
+				<h1>OleOle - Web App for watching live sports</h1>
                 <h2>Designed and developed a social computing system to enhance experience for watching live sports together* </h2>
-                <img src="Rhythm.png" alt="final design">
+                <div class="videoWrapper">
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/iSFXQnQbhOw" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <!-- <iframe width="854" height="480" src="https://www.youtube.com/embed/iSFXQnQbhOw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
                 <br>
                 <div class="highlight">
                 <ul>
@@ -52,90 +55,99 @@
                 </div>
 
                 <h4>IDEATION</h4>
-                <p>To narrow down the scope and decide a domain of common interest, we did a semi-structured brainstorming exercise. During our initial brainstorming exercise, we    
+                <p>To narrow down the scope and decide a domain of common interest, we did a semi-structured brainstorming exercise. We did a timed brainstorming with each of us writing down our ideas on post-its. Focusing on quantity over quality allowed us to explore a breadth of ideas. We then grouped the ideas according to following categories — Logical, Longshot, Practical, Crowd-Pleaser, Off the wall, One we love. By categorising the ideas, we achieved a bit of structure and we could narrow down our scope. We voted on our favorite three ideas and tallied the votes. Following came out to be our favorite ideas -  
                 <ol>
-                    <li>Identify the Community</li>
-                    <li>Identify the Problem</li>
-                    <li>Establish the Goal</li>         
-                    <li>Design Stages (Sketching to Prototyping)</li>
+                    <li>Private Media room - Create a virtual room and watch media together</li>
+                    <li>Betting for a dollar - Quick bets with your friends that help you learn something new</li>
+                    <li>Pacman for health - A running app that is based on the Pacman game </li>         
                 </ol>
                 </p>
-
-                <h4>WORKFLOW</h4>
-                <p>The various phases of the project included defining the problem, Sketching, Storyboarding, Paper Prototyping and creating a hi-fi Prototype, interspersed with peer feedback sessions. The overall process was broken down into the following stages -
-                <ol>
-                    <li>Identify the Community</li>
-                    <li>Identify the Problem</li>
-                    <li>Establish the Goal</li>         
-                    <li>Design Stages (Sketching to Prototyping)</li>
-                </ol>
-                </p>
-                
-                <p>&mdash;&mdash;</p>
-                <h4>THE COMMUNITY CHOSEN</h4>
-                <p>I decided to focus on the problems of the student musicians at the University of Michigan. The university has a lot of student organizations such as Maize Collective, Stamp Nation, The Jam Club, that cater to musicians on the campus. I decided to choose this community because I am a musician myself and an active part of one such organization called The Jam Club. I decided on event promoters as my secondary audience as they played a huge role in giving musicians a platform to perform and grow.</p>
-                <p>&mdash;&mdash;</p>
-                <h4>SCOPING DOWN THE PROBLEM</h4>
+                <img src="oleolebrainstorming.jpeg" alt="brainstorming">
                 <p>
-                To find out where the needs of my target audience were not being met, I conducted interviews with the heads of student organizations catering to student musicians, as well as student musicians themselves. I eventually conducted a total of 6 interviews. A Google form was also sent out to student musicians to ask them about their attitudes and behavior. I devised 3 <a href="https://drive.google.com/drive/folders/0BwpAOQIxmniANkg2X1VmajdnREU?usp=sharing" target="_blank">personas</a> and 1 anti-persona based on the interview data and survey responses.
+                We then presented these three ideas to our peers, and based on the feedback, we decided to go ahead with the first idea. 
                 </p>
-                <h3>Through the research phase, I discovered that local musicians have no single medium to interact and be aware of the events happening in the community.
-                </h3>
+
+                <p>&mdash;&mdash;</p>
+
+                <h4>USER INTERVIEWS</h4>
+                <p>We conducted 5 quick interviews with individuals who use live streaming media platforms/ interact with each other while watching sports to better understand the whole experience. We wanted to understand how people interact with existing platforms/ technology and also how people interact with each other during the same time. The interviews followed a semi-structured approach with the following research questions —
+                <ol>
+                    <li>Which platforms do users use while watching a live stream?</li>
+                    <li>How does social media factor in users' experience while streaming media?</li>
+                </ol>  
+                </p>
+                <p>
+                Through the interview data, we found out that the main reason behind watching media together was increased sense of intimacy and connectedness. Intimacy was defined as watching to enjoy with others (significant others/ friends) and connectedness as feeling of belonging together.      
+                </p>
+                <img src="oleolepersona.jpg" alt="persona">
+
+                <p>&mdash;&mdash;</p>
+
+                <h4>COMPETITIVE ANALYSIS</h4>
+                <p>To study the strengths and weaknesses of existing systems, we performed a competitive analysis. We looked at platforms such as Twitch, YouTube Gaming Live, CNN++, Bilibili/ Niconico, Vh1 Pop up Video ad Instagram Live. These platforms were selected because they analysed users to interact with the system in real time while simultaneously consuming media. </p>
+                <img src="oleolecomp.png" alt="competitive analysis">
                 
                 <p>&mdash;&mdash;</p>
+
+                <h4>SCOPING IT DOWN</h4>
+                <p>We started off with an idea to create a private movie room, a system that would let users create and join virtual private rooms to watch movies with their friends. The movie rooms would allow users to interact with each other in real time, akin to an experience of watching movies in a theater.  
+                Three important points came up during our presentation session. 
+                <ol>
+                    <li>What are the levels of user engagement with the system?</li>
+                    <li>How do people watch a game/show in the same physical space?</li>
+                    <li>How can we support people who have different levels of participation</li>
+                </ol>
+                </p>
+
+                <p>&mdash;&mdash;</p>
+
+                <h3>We realized that user engagement while watching sports is higher than movies so we chose to focus on the former.</h3>
+
+                <p>&mdash;&mdash;</p>
+
+                <p>We also wanted to have a fair bit of personalization in our UI for the user, as well as keep engagement high through media available to the users (gifs, memes, etc). So we narrowed our scope to sports instead of all media. Designing for a custom sport (soccer, tennis, etc) would also help us focus on designing the minute details of the UI, which we really wanted to.  
+                </p>
+
+                <p>&mdash;&mdash;</p>
+
                 <h4>THE CONCEPT</h4>
-                <p>With the data uncovered from the needs asssessment phase, I sketched out 8 unique ideas that would solve the problem. The sketches were very rough and this phase was meant to help diverge the thinking process. The next stage involved <a href="https://drive.google.com/drive/folders/0BwpAOQIxmniANzdESHhPSmpMbHM?usp=sharing" target="_blank">storyboarding</a> the 8 sketches to uncover additional insights into the ideas.</p>
-                <img src="sketches_582.png" alt="sketches">
-                <p>The sketches and storyboards helped shape the structure of my final idea. I established a project objective – designing a tool for local and upcoming musicians to connect and interact – to guide me while making design decisions further ahead in the process. My final vision of the project looked something like this -
-                <ul>
-                    <li>A platform that connects local musicians and promotes interaction</li>
-                    <li>A platform that holds information about the local musicians</li>
-                    <li>A platform that fosters collaboration among musicians</li>
-                </ul> 
+                <p>With the data uncovered from the inital user research phase, we conceptualised a system that would let users create a virtual room to view sports matches together with their friends. In these rooms, users can interact with each other in real time by sending text messages, emojis, gifs, and team anthems/chants (audio presets). These mediums of interaction were deemed to provide a rich enough experience for the users without overwhelming them.</p>
+                <!-- <img src="sketches_582.png" alt="sketches"> -->
+                <p>To come up with this concept, we observed how people interact with each other while watching sports with their friends while being in different locations, in sports pubs with random people and at match screenings surrounded by fans of the same team.
                 </p>
 
                 <p>&mdash;&mdash;</p>
                 
-                <h4>DEVELOPING THE FEATURES</h4>
-                <p>Feedback from the users, on my vision and the sketches, proved valuable in narrowing down the features in my deliverable. I finally decided on the following as my primary features
-                    <ul>
-                    <li><b>Personal Profile for each Musician/ Promoter</b> - The Profile would display information about a musician's preferred genres, instruments played, website/ Soundcloud links and a short bio. For Promoters, it would display the Club affiliation, genres preferred, club website and a bio.</li>
-                    <li><b>Events Section</b> - Options to Create Events/ Invite friends to an event</li>
-                    <li><b>Spotlight Section</b> - Every month, the community will upvote an artist based on the track they submit. Promoters can book the top ranking artists, after hearing the mix and visiting their profile.</li>
-                    <li><b>Search for artists</b> - Artists can be searched on the app by name/ genres/ instruments played.</li>
-                </ul></p>
-                <img src="582sketches.png" alt="wireframes">
+                <h4>CONCEPTUALIZING THE UI</h4>
+                <p>We looked at how current media/ sports providers provide rich interactivity in their systems. We used some of the good practices observed through the competitive analysis to conceptualise our proposed features. Using wireframes, we brought our ideas to life to test the UI and obtain feedback. 
+                </p>
+                <img src="oleolewireframes.png" alt="wireframes">
 
                 <p>&mdash;&mdash;</p>
 
                 <h4>PROTOTYPING</h4>
-                <p>With a premature design in mind, I developed a paper prototype for both the musician as well as event promoter user flow. The freedom and flexibility offered by the lo-fi prototyping method of using paper mockups was really useful to test the interactions of the final app. Peer feedback received on the prototype helped me decide the minute details in the hi-fi prototype. The video below shows the musician user flow while the promoter user flow can be found <a href="https://drive.google.com/file/d/0BwpAOQIxmniAeUZ5b3dpQmZ4SGc/view?usp=sharing" target="_blank">here</a>. The video feels rushed because the assignment allowed for a video with a duration under 100s.
-                </p> 
-                 <div class="videoWrapper">
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/uv2Gb-jPx9Q" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <p>We incorporated the feedback received from testing our wireframes while developing the high fidelity prototype. We made the prototype using Sketch and added interactivity using Invision. Since we had limited time, we could not prototype all the micro-interactions we had imagined for our system but we later demonstrated those in our concept video. The micro interactions were inspired from the FIFA and Call of Duty franchises as these applications do a good job in guiding the users for setting up a game. We wanted our users to have a frictionless experience while setting up a virtual room, so we examined a few games from these franchises. You can play around with the prototype <a href="https://invis.io/W2EF2ERRD" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">here</a>. 
+                </p>
+                <img src="oleolemockups.png" alt="mockups"> 
                
-                   <!--  <img src="582wip.png" alt="work in progress using Adobe XD" > -->
-                    <!-- <figcaption style="text-align: center;font-family: Lora, sans-serif;font-size: 12px;">Workflow in Adobe XD</figcaption> -->
+               <p>&mdash;&mdash;</p>
 
-                <p>The <a href="https://xd.adobe.com/view/8cda7619-a68a-481e-8f13-c4ba9378575d/" target="_blank">final prototype</a> was created for Android OS using Adobe XD. I decided to go with Adobe XD over Sketch due to the former's ability to convert screens to interactive prototype with just a switch from Design to Prototype Mode. The limited capabilities of making a design interactive in XD were sufficient for my final project deliverable. Being an Android user, it was easy for me to design the app for the Android OS. For a thorough explanation of the proposed app and the whole process, please check out the final report <a href="https://drive.google.com/file/d/0BwpAOQIxmniAS3ZQejRPMjRKN0U/view?usp=sharing" target="_blank">here</a>. </p>
-                
-
-                <img src="finalrhythm.gif" alt="final prototype gif">
+                <h4>DEVELOPING THE SYSTEM</h4>   
+                <p>We implemented this system using Python, Flask and Bootstrap. We could not get through hosting this on AWS but one of our team members did a fantastic job getting this up and running within a couple of weeks. For demonstration purposes, we created a room, streamed a video using YouTube Live API and asked our classmates to join in. The system tested well, and could support interaction though text, gifs emojis. You can find the entire code repository for the system <a href="https://github.com/pandeymauli/oleole" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">here</a>.</p>
 
                 <p>&mdash;&mdash;</p>
 
                 <h4>REFLECTING ON THE PROJECT</h4>
-                <p>With this being my first ever project in the Interaction Design domain, I learnt a lot about the various methodologies of design. While I briefly did User Research through interviews and surveys, I realized the importance of involving users early and often to shape the course of the design process. The final prototype I delivered was based on Material Design Guidelines, but my designs did not follow all the rules. I would love to revisit this project in the near future, design a better UI and test it out with my users.</p>
+                <p>My role throughout the course of the project was that of a UX Designer. I actively contributed to sketching, wireframing and prototyping along with generating the final concept video. Initially we as a team, wanted the system to have a plethora of features but as time passed we realized that our ideas could not be implemented in that short period of time. One important thing I learned from this project is that stripping down the features to create an MVP with just the core features should be the first step in every project.</p>
 
                 </ul></p>
                 </div>
                 <div class="bottomnavlinks">
                     <div class="bottomnavlinksleft">
-                        <a href="duo.html">&#x2190; Previous Project </a>
+                        <a href="rhythm.html">&#x2190; Previous Project </a>
                     </div>
                     <div class="bottomnavlinksright">
-                        <a href="expedia.html">Next Project &#x2192;</a> 
+                        <a href="emosense.html">Next Project &#x2192;</a> 
                     </div>
                 </div>
 			</div>
