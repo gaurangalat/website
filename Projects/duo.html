@@ -64,37 +64,32 @@
 
 
                 <p>&mdash;&mdash;</p>
-                <h4>NEEDED SMALL DESIGN FIXES</h4>
-                <p>The feature in its Beta phase did a good job at explaining why a particular good security practice was important but did not provide detailed enough instructions for remediation of the issue. Moreover, the feature was grouped on the home screen, with another feature, that was going to be taken out for the GA release. This meant that it was necessary to rethink where the Security Checkup feature would be located and how would a user interact with it. Lastly, we wanted users to perceive the feature as a 'helper' rather than just an alert. We found out that this could be achieved by using a different alert icon and changing the text.
-                </p>
+                <h4>NEEDED SOME DESIGN FIXES</h4>
+                <!-- <p>The feature in its Beta phase did a good job at explaining why a particular good security practice was important but did not provide detailed enough instructions for remediation of the issue. Moreover, the feature was grouped on the home screen, with another feature, that was going to be taken out for the GA release. This meant that it was necessary to rethink where the Security Checkup feature would be located and how would a user interact with it. Lastly, we wanted users to perceive the feature as a 'helper' rather than just an alert. We found out that this could be achieved by using a different alert icon and changing the text.
+                </p> -->
+                <p>Initial testing of the feature in the Beta version brought three problems to light. Users perceived the feature as simply an alert rather than a helper. The feature also did not accomodate edge cases that affected users' trust in the feature. Moreover, the feature was grouped on the home screen, with another feature, that was going to be taken out for the GA release. This meant that it was necessary to rethink where the Security Checkup feature would be located and how would a user interact with it. </p>
                 <img src="SC_old.png" alt="beta design">
                 <p>&mdash;&mdash;</p>
-                <h4>WHAT I DELIVERED</h4>
-                <p>By the end of my internship, I had -
-                <ul>
-                    <li>Redesigned the flow, icons, text and delivered high quality assets for Security Checkup feature on Duo Mobile (Android)</li>
-                    <li>Designed a small functionality in the Duo Admin Panel for turning on the feature </li>
-                    <li>Moderated 4 usability testing sessions</li>
-                    <li>Worked collaboratively with user researchers and developers</li>
-                </ul></p>
-                <p>&mdash;&mdash;</p>
+                
                 <h4>HOW I DID IT</h4>
                 <p>My mentor played a huge role in shaping the project - through regular 1:1 meetings, we were able to narrow down the scope of the project and establish a timeline. The timeline accounted for various phases such as brainstorming, designing and frequent feedback/ standup sessions. I rapidly designed and verified the prototypes by hallway testing* them and also showing it to the much experienced designers in the Product Design team. I also found it beneficial to get opinions on my designs from a different perspective such as a developer's.</p>
                 <p style="font-size: 14px;line-height:22px; "><i>*Hallway testing, as the name implies, is a quick way of testing design concepts by utilizing bystanders in a hallway (or a high foot traffic area) as test participants</i></p>  
                 <br>
-                <p><b>I. Changing the Alert icon</b></p>
+                <p>&mdash;&mdash;</p>
+                <p>The entire redesign comprised three stages — changing the perception, providing additional context and improving user interactions. </p>
+                <p><b>I. Changing the users' perception</b></p>
                 <p>Some users had no control over a few security issues (such as manufacturers discontinuing OS updates for old phones, especially for Android). The strong language and red alert icons for these flagged issues made such users feel helpless and resulted into frustration. To alleviate this issue, I decided to change the way users perceived an alert by redesigning the icon. In this process, I looked at how existing products such as antivirus softwares handled alerts and created different iterations by tweaking the symbols and colors.</p>
-                <img src="icon.png" alt="icon iterations">
+                <img src="SCold.png" alt="icon iterations">
                 <p>The various iterations were put to test through hallway testing and the design team’s stand-up sessions. Factoring in the feedback from these sessions, I decided to choose the icon that provided a high contrast and was easily distinguishable from the green (all okay) icon. To arrive at this final design, I changed the color of the alert icon from red to yellow and used an exclamation mark instead of an X to make it resemble a warning. The shape of the icon was also changed from a circle to a triangle to distinguish it from the green (all okay) icon.</p>
                 <br>
-                <p><b>II. Changing the landing text and instructions</b></p>
+                <p><b>II. Providing context through landing text and instructions</b></p>
                 <p>There were cases where Android users who had enabled Full Disk Encryption (FDE) were getting notified by the feature stating that their FDE was disabled, leading to confusion. It was found that devices having FDE enabled but with no passcode enabled were not passing the security test done by the feature. Remediation instructions that factored in such cases were missing in the Beta version. Additionally, the text label explicitly saying ‘FDE not enabled’ added to the confusion at the user’s end.</p>
                 <img src="FDElanding.png" alt="concept iterations for dropdown contents for FDE">
                 <p>My first step was to change the language from 'FDE not enabled' to 'FDE issue detected’ in the text label. Next, I added some landing text in the dropdown to provide more context to the text label and lead the user to further actions. As the remediation instructions had to account for <i>normal cases</i> (FDE not enabled) and <i>edge cases</i> (FDE enabled + no passcode), I decided to create separate pages for these two cases. Information relating to the importance of enabling FDE (Why) was placed with the normal case (not enabled). Laying out the information in this way helped reduce the amount of text under each dropdown label on the main screen and prevented users from getting confused.</p>
                 <img src="FDE.png" alt="FDE final design">
-                <p>It was also challenging to design for the Call to Action (CTA) links for How and Why. We wanted the users to understand that these links would lead to a new page in the app itself and not to a new page in the browser. It was necessary to make these links appear as clickable to the users. I changed the tone of the text in the links to first person to make them stand out from the landing text under each label. I also added a slight background fill for the links to make them pop out on the screen. This design concept tested well through hallway testing as the test subjects were successful in interpreting the nature of these links and were able to navigate the scenario provided to them. </p>
+                <p> We wanted the users to understand that the Call to Action (CTA) links for How and Why would lead to a new page in the app itself and not to a new page in the browser. It was also necessary to make the links appear as clickable to the users. To tackle these two issues, I changed the tone of the text in the links to first person to make them stand out from the text under each label. I also added a slight background fill for the links to make them pop out on the screen. This design concept tested well through multiple rounds of hallway testing. </p>
                 <br>
-                <p><b>III. Changing the interaction</b></p>
+                <p><b>III. Improving the user interaction</b></p>
                 <p>There were two ways a user could access the Security Checkup feature in the Beta version – by clicking on the feature on the main screen or by going to Settings menu of Duo Mobile. We did not want the feature to persist on the main screen as it would take up space and also distract the user from approving push notifications. To tackle this issue, I worked closely with an engineering intern on the Mobile team to brainstorm different ways of showing the feature.</p>
                 <img src="SC_oldinteraction.png" alt="concept iterations">
                 <p>We came up with the simple idea of a pop-up and thought of testing it out. However, this idea of the feature popping-up on the main screen tested poorly in hallway testing. The test subjects reported thinking that they would need to dismiss the pop-up before approving any notifications in the app. This exploration did not work well, so we got back to the whiteboard.</p>
@@ -104,6 +99,15 @@
                 <p>&mdash;&mdash;</p>
                 <h4>SO WHAT HAPPENED NEXT</h4>
                 <p>With the designs tested and approved by the senior designers, I handed them off to the developers though a tool called Zepelin. I developed the Android UI screens only while the iOS ones were developed based off my designs. Text (landing text + remediation instructions) and assets (icons and illustrations) were some of the other deliverables that I delivered to the developers. The feature was released in late September and was made available to all Duo users. However, to enable access to this feature for all users in an environment, IT Admins need to configure this feature through the Admin Panel first. </p>
+                <p>&mdash;&mdash;</p>
+                <h4>WHAT I DELIVERED</h4>
+                <p>By the end of my internship, I had -
+                <ul>
+                    <li>Redesigned the flow, icons, text and delivered high quality assets for Security Checkup feature on Duo Mobile (Android)</li>
+                    <li>Designed a small functionality in the Duo Admin Panel for turning on the feature </li>
+                    <li>Moderated 4 usability testing sessions</li>
+                    <li>Worked collaboratively with user researchers, developers and a PM</li>
+                </ul></p>
                 <p>&mdash;&mdash;</p>
                 <h4>LOOKING BACK AT A WONDERFUL SUMMER</h4>
                 <p>I am fortunate to have spent my summer at a wonderful company being surrounded by some of the kindest people I have ever met. Working on the Security Checkup feature with almost full autonomy was daunting, as I always had the mindset that I might mess something up. But my mentor's guidance and support was something that I will always be grateful for. </p> 
