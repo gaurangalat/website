@@ -24,7 +24,7 @@ body {
 .Logotext{
   display: none;
 }
-img{
+.Logo img{
   width: 20px;
   height: 10.5px;
 }
@@ -68,30 +68,8 @@ img{
 .Logo{
   text-align: center;
 }
-/*.Panellabel {
-  letter-spacing: 0.2px;
-  margin-top: 160px;
-  margin-left: 20px;
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 40px;
-}
-.igniteux .Panellabel{
-  margin-top: 30px;
-  padding: 20px;
-  color: white;
-}*/
-/*.Paneldesc{
-  padding-top: 2px;
-  letter-spacing: 0.2px;
-  color: #F5F5F5;
-  text-align: center;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 20px;
-}*/
+
+
 .wrapper {
   display: grid;
   padding-top: 80px;
@@ -184,8 +162,8 @@ p, li {
   margin-bottom: 10px;
   height: 300px;
   border-radius: 2px;
-  padding-left: : 20px;
-  padding-right: 20px;
+/*  padding-left: : 20px;
+  padding-right: 20px;*/
   padding-top: 60px;
   font-size: 150%;
 }
@@ -226,7 +204,7 @@ p, li {
 .umhs{
 /*  background-color: #2196F3;*/
 /*  background-color: #009688;*/
-  background-image: url('umhs.png');
+  background-image: url('oleole.png');
   background-position: center; 
   background-size: cover;
   background-repeat: no-repeat;
@@ -283,6 +261,9 @@ a.active{
   font-size: 8px;
   text-align: center;
   padding:none;
+}
+.inaboutimg img{
+  display: none;
 }
 
 @media only screen and (min-width: 600px){
@@ -357,7 +338,7 @@ a.active{
       "aboutme aboutme";
 }
 .social{
-  margin-top: 60px;
+  margin-top: 10px;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -426,6 +407,9 @@ p, li {
 .copyfooter p{
   font-size: 10px;
 }
+.inaboutimg img{
+  display: none;
+}
 }
 
 @media only screen and (min-width: 991px)  {
@@ -443,40 +427,45 @@ p, li {
       "Logo Portfolio AboutMe Photography";
 }
 .wrapper {
+  display: grid;
   margin-left: 15%;
   margin-right: 15%;
   padding-top: 100px;
-/*  grid-template-areas:
+  grid-template-areas:
     "duo duo expedia"
     "duo duo rhythm"
     "emosense umhs igniteux"
     "aboutme aboutme aboutme"
     "aboutme aboutme aboutme"
-    "aboutme aboutme aboutme";*/
+    "aboutme aboutme aboutme";
 }
-.duo{
-  grid-area: 1 / 1 / 3 / 3;
+
+.aboutme{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    "inabout inabout inaboutimg";
 }
-.expedia{
-    grid-area: 1 / 3 / 2 / 4;
+/*.box2{
+  background-color: #ff4;
+}*/
+.inabout{
+  grid-column: 1 / 2;
+  grid-row: 1;
+
 }
-.rhythm{
-   grid-area: 2 / 3 / 3 / 4;
+/*.inaboutimg{
+  background-image: url('face.png');
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+*/
 .social{
-  margin-top: 10px;
+  margin-top: 50px;
   margin-left: 30%;
   margin-right: 30%;
 }
-/*.AboutMe{
-  text-align: right;
-}
-.Portfolio{
-  text-align: right;
-}
-.Logo{
-  text-align: left;
-}*/
 .box1{
   padding-top: 80px;
   height: 600px;
@@ -512,15 +501,4 @@ p, li{
   text-decoration: underline;
 }
 
-/*.image{
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-.box:hover .image{
-  opacity: 0.3;
-}
-*/
+
