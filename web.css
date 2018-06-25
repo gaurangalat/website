@@ -195,7 +195,7 @@ p, li {
 .duo{
   grid-area:duo;
 /*  background-color: #4CAF50;*/
-  background-image: url('duosmall.png');
+  background-image: url('duosmall2.png');
   background-position: center; 
   background-repeat: no-repeat;
   background-size: cover;
@@ -416,7 +416,7 @@ p, li {
   left: 4%;
 }*/
 .duo{
-  background-image: url('duo1.png');
+  background-image: url('duo2.png');
   background-position: center; 
   background-repeat: no-repeat;
 }
