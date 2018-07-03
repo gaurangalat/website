@@ -115,9 +115,9 @@ img{
   text-align: center;
   margin: 25px 15% 10px;
   grid-gap: 10px;
-  grid-auto-columns: 3fr 3fr 3fr 3fr;
+  grid-auto-columns: 3fr 3fr 3fr;
   grid-template-areas:
-  "linkedin dribbble medium twitter"    
+  "linkedin dribbble twitter"    
 }
 .inabout img{
 /*  padding-left: 8px;*/
@@ -369,7 +369,7 @@ a.active{
 /*  padding-left: 30px;
   padding-right: 30px;*/
   padding-top: 20px;
-  padding-right: 150px;
+  padding-right: 100px;
 }
 .inabout img{
   max-width: 120px;
@@ -434,7 +434,7 @@ p, li {
 /*  padding-left: 5px;
   padding-right: 5px;*/
   margin-left: 15%;
-    margin-right: 15%;
+  margin-right: 15%;
   grid-auto-rows: 40px;
   grid-template-columns: minmax(380px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
   display: grid;
