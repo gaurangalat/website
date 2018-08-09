@@ -63,7 +63,7 @@
                 <!-- Security Checkup informs the user about the security hygiene of their device by alerting them to issues such as no passcode, out of date OS, etc and providing instructions for remediation of the detected issue. The objective of the feature is to caution the user about the security issues while being unobstrusive i.e. not compromising on any functionality of the app.-->
 
                 <p>The Security Checkup feature, meant to check security hygiene of a device, had two aspects to it – Why and How. By alerting the user to security issues on their device such as no passcode, out of date OS, etc. it aimed to highlight good practices (eg. Why should you have a passcode?) and provide instructions for remediation of the detected issue (How to enable a passcode?).</p> <!-- The objective of the feature was to caution the user about the security issues while being unobstrusive i.e. not compromising on any functionality of the app. -->
-
+                <img src="SC_old.png" alt="beta design">
 
                 <br>
                 <br>
@@ -71,27 +71,27 @@
                 <!-- <p>The feature in its Beta phase did a good job at explaining why a particular good security practice was important but did not provide detailed enough instructions for remediation of the issue. Moreover, the feature was grouped on the home screen, with another feature, that was going to be taken out for the GA release. This meant that it was necessary to rethink where the Security Checkup feature would be located and how would a user interact with it. Lastly, we wanted users to perceive the feature as a 'helper' rather than just an alert. We found out that this could be achieved by using a different alert icon and changing the text.
                 </p> -->
                 <p>Initial testing of the feature in the Beta version brought three problems to light. Users perceived the feature as simply an alert rather than a helper. The feature also did not accomodate edge cases that affected users' trust in the feature. Moreover, the feature was grouped on the home screen, with another feature, that was going to be taken out for the GA release. This meant that it was necessary to rethink where the Security Checkup feature would be located and how would a user interact with it. </p>
-                <img src="SC_old.png" alt="beta design">
+                
                 
                 <br>
                 <br>
                 
-                <h4>HOW I DID IT</h4>
+                <!-- <h4>HOW I DID IT</h4>
                 <p>My mentor played a huge role in shaping the project - through regular 1:1 meetings, we were able to narrow down the scope of the project and establish a timeline. The timeline accounted for various phases such as brainstorming, designing and frequent feedback/ standup sessions. I rapidly designed and verified the prototypes by hallway testing* them and also showing it to the other designers at Duo. I also found it beneficial to get opinions on my designs from a different perspective such as a developer's.</p>
                 <p style="font-size: 14px;line-height:22px; "><i>*Hallway testing is a quick way of testing design concepts by utilizing bystanders in a hallway (or a high foot traffic area) as test participants</i></p>  
                 <br>
                 
                 <br>
-                <br>
+                <br> -->
                 <p>The entire redesign comprised three stages — changing the perception, designing for accommodating edge cases and improving the user interaction. </p>
-                <p><b>I. Changing the users' perception</b></p>
+                <p><b>I. Improving the users' perception</b></p>
                 <!-- <p>Some users had no control over a few security issues (such as manufacturers discontinuing OS updates for old phones, especially for Android). The strong language and red alert icons for these flagged issues made such users feel helpless and resulted into frustration. To alleviate this issue, I decided to change the way users perceived an alert by redesigning the icon. In this process, I looked at how existing products such as antivirus softwares handled alerts and created different iterations by tweaking the symbols and colors.</p> -->
                 <p>I realized that the perception of the feature resulted from a combination of visuals and the tone of the copy. The goal was to make the users perceive the feature as a helper and not a mere alert. To tackle this issue I decided to tone down strong visuals (icons), rephrase some of the harshly worded copy and provide more context to the users by adding text (soft landing). </p>
                 <img src="SCold.png" alt="icon iterations">
                 <p>Factoring in the feedback from some quick testing sessions, I decided to choose the icon that provided a high contrast and was easily distinguishable from the green (all okay) icon. I came up with this final icon after changing the color of the icon from red to yellow and using an exclamation mark instead of a cross to make it resemble a warning. The shape of the icon was also changed from a circle to a triangle to distinguish it from the green (all okay) icon.</p>
                 <img src="duo_perception.png" alt="Landing text and icon change">
                 <br>
-                <p><b>II. Designing for edge cases</b></p>
+                <p><b>II. Designing for edge cases to improve users' trust</b></p>
                 <!-- <p>There were cases where Android users who had enabled Full Disk Encryption (FDE) were getting notified by the feature stating that their FDE was disabled, leading to confusion. It was found that devices having FDE enabled but with no passcode enabled were not passing the security test done by the feature. Remediation instructions that factored in such cases were missing in the Beta version. Additionally, the text label explicitly saying ‘FDE not enabled’ added to the confusion at the user’s end.</p> -->
                 <p>There were two edge cases for Android users that surfaced during initial testing of the Beta feature — Full Disk Encryption (FDE) and Operating System (OS). I had to design separate pages comprising remediation instructions for the normal and edge cases with links to those on the main page. It was necessary that users understood that the links were hyperlinks and would open a new page in the Duo Mobile app and not the browser. To tackle these two issues, I changed the tone of the text in the links to first person to make them stand out from the text under each label. I also added a slight background fill for the links to make them pop out on the screen. </p>
                 <img src="FDElanding.png" alt="concept iterations for dropdown contents for FDE">
@@ -102,7 +102,7 @@
                 <p>The edge case for OS issue resulted from the fact that manufacturers do not provide updates to older models of cellphones. Thus, it was necessary to educate the users the latest OS supported by a device was not the same as the latest OS available for Android OS. </p>
                 <img src="duo_OSedgecase.png" alt="OS final design">
                 <br>
-                <p><b>III. Changing the user interaction</b></p>
+                <p><b>III. Rethinking the user interaction</b></p>
                 <!-- <p>There were two ways a user could access the Security Checkup feature in the Beta version – by clicking on the feature on the main screen or by going to Settings menu of Duo Mobile. We did not want the feature to persist on the main screen as it would take up space and also distract the user from approving push notifications. To tackle this issue, I worked closely with an engineering intern on the Mobile team to brainstorm different ways of showing the feature.</p> -->
                 <p>The goal of the Security Checkup feature was to notify users of the security issues without being persistent (fixed) on the home screen. I came up with the simple idea of a pop-up and thought of testing it out. However, this idea of the feature popping-up on the main screen tested poorly in hallway testing. Through a 1:1 design session with my mentor, we came up with a toast-like functionality for the feature. This design concept tested well through initial testing and was subsequently approved by the Product Manager on the team. </p>
                 <img src="SC_oldinteraction.png" alt="concept iterations">
