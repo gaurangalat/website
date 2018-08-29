@@ -1,179 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Gaurang Alat">
+ 
+  <title>OleOle - Social Computing</title>
 
-    <title>OleOle - Social Computing</title>
-
-     <link href="portfolio.css" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
+  <link href="test1.css" rel="stylesheet">
 
 </head>
 
+
 <body>
-    <div class="wrapper links">
-        <div class="box">
-            <nav class="nav">
-                <div class="Logo">
-                    <a href="http://gaurangalat.com" class="navLinks"><img src="logo.png" alt="logo" style="  width: 20px;height: 10.5px;">
-                    <span class="Logotext">Gaurang Alat
-                    </span></a>
-                </div>
-                <div class="Portfolio">
-                    <a href="http://gaurangalat.com/#portfolio" class="navLinks">Portfolio</a>
-                </div>
-                <div class="AboutMe">
-                    <a href="http://gaurangalat.com/#aboutme" class="navLinks">About Me</a>
-                </div>
-                <div class="Photography">
-                    <a href="http://gaurangalat.com/photography/" target="_blank" class="navLinks">Photography</a>
-                </div>
-            </nav>
 
-			<div span class="contents">
-                <div class="text">
-				<h1>OleOle - Web App for watching live sports</h1>
-                <h2>Designed and developed a social computing system to enhance experience for watching live sports together* </h2>
-                <div class="videoWrapper">
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/iSFXQnQbhOw" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <!-- <iframe width="854" height="480" src="https://www.youtube.com/embed/iSFXQnQbhOw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-                <br>
-                <div class="highlight">
-                <ul>
-                    <li><b>Task</b>: Develop a social computing system to solve a novel problem</li>
-                    <li><b>What I did</b>: Interviews, competitive analysis, sketching, storyboarding, wireframing, hi-fi prototyping, concept video</li>
-                    <p style="font-size: 12px;line-height: 18px;"><i>*Group project for Developing Social Computing class, Sept-Dec 2017</i></p>
-                </ul>
-                </div>
-                <br>
-                <h4>IDEATION</h4>
-                <p>To narrow down the scope and decide a domain of common interest, we did a semi-structured brainstorming exercise. We did a timed brainstorming with each of us writing down our ideas on post-its. Focusing on quantity over quality allowed us to explore a breadth of ideas. We then grouped the ideas according to following categories — Logical, Longshot, Practical, Crowd-Pleaser, Off the wall, One we love. By categorising the ideas, we achieved a bit of structure and we could narrow down our scope. We voted on our favorite three ideas and tallied the votes. Following came out to be our favorite ideas -  
-                <ol>
-                    <li>Private Media room - Create a virtual room and watch media together</li>
-                    <li>Betting for a dollar - Quick bets with your friends that help you learn something new</li>
-                    <li>Pacman for health - A running app that is based on the Pacman game </li>         
-                </ol>
-                </p>
-                <img src="oleolebrainstorming.jpeg" alt="brainstorming">
-                <p>
-                We then presented these three ideas to our peers, and based on the feedback, we decided to go ahead with the first idea. 
-                </p>
+<nav class="nav">
+  <div class="Logo">
+      <a href="http://gaurangalat.com" class="navLinks"><img src="logo.png" alt="logo" style="  width: 20px;height: 10.5px;">
+      <span class="Logotext">Gaurang Alat
+      </span></a>
+  </div>
+  <div class="Portfolio">
+      <a href="http://gaurangalat.com/#portfolio" class="navLinks">Portfolio</a>
+  </div>
+  <div class="AboutMe">
+      <a href="http://gaurangalat.com/#aboutme" class="navLinks">About Me</a>
+  </div>
+  <div class="Photography">
+      <a href="http://gaurangalat.com/photography/" target="_blank" class="navLinks">Photography</a>
+  </div>
+</nav>
 
-                <br>
-                <br>
+<div class="wrapper">
 
-                <h4>USER INTERVIEWS</h4>
-                <p>We conducted 5 quick interviews with individuals who use live streaming media platforms/ interact with each other while watching sports to better understand the whole experience. We wanted to understand how people interact with existing platforms/ technology and also how people interact with each other during the same time. The interviews followed a semi-structured approach with the following research questions —
-                <ol>
-                    <li>Which platforms do users use while watching a live stream?</li>
-                    <li>How does social media factor in users' experience while streaming media?</li>
-                </ol>  
-                </p>
-                <p>
-                Through the interview data, we found out that the main reason behind watching media together was increased sense of intimacy and connectedness. Intimacy was defined as watching to enjoy with others (significant others/ friends) and connectedness as feeling of belonging together.      
-                </p>
-                <br>
-                <img src="oleolepersona.jpg" alt="persona">
+  <div class="header">
+    <h1>OleOle - Web App for watching live sports</h1>
+    <h2>Designed and developed a social computing system to enhance experience for watching live sports together* </h2>
+  </div>
 
-                <br>
-                <br>
+  <div class="para">
 
-                <h4>COMPETITIVE ANALYSIS</h4>
-                <p>To study the strengths and weaknesses of existing systems, we performed a competitive analysis. We looked at platforms such as Twitch, YouTube Gaming Live, CNN++, Bilibili/ Niconico, Vh1 Pop up Video ad Instagram Live. These platforms were selected because they analysed users to interact with the system in real time while simultaneously consuming media. </p>
-                <br>
-                <img src="oleolecomp.png" alt="competitive analysis">
-                
-                <br>
-                <br>
+    <div class="videoWrapper">
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/iSFXQnQbhOw" frameborder="0" allowfullscreen></iframe>
+    </div>
 
-                <h4>SCOPING IT DOWN</h4>
-                <p>We started off with an idea to create a private movie room, a system that would let users create and join virtual private rooms to watch movies with their friends. The movie rooms would allow users to interact with each other in real time, akin to an experience of watching movies in a theater.  
-                Three important points came up during our presentation session. 
-                <ol>
-                    <li>What are the levels of user engagement with the system?</li>
-                    <li>How do people watch a game/show in the same physical space?</li>
-                    <li>How can we support people who have different levels of participation</li>
-                </ol>
-                </p>
+    <div class="highlight">
+      <ul>
+        <li><b>Task</b>: Develop a social computing system to solve a novel problem</li>
+        <li><b>What I did</b>: Interviews, competitive analysis, sketching, storyboarding, wireframing, hi-fi prototyping, concept video</li>
+        <p style="font-size: 12px;line-height: 18px;"><i>*Group project for Developing Social Computing class, Sept-Dec 2017</i></p>
+      </ul>
+    </div>
+    
+    <h4>IDEATION</h4>
+    <p>To narrow down the scope and decide a domain of common interest, we did a semi-structured brainstorming exercise. We did a timed brainstorming with each of us writing down our ideas on post-its. Focusing on quantity over quality allowed us to explore a breadth of ideas. We then grouped the ideas according to following categories — Logical, Longshot, Practical, Crowd-Pleaser, Off the wall, One we love. By categorising the ideas, we achieved a bit of structure and we could narrow down our scope. We voted on our favorite three ideas and tallied the votes. Following came out to be our favorite ideas -  
+    <ol>
+        <li>Private Media room - Create a virtual room and watch media together</li>
+        <li>Betting for a dollar - Quick bets with your friends that help you learn something new</li>
+        <li>Pacman for health - A running app that is based on the Pacman game </li>         
+    </ol>
+    </p>
+    <img src="oleolebrainstorming.jpeg" alt="brainstorming">
+    <p>
+    We then presented these three ideas to our peers, and based on the feedback, we decided to go ahead with the first idea. 
+    </p>
+    <br>
+    <h4>USER INTERVIEWS</h4>
+    <p>We conducted 5 quick interviews with individuals who use live streaming media platforms/ interact with each other while watching sports to better understand the whole experience. We wanted to understand how people interact with existing platforms/ technology and also how people interact with each other during the same time. The interviews followed a semi-structured approach with the following research questions —
+    <ol>
+        <li>Which platforms do users use while watching a live stream?</li>
+        <li>How does social media factor in users' experience while streaming media?</li>
+    </ol>  
+    </p>
+  </div>
 
-                <p>&mdash;&mdash;</p>
+  <div class="row">
+    <div class="column1">
+      <div>
+          <img src="oleolepersona.jpg" alt="persona">
+      </div>
+      <br>
+    </div>
 
-                <h3>We realized that user engagement while watching sports is higher than movies so we chose to focus on the former.</h3>
+    <div class="column2" >
+      <h4>PERSONAS</h4>
+      <p>Through the interview data, we found out that the main reason behind watching media together was increased sense of intimacy and connectedness. Intimacy was defined as watching to enjoy with others (significant others/ friends) and connectedness as feeling of belonging together.      
+      </p>
+    </div> 
+  </div>
 
-                <p>&mdash;&mdash;</p>
+  <br>
+  <br>
+  <br>
+  <br>
 
-                <p>We also wanted to have a fair bit of personalization in our UI for the user, as well as keep engagement high through media available to the users (gifs, memes, etc). So we narrowed our scope to sports instead of all media. Designing for a custom sport (soccer, tennis, etc) would also help us focus on designing the minute details of the UI, which we really wanted to.  
-                </p>
+  <div class="row">
+    <div class="column1" >
+        <img src="oleolecomp.png" alt="competitive analysis">
+    </div>
 
-                <br>
-                <br>
+    <div class="column2">
+      <div>
+       <h4>COMPETITIVE ANALYSIS</h4>
+        <p>To study the strengths and weaknesses of existing systems, we performed a competitive analysis. We looked at platforms such as Twitch, YouTube Gaming Live, CNN++, Bilibili/ Niconico, Vh1 Pop up Video ad Instagram Live. These platforms were selected because they analysed users to interact with the system in real time while simultaneously consuming media. </p>
+      </div>
+    </div>
+  </div> 
 
-                <h4>THE CONCEPT</h4>
-                <p>With the data uncovered from the inital user research phase, we conceptualised a system that would let users create a virtual room to view sports matches together with their friends. In these rooms, users can interact with each other in real time by sending text messages, emojis, gifs, and team anthems/chants (audio presets). These mediums of interaction were deemed to provide a rich enough experience for the users without overwhelming them.</p>
-                <!-- <img src="sketches_582.png" alt="sketches"> -->
-                <p>To come up with this concept, we observed how people interact with each other while watching sports with their friends while being in different locations, in sports pubs with random people and at match screenings surrounded by fans of the same team.
-                </p>
+    <div class="para">
+    <h4>SCOPING IT DOWN</h4>
+    <p>We started off with an idea to create a private movie room, a system that would let users create and join virtual private rooms to watch movies with their friends. The movie rooms would allow users to interact with each other in real time, akin to an experience of watching movies in a theater.  
+    Three important points came up during our presentation session. 
+    <ol>
+        <li>What are the levels of user engagement with the system?</li>
+        <li>How do people watch a game/show in the same physical space?</li>
+        <li>How can we support people who have different levels of participation</li>
+    </ol>
+    </p>
+    <p>&mdash;&mdash;</p>
 
-                <br>
-                <br>
-                
-                <h4>CONCEPTUALIZING THE UI</h4>
-                <p>We looked at how current media/ sports providers provide rich interactivity in their systems. We used some of the good practices observed through the competitive analysis to conceptualise our proposed features. Using wireframes, we brought our ideas to life to test the UI and obtain feedback. 
-                </p>
-                <img src="oleolewireframes.png" alt="wireframes">
+    <h3>We realized that user engagement while watching sports is higher than movies so we chose to focus on the former.</h3>
 
-                <br>
-                <br>
+    <p>&mdash;&mdash;</p>
+    <p>We also wanted to have a fair bit of personalization in our UI for the user, as well as keep engagement high through media available to the users (gifs, memes, etc). So we narrowed our scope to sports instead of all media. Designing for a custom sport (soccer, tennis, etc) would also help us focus on designing the minute details of the UI, which we really wanted to. </p>
+    <br>
+    <h4>THE CONCEPT</h4>
+    <p>With the data uncovered from the inital user research phase, we conceptualised a system that would let users create a virtual room to view sports matches together with their friends. In these rooms, users can interact with each other in real time by sending text messages, emojis, gifs, and team anthems/chants (audio presets). These mediums of interaction were deemed to provide a rich enough experience for the users without overwhelming them.</p>
+  
+    <p>To come up with this concept, we observed how people interact with each other while watching sports with their friends while being in different locations, in sports pubs with random people and at match screenings surrounded by fans of the same team.
+    </p>
+    </div>
 
-                <h4>PROTOTYPING</h4>
-                <p>We incorporated the feedback received from testing our wireframes while developing the high fidelity prototype. We made the prototype using Sketch and added interactivity using Invision. Since we had limited time, we could not prototype all the micro-interactions we had imagined for our system but we later demonstrated those in our concept video. The micro interactions were inspired from the FIFA and Call of Duty franchises as these applications do a good job in guiding the users for setting up a game. We wanted our users to have a frictionless experience while setting up a virtual room, so we examined a few games from these franchises. You can play around with the prototype <a href="https://invis.io/W2EF2ERRD" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">here</a>. 
-                </p>
-                <img src="oleolemockups.png" alt="mockups"> 
-               
-                <br>
-                <br>
+  <div class="row">
+    <div class="column1" >
+        <br>
+        <img src="oleolewireframes.png" alt="wireframes">
+    </div>
 
-                <h4>DEVELOPING THE SYSTEM</h4>   
-                <p>We implemented this system using Python, Flask and Bootstrap. We could not get through hosting this on AWS but one of our team members did a fantastic job getting this up and running within a couple of weeks. For demonstration purposes, we created a room, streamed a video using YouTube Live API and asked our classmates to join in. The system tested well, and could support interaction though text, gifs emojis. You can find the entire code repository for the system <a href="https://github.com/pandeymauli/oleole" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">here</a>.</p>
+    <div class="column2">
+      <br>
+      <br>
+      <div>
+        <h4>CONCEPTUALIZING THE UI</h4>
+        <p>We looked at how current media/ sports providers provide rich interactivity in their systems. We used some of the good practices observed through the competitive analysis to conceptualise our proposed features. Using wireframes, we brought our ideas to life to test the UI and obtain feedback. </p>
+      </div>
+    </div> 
+  </div> 
 
-                <br>
-                <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-                <h4>REFLECTING ON THE PROJECT</h4>
-                <p>My role throughout the course of the project was that of a UX Designer. I actively contributed to sketching, wireframing and prototyping along with generating the final concept video. Initially we as a team, wanted the system to have a plethora of features but as time passed we realized that our ideas could not be implemented in that short period of time. One important thing I learned from this project is that stripping down the features to create an MVP with just the core features should be the first step in every project.</p>
-                 
-                <br>
-                <br>
+  <div class="row">
+    <div class="column1" >
+       <img src="oleolemockups.png" alt="mockups"> 
+    </div>
 
-                <h4>EDIT: SOME INTERESTING NEWS</h4>
-                <p>A month after we turned in our project, Facebook released a new feature called <a href="https://www.facebook.com/photo.php?fbid=10154965097952063&set=a.415427007062.200610.576027062&type=3&theater" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">Watch Party</a>. There were quite a few similarities between OleOle and Watch Party which delighted us. Assuming this as a source of validation, we realized that we were on the right path when we decided to develop OleOle.</p>
-                <img src="watchparty.png" alt="Facebook Watch Party feature"> 
-
-                </ul></p>
-                </div>
-                <div class="bottomnavlinks">
-                    <div class="bottomnavlinksleft">
-                        <a href="rhythm.html">&#x2190; Previous Project </a>
-                    </div>
-                    <div class="bottomnavlinksright">
-                        <a href="linq.html">Next Project &#x2192;</a> 
-                    </div>
-                </div>
-			</div>
-		</div>
-		
-
-	</div>
+    <div class="column2">
+      <div>
+        <h4>MOCKUPS</h4>
+        <p>We incorporated the feedback received from testing our wireframes while developing the high fidelity prototype. Since we had limited time, we could not prototype all the micro-interactions we had planned out, Instead, we later demonstrated those in our concept video. The micro interactions were inspired from the FIFA and Call of Duty franchises as these applications do a good job in guiding the users for setting up a game. We wanted our users to have a frictionless experience while setting up a virtual room, so we examined a few games from these franchises. You can play around with the prototype <a href="https://invis.io/W2EF2ERRD" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">here</a>.</p>
+      </div>
+    </div> 
+  </div>
 
 
+  <div class="para">
+    <h4>DEVELOPING THE SYSTEM</h4>   
+    <p>We implemented this system using Python, Flask and Bootstrap. We could not get through hosting this on AWS but one of our team members did a fantastic job getting this up and running within a couple of weeks. For demonstration purposes, we created a room, streamed a video using YouTube Live API and asked our classmates to join in. The system tested well, and could support interaction though text, gifs emojis. You can find the entire code repository for the system <a href="https://github.com/pandeymauli/oleole" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">here</a>.</p>
+
+    <br>
+    <br>
+
+    <h4>REFLECTING ON THE PROJECT</h4>
+    <p>My role throughout the course of the project was that of a UX Designer. I actively contributed to sketching, wireframing and prototyping along with generating the final concept video. Initially we as a team, wanted the system to have a plethora of features but as time passed we realized that our ideas could not be implemented in that short period of time. One important thing I learned from this project is that stripping down the features to create an MVP with just the core features should be the first step in every project.</p>
+     
+    <br>
+    <br>
+
+    <h4>EDIT: SOME INTERESTING NEWS</h4>
+    <p>A month after we turned in our project, Facebook released a new feature called <a href="https://www.facebook.com/photo.php?fbid=10154965097952063&set=a.415427007062.200610.576027062&type=3&theater" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">Watch Party</a>. There were quite a few similarities between OleOle and Watch Party which delighted us. Assuming this as a source of validation, we realized that we were on the right path when we decided to develop OleOle.</p>
+    <img src="watchparty.png" alt="Facebook Watch Party feature"> 
+
+    </ul></p>
+  </div>
+
+  <div class="bottomnavlinks left">
+    <a href="linq.html">&#x2190; Previous Project </a>
+  </div>
+
+</div>
 
 <!-- Google Analytics -->
 <script>
@@ -198,5 +219,7 @@ ga('send', 'pageview');
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
+ 
+
 </body>
 </html>

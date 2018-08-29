@@ -12,7 +12,6 @@ body {
   grid-area:Portfolio;
 }
 .Logo{
-  padding-top: 5px;
   grid-area:Logo;
 }
 .Photography{
@@ -28,20 +27,26 @@ img{
   width: 20px;
   height: 10.5px;
 }
-.nav{
+/*.nav{
   background: rgba(255,255,255,0.95);
   padding-left: 5px;
   padding-right: 5px;
-/*  margin-right:15%;
-  margin-left: 15%;*/
   margin: 0px 10% 0px;
   display: grid;
   grid-auto-rows: 30px;
-/*  grid-auto-columns: minmax(84px,auto);*/
   grid-template-areas:
       "Logo Logo Logo"
       "Portfolio AboutMe Photography";
-}
+}*/
+.nav{
+  background: rgba(255,255,255,0.95);
+  padding: 2.5% 10% 0% 10%;
+  margin:0px;
+  display: grid;
+  grid-auto-rows: 30px;
+  grid-template-areas:
+      "Logo Logo Logo"
+      "Portfolio AboutMe Photography";}
 .nav {
  position: fixed;
  top:0;
@@ -68,30 +73,7 @@ img{
 .Logo{
   text-align: center;
 }
-/*.Panellabel {
-  letter-spacing: 0.2px;
-  margin-top: 160px;
-  margin-left: 20px;
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 40px;
-}
-.igniteux .Panellabel{
-  margin-top: 30px;
-  padding: 20px;
-  color: white;
-}*/
-/*.Paneldesc{
-  padding-top: 2px;
-  letter-spacing: 0.2px;
-  color: #F5F5F5;
-  text-align: center;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 20px;
-}*/
+
 .wrapper {
   display: grid;
   padding-top: 80px;
@@ -298,8 +280,8 @@ a.active{
   height: 21px;
 }*/
 .nav{
-  padding-top: 20px;
-  margin: 0px 6%;
+  padding: 20px 10% 0px 10%;
+  margin: 0px;
   display: grid;
   grid-template-rows: 40px;
   grid-template-columns-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);
@@ -325,23 +307,10 @@ a.active{
 .Logo{
   text-align: left;
 }
-/*.duo .Panellabel {
-  margin-top: 180px;
-  font-size: 36px;
-  line-height: 60px;
-}
-.duo .Paneldesc{
-  padding-top: 5px;
-  font-size: 18px;
-  line-height: 28px;
-}*/
+
 .duo{
   background-size: 750px 500px;
 }
-/*.Paneldesc{
-  font-size: 14px;
-  line-height: 22px;
-}*/
 .wrapper {
     margin-left: 6%;
     margin-right: 6%;
@@ -409,12 +378,7 @@ p, li {
   font-size: 24px;
   font-weight: 200;
 }
-/*.duo .overlaid {
-  opacity: 1;
-  position: absolute;
-  bottom: 5%;
-  left: 4%;
-}*/
+
 .duo{
   background-image: url('duo2.png');
   background-position: center; 
@@ -430,18 +394,15 @@ p, li {
 
 @media only screen and (min-width: 991px)  {
 .nav{
-  padding-top: 20px;
-/*  padding-left: 5px;
-  padding-right: 5px;*/
-  margin-left: 15%;
-  margin-right: 15%;
-  grid-auto-rows: 40px;
-  grid-template-columns: minmax(380px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
-  display: grid;
-  /*grid-auto-columns: minmax(500px,3fr) minmax(135px,1fr) minmax(135px,1fr);*/
-  grid-template-areas:
+    padding: 20px 15% 0px 15%;
+    margin:0px; 
+    grid-auto-rows: 40px;
+    grid-template-columns: minmax(350px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
+    display: grid;
+    grid-template-areas:
       "Logo Portfolio AboutMe Photography";
 }
+
 .wrapper {
   margin-left: 15%;
   margin-right: 15%;
