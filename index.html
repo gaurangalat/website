@@ -7,194 +7,145 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Gaurang Alat">
 
     <title>Gaurang Alat Portfolio</title>
 
-     <link href="web.css" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
-     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"/>
-
-<script type="text/javascript">
-
-		$(document).ready(function () {
-			$('.navLinks').click(function (e) {
-				$('.navLinks').removeClass('active');
-				$(e.target).addClass('active');
-			});
-		});
-
-</script>
-     
+    <link href="web.css" rel="stylesheet">
 </head>
 
 
 <body>
-	<!-- NAVIGATION -->
-	<nav class="nav">
-	    	<div class="Logo">
-	    		<a href="http://gaurangalat.com" class="navLinks"><img src="logo.png" alt="logo" style="  width: 20px;height: 10.5px;">
-            <span class="Logotext">Gaurang Alat
-            </span></a>
-	    	</div>
-	    	<div class="Portfolio">
-	    		<a href="#portfolio" class="navLinks">Portfolio</a>
-	    	</div>
-	    	<div class="AboutMe">
-	    		<a href="#aboutme" class="navLinks">About Me</a>
-	    	</div>
-	    	<div class="Photography">
-	    		<a href="http://gaurangalat.com/photography/" target="_blank" class="navLinks">Photography</a>
-	    	</div>
-		</nav>
 
-	<!-- GRID -->
-	<div class="wrapper" id="portfolio">
-		
+<nav class="nav">
+    <div class="Logo">
+        <a href="http://gaurangalat.com" class="navLinks"><img src="logo.png" alt="logo" style="  width: 20px;height: 10.5px;">
+    <span class="Logotext">Gaurang Alat
+    </span></a>
+    </div>
+    <div class="Portfolio">
+        <a href="#portfolio" class="navLinks">Portfolio</a>
+    </div>
+    <div class="AboutMe">
+        <a href="#aboutme" class="navLinks">About Me</a>
+    </div>
+    <div class="Photography">
+        <a href="http://gaurangalat.com/photography/" target="_blank" class="navLinks">Photography</a>
+    </div>
+</nav>
 
-		<div class="box duo">
-			<div class="testtext">
-				Duo Security
-			</div>
-			<div class="testtext2">
-				UX Design
-			</div>
-	<!-- 		<img src="test.png" class="image"> -->
-			<div class="overlaid">
-				<a href="Projects/duo.html">View Project</a>
-  			</div>
-  		</div>
-		
-		<div class="box expedia">
-			<div class="testtext">
-				Google Pets
-			</div>
-			<div class="testtext2">
-				UX Design 
-				
-			</div>
-	<!-- 		<img src="test.png" class="image"> -->
-			<div class="overlaid">
-				<a href="Projects/google.html">View Project</a>
-  			</div>
-  		</div>
+<div class="header">
+    <h2>Hi, I am Gaurang, a Product Designer with a strong knack for using critical thinking to solve problems and create thoughtful experiences.</h2>
+    <br>
+    <svg height="20" width="auto">
+        <line x1="0" y1="0" x2="1000" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+    </svg>
+</div>
 
-  		<div class="box rhythm">
-			<div class="testtext">
-				Rhythm
-			</div>
-			<div class="testtext2">
-				UX Design 
-				<br>
-				User Research
-			</div>
-	<!-- 		<img src="test.png" class="image"> -->
-			<div class="overlaid">
-				<a href="Projects/rhythm.html">View Project</a>
-  			</div>
-  		</div>
+<div class= "wrapper" id="portfolio">
+    
+    <div class="duo">
+        <a href="Projects/duo.html" class="card">
+          <div class="thumb" style="background-image: url(duonew.png);"></div>
+          <article>
+            <h1>Duo Security</h1>
+            <p>Shipping the new Security Checkup</p>
+            <span>UX Design</span>
+          </article>
+        </a>
+    </div>
+    <!-- <div clas="wonderus">
+        <a href="" class="card">
+          <div class="thumb"></div>
+          <article>
+            <h1>Wonderus</h1>
+            <p>Building an acronym decoder for teams</p>
+            <span>UX Design</span>
+          </article>
+        </a>
+    </div> -->
+    <div class="google">
+        <a href="Projects/google.html" class="card">
+          <div class="thumb" style="background-image: url(googlenew.png);"></div>
+          <article>
+            <h1>Google Pets</h1>
+            <p>Google Design Exercise</p>
+            <span>UX Design, User Research</span>
+          </article>
+        </a>
+    </div>
+    <div class="rhythm">
+        <a href="Projects/rhythm.html" class="card">
+          <div class="thumb" style="background-image: url(rhythmnew.png);"></div>
+          <article>
+            <h1>Rhythm</h1>
+            <p>Designing a networking app for musicians</p>
+            <span>UX Design, User Research</span>
+          </article>
+        </a>
+    </div>
+    <div class="linq">
+        <a href="Projects/linq.html" class="card">
+          <div class="thumb" style="background-image: url(linqnew.png);"></div>
+          <article>
+            <h1>Linq</h1>
+            <p>Building a system to monitor social behavior</p>
+            <span>UX Design</span>
+          </article>
+        </a>
+    </div>
+    <div class="oleole">
+        <a href="Projects/oleole.html" class="card">
+          <div class="thumb" style="background-image: url(oleolenew.png);"></div>
+          <article>
+            <h1>OleOle</h1>
+            <p>Enhancing the experience of watching sports</p>
+            <span>UX Design</span>
+          </article>
+        </a>
+    </div>
+    <div class="ignite">
+        <a href="https://www.youtube.com/watch?v=9Z5bTOZt850&feature=youtu.be" class="card">
+          <div class="thumb" style="background-image: url(igniteuxnew.png);"></div>
+          <article>
+            <h1>Ignite UX @ Duo Security</h1>
+            <p>How Mobile UI is turning upside down</p>
+            <span>Ignite style talk</span>
+          </article>
+        </a>
+    </div>
+</div>
 
-  		<div class="box emosense">
-			<div class="testtext">
-				Linq
-			</div>
-			<div class="testtext2">
-				UX Design
-			</div>
-	<!-- 		<img src="test.png" class="image"> -->
-			<div class="overlaid">
-				<a href="Projects/linq.html">View Project</a>
-  			</div>
-  		</div>
+<div id="aboutme" class="aboutme">
+     <svg height="20" width="auto">
+        <line x1="0" y1="0" x2="1000" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+    </svg>
+     <br>
+    <div>           
+        <h2>"I bring a diverse design toolbox 🛠, a unique cultural perspective 👓 and an amusing British-Indian accent 🇬🇧🇮🇳"</h2>
+       <br>
+        <svg height="20" width="auto">
+            <line x1="0" y1="0" x2="1000" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+        </svg>
+        <br>
+        <br>
+        <br>
+        <p>I am a Product designer passionate about designing for growth and conversion. Over the course of the last two years, I have applied human-centered design principles to <a href="http://gaurangalat.com/projects" target="_blank" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">projects</a> in the domains of technology, social networks, games and healthcare. </p> 
+        <p>Currently, I am looking for an opportunity to create impactful work and grow my skills. I enjoy working in a collaborative and diverse environment surrounded by people with different skill sets and lots of coffee. If you are curious to know how I can contribute to your company's mission, please get in <a href="mailto:gaurang.alat@gmail.com" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">touch</a> with me!</p>
+        <br>
+        <div class="button">
+            <a href="https://drive.google.com/open?id=1vW0-Y7cox6C0GQcDOyX10bHjgoOpy9_C" target="_blank">VIEW RESUME</a>
+        </div>
+    </div>
+</div>
 
-  		<div class="box umhs">
-			<div class="testtext">
-				OleOle
-			</div>
-			<div class="testtext2">
-				UX Design
-			</div>
-	<!-- 		<img src="test.png" class="image"> -->
-			<div class="overlaid">
-				<a href="Projects/oleole.html">View Project</a> 
-  			</div>
-  		</div>
+<div class="box2 social">
+        <a href="https://linkedin.com/in/gaurangalat" target="_blank" class="linkedin"><h3>LinkedIn</h3></a>
+        <a href="https://dribbble.com/gaurangalat" target="_blank" class="dribbble"><h3>Dribbble</h3></a>
+        <a href="https://twitter.com/@gaurangalat" target="_blank" class="twitter'"><h3>Twitter</h3></a>
+    </div>
+</div>
 
-
-  		<!-- <div class="box igniteux" style="background-color: #4CAF50;">
-			<a href="https://youtu.be/9Z5bTOZt850" target="_blank"> 
-				<div class="Panellabel">
-					Help! My Mobile UI is turning upside down
-				</div>
-  				<div class="Paneldesc" style="color:#f5f5f5;margin-top: -28px;">
-  					<h4>Watch my Ignite UX talk &#x2192;</h4>
-  				</div>
-  			</a>
-  		</div> -->
-
-  		<div class="box igniteux">
-			<div class="testtext">
-				Ignite UX 
-			</div>
-			<div class="testtext2">
-				UX Design
-			</div>
-	<!-- 		<img src="test.png" class="image"> -->
-			<div class="overlaid">
-				<a href="https://youtu.be/9Z5bTOZt850">Watch my talk</a>
-  			</div>
-  		</div>
-
-		<div id="aboutme" class="box1 aboutme">
-				<h1>About Me</h1>
-				<div class="inabout">
-					<!-- <img src="face.png" alt="profile_photo" style="width:150px;height:150px;float:right"> -->
-					<div class="inabouttext">
-					<!-- <h3>"I am interested in streamlining user journeys and amplifying growth"</h3> -->
-					<h3>"I bring a diverse design toolbox 🛠, a unique cultural perspective 👓 and a British-Indian accent 🇬🇧🇮🇳"</h3>
-					<p>Hi, I am Gaurang, a Product designer passionate about designing for growth. I have a strong knack for using critical thinking to solve complex problems and create thoughtful experiences. Over the course of the last two years, I have applied human-centered design principles to <a href="http://gaurangalat.com/projects" target="_blank" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">projects</a> in the domains of technology, social networks, games and healthcare. </p> 
-					<p>Currently, I am looking for an opportunity to create impactful work and grow my skills. I enjoy working in a collaborative and diverse environment surrounded by people with different skill sets and lots of coffee. If you are curious to know how I can contribute to your company's mission, please get in <a href="mailto:gaurang.alat@gmail.com" target="_top" style="text-decoration: none;border-bottom-style: dotted;border-width:1.25px;">touch</a> with me!
-					<p>
-					<br>
-					<a href="https://drive.google.com/open?id=1vW0-Y7cox6C0GQcDOyX10bHjgoOpy9_C" target="_blank" style="text-decoration: none;padding: 8px; padding-left:10px;border-style: solid;border-radius:10px;border-width: 1.2px;color: white;background: rgba(76,175,80,0.85);font-size: 14px;"> View my Resume &#x2192;</a>
-					</p>
-					</div>
-				</div>
-		</div>
-	</div>
-<!-- 
-		<div class="aboutmephoto">
-			<img src="face.png">
-		</div>	
-  	</div> -->
-
-		<div class="box2 social">
-			<a href="https://linkedin.com/in/gaurangalat" target="_blank" class="linkedin"><h2>LinkedIn</h2></a>
-			<a href="https://dribbble.com/gaurangalat" target="_blank" class="dribbble"><h2>Dribbble</h2></a>
-			<!-- <a href="https://medium.com/@gaurangalat" target="_blank" class="medium"><h2>Medium</h2></a> -->
-			<a href="https://twitter.com/@gaurangalat" target="_blank" class="twitter'"><h2>Twitter</h2></a>
-<!-- 			<p>2017 Copyright </p> -->
-		</div>
-
-		<div class="copyfooter">
-			<p>
-				Made with CSS Grid. Copyright &copy; 2018 Gaurang Alat
-			</p>
-		</div>
-
-
-
-<script type="text/javascript">
-
-		$(document).ready(function () {
-			$('.navLinks').click(function (e) {
-				$('.navLinks').removeClass('active');
-				$(e.target).addClass('active');
-			});
-		});
-
-</script>
 
 <!-- Google Analytics -->
 <script>
@@ -206,9 +157,9 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-108361371-1', 'auto');
 ga('send', 'pageview');
 </script>
-<!-- End Google Analytics -->
 
-<!-- Hotjar Tracking Code for www.gaurangalat.com -->
+
+Hotjar Tracking Code for www.gaurangalat.com
 <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};

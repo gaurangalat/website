@@ -1,10 +1,8 @@
 body {
   background-color: #fff;
-  font-family: "Istok Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-.aboutme{
-  grid-area:aboutme;
-}
+
 .AboutMe{
   grid-area:AboutMe;
 }
@@ -17,27 +15,13 @@ body {
 .Photography{
   grid-area:Photography;
 }
-/*nav.nav{
-  background: rgba(255,255,255,0.97);
-}*/
 .Logotext{
   display: none;
 }
-img{
+.Logo img{
   width: 20px;
   height: 10.5px;
 }
-/*.nav{
-  background: rgba(255,255,255,0.95);
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 0px 10% 0px;
-  display: grid;
-  grid-auto-rows: 30px;
-  grid-template-areas:
-      "Logo Logo Logo"
-      "Portfolio AboutMe Photography";
-}*/
 .nav{
   background: rgba(255,255,255,0.95);
   padding: 2.5% 10% 0% 10%;
@@ -73,24 +57,66 @@ img{
 .Logo{
   text-align: center;
 }
-
-.wrapper {
+.header{
+  margin: 25% 10% 0px 10%;
+}
+.wrapper{
+  margin: 10%;
   display: grid;
-  padding-top: 80px;
-  margin: 0px 10% 0px;
-  grid-gap: 10px;
-  grid-auto-columns: minmax(250px, auto);
-  grid-auto-rows: 250px;
-  grid-template-areas:
-      "duo"
-      "rhythm" 
-      "expedia"
-      "igniteux"
-      "emosense"
-      "umhs"
-      "aboutme"
-      "aboutme"
-      "aboutme";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+.card {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+}
+.aboutme{
+  margin: 25% 10% 10% 10%;
+}
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+.card article {
+  padding: 15px 20px;
+}
+ 
+/* typography */
+.card h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+}
+ 
+.card p { 
+  margin: 5px 0px 15px 0px;
+  line-height: 1.3;
+  font-size: 14px;
+}
+ 
+.card span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+}
+.card .thumb {
+  padding-bottom: 75%;
+  background-size: cover;
+  background-position: center center;
 }
 .social{
   display: grid;
@@ -101,378 +127,138 @@ img{
   grid-template-areas:
   "linkedin dribbble twitter"    
 }
-.inabout img{
-/*  padding-left: 8px;*/
-  padding-bottom: 10px;
-  max-width: 75px;
-  max-height: 75px;
-}
-
-h1 {
-  font-style: medium;
-  font-size: 24px;
-  line-height: 40px;
-}
-h2{
-  font-weight: 100;
-  font-size: 12px;
-  line-height: 20px;
-  color: #808080;
-}
-h3{
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 600;
-  color: #000000;
-    padding-bottom: 10px;
-}
-h4{
-  color: white;
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  color: #FFFAFA;
-  text-align: center;
-  font-weight: 300;
-  font-size: 14px;
-}
 p, li {
   font-weight: 300;
   font-size: 14px;
   line-height: 22px;
-  color: #2b2b2b;
-  font-family: "Open Sans", sans-serif;
 }
-
-/*Portfolio modal contents*/
-
-.box {
-  background-color: #f5f5f5;
-  border-radius: 2px;
-}
-.box a{
-  text-decoration: none;
-}
-.box a:hover {
-  text-decoration: none;
-}
-.box:hover{
-  transition: opacity 0.3s ease-in-out;
-  transform: scale(1.01);
-}
-.box1 {
-/*  background-color: #f5f5f5;*/
-/*  margin-top: 40px;*/
-  margin-bottom: 10px;
-  height: 300px;
-  border-radius: 2px;
-  padding-left: : 20px;
-  padding-right: 20px;
-  padding-top: 60px;
-  font-size: 150%;
-}
-.box2 {
-  border-radius: 2px;
-}
-.duo{
-  grid-area:duo;
-/*  background-color: #4CAF50;*/
-  background-image: url('duosmall2.png');
-  background-position: center; 
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.rhythm{
-/*  background-color: #009688;*/
-  background-image: url('test2.png');
-  background-position: center; 
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.expedia{
-/*  background-color: #00BCD4;*/
-/*  background-size: 300px 200px;*/
-  background-image: url('google.png');
-  background-position: center; 
-  background-size: cover;
-  background-repeat: no-repeat;
-
-}
-.emosense{
-/*  background-color: #3F51B5;*/
-/*  background-color: #00BCD4;*/
-  background-image: url('linq.png');
-  background-position: center; 
-  background-size: cover;
-}
-.umhs{
-/*  background-color: #2196F3;*/
-/*  background-color: #009688;*/
-  background-image: url('oleole.png');
-  background-position: center; 
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.igniteux{
-/*  background-color: #2196F3;*/
-/*  background-color: #009688;*/
-  background-image: url('igniteux.png');
-  background-position: center; 
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.overlaid {
-/*  transition: .1s ease;*/
-  margin-left:20px;
-  margin-top: 100px; 
-/*  margin-left: 20px;
-  margin-top: 60px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)*/
-}
-.overlaid a{
-  color: black;
-  font-size: 12px;
-  border-bottom-style: dotted;
-  border-width: 1px;
-}
-/*.box:hover .overlaid {
-  opacity: 1;
-  background: rgba(255,255,255,0.95);
-}*/
-.testtext{
-  font-weight: 600;
-  margin-left: 20px;
-  margin-top: 60px;
+h2{
+  font-weight: 300;
+  line-height: 1.5;
   font-size: 18px;
 }
-.testtext2{
-  margin-left: 20px;
+h3{
+  font-weight: 100;
   font-size: 12px;
-  font-weight: 200;
+  line-height: 20px;
+}
+a{
+  color: #1b1b1b;
+  text-decoration: none;
 }
 a.active{
  font-weight: 600;
  text-decoration: underline;
 }
-.rhythm > .overlaid{
-  margin-top: 80px; 
-}
-.copyfooter p{
-  font-size: 8px;
-  text-align: center;
-  padding:none;
-}
-
-@media only screen and (min-width: 600px){
-.Logotext{
-  display: inline;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing:-0.5px;
-  margin-left: 5px;
-}
-/*img{
-  width: 40px;
-  height: 21px;
-}*/
-.nav{
-  padding: 20px 10% 0px 10%;
-  margin: 0px;
-  display: grid;
-  grid-template-rows: 40px;
-  grid-template-columns-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);
-  grid-template-areas:
-      "Logo Portfolio AboutMe Photography";
-}
-.navLinks{
-  font-size: 12px;
-  text-transform: uppercase;
+.button{
+  padding-top: 10px;
   text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-.AboutMe{
-  text-align: right;
-}
-.Portfolio{
-  text-align: right;
-}
-.Photography{
-  text-align: right;
-}
-.Logo{
-  text-align: left;
-}
-
-.duo{
-  background-size: 750px 500px;
-}
-.wrapper {
-    margin-left: 6%;
-    margin-right: 6%;
-    grid-template-areas:
-      "duo duo"
-      "duo duo"
-      "rhythm expedia"
-      "igniteux  emosense"
-      "umhs ."
-      "aboutme aboutme"
-      "aboutme aboutme"
-  /*    "aboutme aboutme"*/
-      "aboutme aboutme";
-}
-.social{
-  margin-top: 60px;
-  margin-left: 20%;
-  margin-right: 20%;
-}
-.box1{
-  padding-top: 40px;
-  height: 600px;
-}
-.inabouttext{
-/*  padding-left: 30px;
-  padding-right: 30px;*/
-  padding-top: 20px;
-  padding-right: 100px;
-}
-.inabout img{
-  max-width: 120px;
-  max-height: 120px;
-}
-.duo h4{
-  font-size: 16px;
-  padding-left: 80px;
-  padding-right: 80px;
-}
-h1{
-  font-size: 36px;
-  line-height: 54px
-}
-h2{
+  padding: 12px;
+  border-style: solid;
+  border-width: 2px;
+  max-width: 100px;
   font-size: 14px;
-  line-height: 22px;
 }
-h3{
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 600;
-}
-p, li {
-  font-size: 16px;
-  line-height: 26px;
-}
-.duo .testtext{
-  font-weight: 600;
-  margin-left: 20px;
-  margin-top: 150px;
-  font-size: 40px;
-}
-.duo .testtext2{
-  margin-left: 20px;
-  margin-top: -5px;
-  font-size: 24px;
-  font-weight: 200;
+.button:hover{
+  box-shadow: 0 0 0 1px black;
+  transition: transform 200ms ease-out;
+  transform: translate(4px,-4px);
 }
 
-.duo{
-  background-image: url('duo2.png');
-  background-position: center; 
-  background-repeat: no-repeat;
-}
-.duo > .overlaid{
-  margin-top: 220px; 
-}
-.copyfooter p{
-  font-size: 10px;
-}
+
+@media only screen and (min-width: 480px) {
+  .nav{
+    padding: 20px 10% 0px 10%;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 40px;
+    grid-template-columns-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);
+    grid-template-areas:
+        "Logo Portfolio AboutMe Photography";
+  }
+  .Logotext{
+    display: inline;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing:-0.5px;
+    margin-left: 5px;
+  }
+  .navLinks{
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  .AboutMe{
+    text-align: right;
+  }
+  .Portfolio{
+    text-align: right;
+  }
+  .Photography{
+    text-align: right;
+  }
+  .Logo{
+    text-align: left;
+  }
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .social{
+    margin-top: 60px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  p, li {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .header{
+    margin: 10% 20%;
+  }
+  h2{
+    font-size: 24px;
+  }
+  h3{
+    font-size: 14px;
+    line-height: 22px;
+  }  
 }
 
-@media only screen and (min-width: 991px)  {
-.nav{
+@media only screen and (min-width: 991px) {
+  .nav{
     padding: 20px 15% 0px 15%;
     margin:0px; 
-    grid-auto-rows: 40px;
+    grid-auto-rows: 80px;
     grid-template-columns: minmax(350px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
     display: grid;
     grid-template-areas:
       "Logo Portfolio AboutMe Photography";
-}
-
-.wrapper {
-  margin-left: 15%;
-  margin-right: 15%;
-  padding-top: 100px;
-  grid-template-areas:
-    "duo duo expedia"
-    "duo duo rhythm"
-    "emosense umhs igniteux"
-    "aboutme aboutme aboutme"
-    "aboutme aboutme aboutme"
-    "aboutme aboutme aboutme";
-}
-.social{
+  }
+  .header{
+    margin: 15% 20% 2.5% 20%;
+  }
+  .wrapper {
+    margin: 0% 20% 5% 20%;
+    padding-top: 7.5%;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+  }
+  .aboutme{
+    margin: 10% 20%;
+  }
+  .social{
   margin-top: 10px;
   margin-left: 30%;
   margin-right: 30%;
 }
-/*.AboutMe{
-  text-align: right;
+  p, li{
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.03em;
+  }
+  h2{
+    font-size: 36px;
+    letter-spacing: 0.03em;
+  }
 }
-.Portfolio{
-  text-align: right;
-}
-.Logo{
-  text-align: left;
-}*/
-.box1{
-  padding-top: 80px;
-  height: 600px;
-}
-.inabout img{
-  max-width: 150px;
-  max-height: 150px;
-}
-h1{
-  font-size: 40px;
-  line-height: 60px;
-}
-h3{
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 600;
-}
-p, li{
-  font-size: 16px;
-  line-height: 27px;
-}
-}
-
-.inabout a{
-  color: #808080;
-  font-weight: 400;
-}
-.social a {
-  text-decoration: none;
-}
-.social a:hover{
-  color: #000;
-  text-decoration: underline;
-}
-
-/*.image{
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-.box:hover .image{
-  opacity: 0.3;
-}
-*/
