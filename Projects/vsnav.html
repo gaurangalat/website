@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+ 
+  <title>Enhancing mobile navigation at VS</title>  
+
+  <link href="test1.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<nav class="nav">
+  <div class="Logo">
+      <a href="http://gaurangalat.com" class="navLinks"><img src="logo.png" alt="logo" style="  width: 20px;height: 10.5px;">
+      <span class="Logotext">Gaurang Alat
+      </span></a>
+  </div>
+  <div class="Portfolio">
+      <a href="http://gaurangalat.com/#portfolio" class="navLinks">Portfolio</a>
+  </div>
+  <div class="AboutMe">
+      <a href="http://gaurangalat.com/#aboutme" class="navLinks">About Me</a>
+  </div>
+  <div class="Photography">
+      <a href="http://gaurangalat.com/photography/" target="_blank" class="navLinks">Photography</a>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+  <div class="header">
+    <h1>Improving mobile navigation at Victoria's Secret</h1>
+    <h2>Led design efforts for improving product navigation for Victoria Secret's mobile website</h2>
+  </div>
+
+  <div class="para">
+
+    <img src="SChero.png" alt="glimpse of final design">
+    <div class="highlight">
+      <ul>
+        <li><b>Goal</b>: To enable users to find products easily and browse through different product categories seamlessly</li>
+        <li><b>What I did</b>: User journey map, sketching, prototyping, usability testing, A/B testing and validating analytics</li>
+      </ul>
+    </div>
+    
+    <p>Historically, Victoria Secret's product navigation had been contained inside a hamburger menu on the mobile website. The navigation allowed users to traverse through the first layer of product categories (Bras, Panties, Lingerie, etc) but didn't show the secondary and tertiary levels of products available within each category. Higher levels of a product category were available to a user only when they visited the product category's landing page. The main goal of this redesign was to allow users to access deeper levels of a product category from the hamburger menu.</p> 
+  </div>
+
+  <div class="row">
+    <div class="column1">
+      <div>
+          <img src="SC_old.png" alt="beta design">
+      </div>
+      <br>
+    </div>
+
+    <div class="column2" >
+      <h4>TOO MANY TAPS</h4>
+      <p>A simple example here demonstrates the shortcomings of the navigation structure. A user in order to visit a certain sub-category, would have to choose the primary product category in the menu, visit the landing page and then scroll down on the corresponding landing page to find the list of sub-categories. Users would always need to visit the landing page of a category to view any sub-categories, irrespective of the type of page they were on. </p>
+    </div> 
+  </div>
+
+  <div class="para">
+    <h4>SCOPING OUT THE WORK</h4>
+      <p>An obvious solution to increase the visibility of secondary and tertiary levels of product categories was to introduce a tiered navigation. This style would nest sub-sub-categories into sub-categories which would be encapsulated by primary level categories. Before moving on to design, I checked in with the CMS team to make sure they were aligned with this direction. With everyone on the same page, I started designing some mockups to envision how a tiered navigation might look and work.</p>
+      <br>
+  </div>
+
+ <div class="para">
+    <h4>UNDERSTANDING THE PROBLEM SPACE</h4>
+      <p>An obvious solution to increase the visibility of secondary and tertiary levels of product categories was to introduce a tiered navigation. This style would nest sub-sub-categories into sub-categories which would be encapsulated by primary level categories. Before moving on to design, I checked in with the CMS team to make sure they were aligned with this direction. With everyone on the same page, I started designing some mockups to envision how a tiered navigation might look and work.</p>
+      <br>
+  </div>
+
+  <div class="row">
+    <div class="column1" >
+        <img src="SCold.png" alt="icon iterations">
+    </div>
+
+    <div class="column2">
+      <div>
+        <h4>Option A: Accordion approach</h4>
+        <p>This variant adopted an accordion styled expand/ collapse functionality. Users could expand categories and even sub-categories to get to the tertiary levels of product categories. While this facilitated an easier way to switch between categories since everything was on one page, the expanded view reduced visibility for other categories in the menu.  
+        </p>
+      </div>
+    </div>
+  </div> 
+
+  <!-- <div class="row">
+    <div class="column1" >
+        <img src="duo_perception.png" alt="Landing text and icon change">
+    </div>
+
+    <div class="column2">
+      <br>
+      <br>
+      <div>
+        <p>By using a combination of ambiguous copy in the dropdown label and an extra paragraph of text, I could provide more context to the user while making space for the edge case design.</p>
+      </div>
+    </div> 
+  </div>  -->
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="column1" >
+        <img src="FDElanding.png" alt="concept iterations for dropdown contents for FDE">
+    </div>
+
+    <div class="column2">
+      <div>
+        <h4>Option B: Drill down approach</h4>
+        <p>Another variant included a linear drill down approach, where the user would start at the primary level of a product category and then end up at a tertiary level via a secondary level. While this benefitted users who were looking for a specific product as it helped them focus, it also increased the number of taps required to go from primary to teriary level and vice versa. This drawback would impact users who wanted to browse through the product collections. </p>
+
+      </div>
+    </div> 
+  </div>
+
+
+  <!-- <div class="row">
+    <div class="column1" >
+         <img src="FDE.png" alt="FDE final design">
+    </div>
+
+    <div class="column2">
+      <div>
+        <p> Not all Android devices are shipped with disk encryption, so users have to manually enable encryption. This was the normal case that the Beta version addressed. But Security Checkup identified encrypted devices with no passcode as non-encrypted devices. So it was  necessary to design a set of remediation instructions for this edge case.</p>
+
+      </div>
+    </div> 
+  </div> -->
+
+  <!--  <div class="row">
+    <div class="column1" >
+         <img src="duo_OSedgecase.png" alt="OS final design">
+    </div>
+
+    <div class="column2">
+      <div>
+        <p>The edge case for OS issue resulted from the fact that device manufacturers occasionally do not provide updates to older models. To tackle this, I designed instructions to educate the users that the latest OS supported by a device is not the same as the latest OS available for Android OS. </p>
+
+      </div>
+    </div> 
+  </div> -->
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="column1" >
+        <img src="SC_oldinteraction.png" alt="concept iterations">
+    </div>
+
+    <div class="column2">
+      <div>
+        <h4>Option C: Hybrid approach</h4>
+        <p>This variant, as the name suggests, was a combination of the accordion and the drill down approach. It not only allowed users to drill down into a category but also facilitated easier switching between various sub-categories and even categories. The hybrid approach combined the strengths of the previous oprions while limiting the inherited drawbacks. </p>
+
+      </div>
+    </div> 
+  </div>
+
+  <!-- <div class="row">
+    <div class="column1" >
+         <img src="duo_dismiss.png" alt="iterations for dismiss dialog box">
+    </div>
+    <div class="column2">
+      <div>
+        <p>User research pointed out that users wished to hide the warning notifications. Since it was important that users should have the perfect security hygiene, it became necessary to educate them about the alternate way to access this feature after dismissing the notification. </p>
+      </div>
+    </div> 
+  </div> -->
+
+  <br>
+  <div class="para">
+  <!--   <img src="duo_flow.png" alt="Final flow for Security Checkup"> -->
+    <h4>CHECKING FOR USABILITY ISSUES</h4>
+    <p>After considering the pros and cons of each variant, it became clear that the hybrid approach satisfied the needs of two kinds of users — those who wanted to shop for a certain product and those who wanted to casually browse the website. The next logical step was to put this design in front of users and see how it performed. This step was crucial to understand the usability of the proposed hybrid solution.</p>
+    
+    <br>
+    
+    <h4>SETTING UP THE USABILITY TESTING</h4>
+    <p>The test objective was planned around two scenarios that largely reflected the user behavior we had seen — finding a certain product, and switching categories to find a different product. To determine the success of the new design, it was imperative to have a reference. So I ended up conducting usability tests on the current navigation setup (live website) as well on a prototype with the new navigation. Suucess rate and time for task completion were the two metrics recorded from the two testing groups.</p>
+    
+    <br>
+
+    <h4>LOOKING BACK AT A WONDERFUL SUMMER</h4>
+    <p>I was fortunate enough to spend my summer at a wonderful company being surrounded by some of the kindest people I have ever met. Working in a professional environment at Duo made me aware of my weaknesses as a designer and helped polish my communication skills while regular collaboration with developers taught me about proper methods for documentation and sharing design assets. 
+    </p>
+    </div>
+
+    <div class="bottomnavlinks right">
+      <a href="google.html">Next Project &#x2192;</a> 
+    </div>
+    
+</div>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-90319665-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Hotjar Tracking Code for www.gaurangalat.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:661481,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+</body>
+</html>
