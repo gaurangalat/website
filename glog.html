@@ -34,11 +34,11 @@
 							<form class="loginForm">
 								<div class="input-fields-div autoMargin">
 									<div class="input-field">
-					          <input id="user_name" type="text" class="validate">
-					          <label for="user_name">Email or Phone</label>
+					          <input id="user_name" type="text" class="validate" data-hj-whitelist>
+					          <label for="user_name">Email</label>
 					        </div>
 									<div id="passwordDiv" class="input-field scale-transition scale-out">
-					          <input id="pass_word" type="password" class="validate">
+					          <input id="pass_word" type="text" class="validate" data-hj-whitelist>
 					          <label for="pass_word">Password</label>
 										<a href="javascript:void(0)" class="showPassword" onclick="showPassword()"><i class="material-icons md-18">visibility</i></a>
 					        </div>
@@ -50,7 +50,7 @@
 									<p>You can join us now by<br/><a href="#createAccountNow" class="createAccountNow">Creating a account</a></p>
 								</div>
 								<div class="input-fields-div autoMargin right-align">
-									<a href="#enterOTP" class="loginNextBtn waves-effect waves-light btn">Get OTP</a>
+									<a href="#enterOTP" class="loginNextBtn waves-effect waves-light btn">NEXT</a>
 									<button type="submit" onclick="login()" class="loginBtn waves-effect waves-light btn hide">Login</button>
 								</div>
 							</form>
