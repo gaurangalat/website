@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   font-family: roboto, 'Noto Sans Myanmar UI', arial, sans-serif;
   /*letter-spacing: -0.5px;*/
 }
@@ -63,8 +63,8 @@ a{
 }
 .logoImage {
   display: block;
-  margin: 10px auto;
-  max-height: 30px;
+  margin: 15px auto;
+  max-height: 25px;
 }
 .clearfix {
   width: 100%;
