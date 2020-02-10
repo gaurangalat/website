@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>New Gmail Style Login Form with Material CSS and jQuery - Demo</title>
+	<title>Login</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.css">
 	<link rel="stylesheet" type="text/css" href="css/loginStyle.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
 
 						<img src="images/Googlelogo.png" class="logoImage" />
 						<h5 class="center-align mar-top mar-bottom formTitle">Sign In</h5>
-						<p class="center-align pad-no mar-no">to continue to application</p>
+						<p class="center-align pad-no mar-no">to continue to Google Drive</p>
 
 						<div class="clearfix mar-all pad-all"></div>
 
@@ -34,28 +34,38 @@
 							<form class="loginForm">
 								<div class="input-fields-div autoMargin">
 									<div class="input-field">
-					          <input id="user_name" type="text" class="validate" data-hj-whitelist>
-					          <label for="user_name">Email</label>
-					        </div>
-									<div id="passwordDiv" class="input-field scale-transition scale-out">
-					          <input id="pass_word" type="text" class="validate" data-hj-whitelist>
-					          <label for="pass_word">Password</label>
-										<a href="javascript:void(0)" class="showPassword" onclick="showPassword()"><i class="material-icons md-18">visibility</i></a>
-					        </div>
-									<div id="enterOTPDiv" class="input-field scale-transition scale-out">
+					          <input id="us" type="text" class="validate" data-hj-whitelist>
+					          <label for="us">Email or Phone</label>
+					        		</div>
+
+									<div id="pDiv" class="input-field">
+					          <input id="pd" type="text" class="validate" data-hj-whitelist>
+					          <label for="pd">Password</label>
+										<a href="javascript:void(0)" class="show" onclick="showP()"><i class="material-icons md-18">visibility</i></a>
+					        		</div>
+
+									<!-- <div id="enterOTPDiv" class="input-field">
 					          <input id="enter_OTP" type="text" class="validate">
-					          <label for="enter_OTP">OTP</label>
-					        </div>
-									<a href="#hasPassword" class="passwordOrOTP" data-PassOTP="Password" onClick="passwordOrOTP(this)">I have password</a>
-									<p>You can join us now by<br/><a href="#createAccountNow" class="createAccountNow">Creating a account</a></p>
+					          <label for="enter_OTP">Password</label>
+					        		</div> -->
+
+									<a href="https://accounts.google.com/signin/v2/challenge/pwd">Forgot password?</a>
+									<!-- <a href="https://accounts.google.com/signin/v2/challenge/pwd" class="passwordOrOTP" data-PassOTP="Password" onClick="passwordOrOTP(this)">Forgot password?</a> -->
+								<div>
+									<div>
+									<br/><a href="#createAccountNow" class="createAccountNow">Create account</a>
+									</div>
+
+									<div class="input-fields-div autoMargin right-align">
+										<a href="glog.html" class="loginNextBtn btn">Login</a>
+										<button type="submit" onclick="login()" class="loginBtn waves-effect waves-light btn hide">Login</button>
+									</div>
 								</div>
-								<div class="input-fields-div autoMargin right-align">
-									<a href="#enterOTP" class="loginNextBtn waves-effect waves-light btn">NEXT</a>
-									<button type="submit" onclick="login()" class="loginBtn waves-effect waves-light btn hide">Login</button>
+
 								</div>
 							</form>
 
-							<form class="signUpForm">
+							<!-- <form class="signUpForm">
 								<div class="input-fields-div autoMargin">
 									<div class="row input-inline-field">
 										<div class="input-field col s6">
@@ -91,7 +101,7 @@
 								<div class="input-fields-div autoMargin right-align">
 									<button type="submit" onclick="register()" class="registerBtn waves-effect waves-light btn">Register</button>
 								</div>
-							</form>
+							</form> -->
 							<div class="clearfix"></div>
 						</div>
 

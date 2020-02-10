@@ -57,7 +57,7 @@ function showProgress() {
   }, 500)
 }
 
-function showPassword() {
+function showP() {
   var iconText = $(".showPassword:eq(0) i").text();
   var input_type = (iconText == "visibility") ? "text" : "password";
   if(input_type == "text") {

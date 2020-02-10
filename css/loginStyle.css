@@ -1,9 +1,10 @@
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: roboto, 'Noto Sans Myanmar UI', arial, sans-serif;
   letter-spacing: -0.5px;
 }
 a{
   font-weight: 500;
+  font-size: 14px;
 }
 .setMaxWidth{
   max-width: 450px;
@@ -108,7 +109,7 @@ a{
 }
 .passwordOrOTP {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .hidden {
   visibility: hidden;
@@ -121,16 +122,16 @@ a{
   width: 50%;
   float: left;
 }
-#reg_passwordDiv, #passwordDiv{position: relative;}
+/*#reg_passwordDiv, #passwordDiv{position: relative;}
 #formContainer.goLeft {
   -webkit-animation: slideLeft 0.2s forwards;
   animation: slideLeft 0.2s forwards;
-}
+}*/
 #formContainer.goRight {
   -webkit-animation: zeroLeft 0.2s forwards;
   animation: zeroLeft 0.2s forwards;
 }
-.showPassword {
+.show {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -138,7 +139,7 @@ a{
   -moz-transform: translateY(-50%);
   right: 10px;
 }
-.input-inline-field .showPassword{
+.input-inline-field .show{
   right: 15px;
 }
 @-webkit-keyframes slideLeft {
