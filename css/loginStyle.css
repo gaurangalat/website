@@ -1,6 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: roboto, 'Noto Sans Myanmar UI', arial, sans-serif;
-  letter-spacing: -0.5px;
+  /*letter-spacing: -0.5px;*/
 }
 a{
   font-weight: 500;
@@ -75,11 +75,11 @@ a{
   padding: 0;
 }
 
-@media only screen and (max-width: 420px) {
+/*@media only screen and (max-width: 420px) {
   .gmailStyle {
-    margin-top: -175;
+    margin-top: -100;
   }
-}
+}*/
 
 .gmailStyle input[type=text]:not(.browser-default):focus:not([readonly]),
 .gmailStyle input[type=password]:not(.browser-default):focus:not([readonly]) {
