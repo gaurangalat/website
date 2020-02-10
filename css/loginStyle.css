@@ -71,9 +71,16 @@ a{
   clear: both;
 }
 .gmailStyle{
-  margin-top: -172;
+  margin-top: 0;
   padding: 0;
 }
+
+@media only screen and (max-width: 412px) {
+  .gmailStyle {
+    margin-top: -200;
+  }
+}
+
 .gmailStyle input[type=text]:not(.browser-default):focus:not([readonly]),
 .gmailStyle input[type=password]:not(.browser-default):focus:not([readonly]) {
   box-shadow: 0px 0 1px #1A73E8;
