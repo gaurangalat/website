@@ -241,7 +241,7 @@ a.active{
   }
   .wrapper {
     margin: 0% 20% 5% 20%;
-    padding-top: 7.5%;
+    padding: 7.5% 0%;
     /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
   }
   .aboutme{
