@@ -245,8 +245,7 @@ a.active{
     /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
   }
   .aboutme{
-   	margin: 0% 25% 20% 25%;
-   	padding-top: 10%;
+   	margin: 10% 25% 20% 25%;
   }
   .social{
   	margin-top: 10px;
