@@ -251,7 +251,11 @@ a.active{
   	margin-top: 10px;
   	margin-left: 30%;
   	margin-right: 30%;
-}
+	}
+	.aboutme p{
+		font-size: 24px;
+		line-height: 40px; 
+	}	
   p, li{
     font-size: 20px;
     line-height: 36px;
