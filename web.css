@@ -245,16 +245,17 @@ a.active{
     /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
   }
   .aboutme{
-   	margin: 0% 20% 20% 20%;
+   	margin: 0% 25% 20% 25%;
+   	padding-top: 10%
   }
   .social{
   	margin-top: 10px;
   	margin-left: 30%;
   	margin-right: 30%;
 	}
-	.aboutme p{
-		font-size: 24px;
-		line-height: 40px; 
+  .aboutme p{
+	font-size: 24px;
+	line-height: 40px; 
 	}	
   p, li{
     font-size: 20px;
