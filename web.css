@@ -61,7 +61,7 @@ body {
   margin: 25% 10% 0px 10%;
 }
 .wrapper{
-  margin: 10%;
+  margin: 10% 10% 20% 10%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
