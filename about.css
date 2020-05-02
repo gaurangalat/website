@@ -1,6 +1,7 @@
 body {
   background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0px;
 }
 
 .AboutMe{
@@ -28,6 +29,7 @@ body {
   margin:0px;
   display: grid;
   grid-auto-rows: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
       "Logo Logo Logo"
       "Portfolio AboutMe Photography";}
