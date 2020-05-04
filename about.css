@@ -32,7 +32,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
       "Logo Logo Logo"
-      "Portfolio AboutMe Photography";}
+      "AboutMe Portfolio Photography";}
 .nav {
  position: fixed;
  top:0;
@@ -51,10 +51,10 @@ body {
   text-align: center;
 }
 .Portfolio{
-  text-align: left;
+  text-align: center;
 }
 .Photography{
-  text-align: right;
+  text-align: center;
 }
 .Logo{
   text-align: center;
@@ -84,6 +84,7 @@ p, li {
   font-size: 14px;
   line-height: 22px;
   margin: 0px;
+  margin-bottom: 10px;
 }
 h2{
   font-weight: 300;
@@ -131,9 +132,10 @@ a.active{
     margin: 0px;
     display: grid;
     grid-template-rows: 40px;
-    grid-template-columns-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);
+    /*grid-template-columns-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);*/
+    grid-template-columns: 3fr 1fr 1fr 1fr;
     grid-template-areas:
-        "Logo Portfolio AboutMe Photography";
+        "Logo AboutMe Portfolio Photography";
   }
   .Logotext{
     display: inline;
@@ -166,9 +168,14 @@ a.active{
     margin-left: 20%;
     margin-right: 20%;
   }
-  p, li {
+  .about p{
     font-size: 16px;
-    line-height: 26px;
+    line-height: 28px;
+  }
+  p, li {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 10px;
   }
   h2{
     font-size: 24px;
@@ -184,10 +191,10 @@ a.active{
     padding: 20px 15% 0px 15%;
     margin:0px; 
     grid-auto-rows: 80px;
-    grid-template-columns: minmax(350px,700px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
-    display: grid;
+/*    grid-template-columns: minmax(350px,700px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);*/
+    grid-template-columns: 4fr 1fr 1fr 1fr;
     grid-template-areas:
-      "Logo Portfolio AboutMe Photography";
+      "Logo AboutMe Portfolio Photography";
   }
   .aboutme{
    	margin: 10% 25% 15% 25%;

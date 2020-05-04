@@ -32,7 +32,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
       "Logo Logo Logo"
-      "Portfolio AboutMe Photography";}
+      "AboutMe Portfolio Photography";}
 .nav {
  position: fixed;
  top:0;
@@ -51,10 +51,10 @@ body {
   text-align: center;
 }
 .Portfolio{
-  text-align: left;
+  text-align: center;
 }
 .Photography{
-  text-align: right;
+  text-align: center;
 }
 .Logo{
   text-align: center;
@@ -174,9 +174,10 @@ a.active{
     margin: 0px;
     display: grid;
     grid-template-rows: 40px;
-    grid-template-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);
+    /*grid-template-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);*/
+    grid-template-columns: 3fr 1fr 1fr 1fr;
     grid-template-areas:
-        "Logo Portfolio AboutMe Photography";
+        "Logo AboutMe Portfolio Photography";
   }
   .Logotext{
     display: inline;
@@ -233,10 +234,11 @@ a.active{
     padding: 20px 15% 0px 15%;
     margin:0px; 
     grid-auto-rows: 80px;
-    grid-template-columns: minmax(350px,700px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
+    /*grid-template-columns: minmax(350px,700px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);*/
+    grid-template-columns: 4fr 1fr 1fr 1fr;
     display: grid;
     grid-template-areas:
-      "Logo Portfolio AboutMe Photography";
+      "Logo AboutMe Portfolio Photography";
   }
   .header{
     margin: 10% 20% 2.5% 20%;
