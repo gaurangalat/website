@@ -26,7 +26,7 @@ body {
 .nav{
   background: rgba(255,255,255,0.95);
   padding: 2.5% 10% 0% 10%;
-  margin:0px;
+/*  margin:auto; */
   display: grid;
   grid-auto-rows: 30px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -113,11 +113,15 @@ a.active{
 
 .button{
 /*  margin-top: 10px;*/
-  padding: 8px;
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-style: solid;
   border-width: 2px;
   font-size: 12px;
-  max-width:80px;
+  max-width: 120px;
+  text-align: center;
 }
 .button:hover{
   box-shadow: 0 0 0 1px black;
@@ -172,6 +176,16 @@ a.active{
     font-size: 16px;
     line-height: 28px;
   }
+  .button{
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 12px;
+  text-align: center;
+}
   p, li {
     font-size: 14px;
     line-height: 24px;
@@ -189,7 +203,8 @@ a.active{
 @media only screen and (min-width: 991px) {
   .nav{
     padding: 20px 15% 0px 15%;
-    margin:0px; 
+    max-width: 1400px;
+    margin: auto; 
     grid-auto-rows: 80px;
 /*    grid-template-columns: minmax(350px,700px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);*/
     grid-template-columns: 4fr 1fr 1fr 1fr;
@@ -197,10 +212,12 @@ a.active{
       "Logo AboutMe Portfolio Photography";
   }
   .aboutme{
-   	margin: 10% 25% 15% 25%;
+   	margin: 10% 25% 10% 25%;
+    max-width: 1000px;
   }
   .timeline{
     margin: 10% 25% 10% 25%;
+    max-width: 1000px;
   }
   .social{
   	margin-top: 10px;
@@ -208,14 +225,14 @@ a.active{
   	margin-right: 30%;
 	}
   .aboutme p{
-	font-size: 24px;
-	line-height: 40px; 
+	 font-size: 24px;
+	 line-height: 40px; 
 	}	
   p, li{
     font-size: 18px;
     line-height: 36px;
     letter-spacing: 0.02em;
-    margin-bottom: 5%;
+    margin-bottom: 20px;
   }
   h2{
     font-size: 36px;
@@ -228,11 +245,13 @@ a.active{
     margin: 0px;
   }
   .button{
-    padding: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     border-style: solid;
     border-width: 2px;
     font-size: 16px;
-    max-width: 110px;
     letter-spacing: 0.01em;
 }
 }
