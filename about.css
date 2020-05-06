@@ -16,15 +16,15 @@ body {
 .Photography{
   grid-area:Photography;
 }
-.Logotext{
+/*.Logotext{
   display: none;
-}
+}*/
 .Logo img{
   width: 20px;
   height: 10.5px;
 }
 .nav{
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.8);
   padding: 2.5% 10% 0% 10%;
 /*  margin:auto; */
   display: grid;
@@ -32,13 +32,15 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
       "Logo Logo Logo"
-      "AboutMe Portfolio Photography";}
+      "AboutMe Portfolio Photography";
+}
 .nav {
- position: fixed;
+ position:fixed;
  top:0;
  right: 0;
  left: 0;
  z-index: 1000;
+ backdrop-filter: blur(10px);
 }
 .navLinks{
   font-size: 10px;

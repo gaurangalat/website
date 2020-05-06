@@ -16,15 +16,15 @@ body {
 .Photography{
   grid-area:Photography;
 }
-.Logotext{
+/*.Logotext{
   display: none;
-}
+}*/
 .Logo img{
   width: 20px;
   height: 10.5px;
 }
 .nav{
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.8);
   padding: 2.5% 10% 0% 10%;
   margin:0px;
   display: grid;
@@ -39,6 +39,7 @@ body {
  right: 0;
  left: 0;
  z-index: 1000;
+ backdrop-filter: blur(10px);
 }
 .navLinks{
   font-size: 10px;
@@ -80,9 +81,6 @@ body {
   position: relative;
   top: 0;
   transition: all .1s ease-in;
-}
-.aboutme{
-  margin: 25% 10% 10% 10%;
 }
 .card:hover {
   top: -2px;
@@ -151,20 +149,6 @@ a{
 a.active{
  font-weight: 600;
  text-decoration: underline;
-}
-.button{
-  padding-top: 10px;
-  text-decoration: none;
-  padding: 12px;
-  border-style: solid;
-  border-width: 2px;
-  max-width: 100px;
-  font-size: 14px;
-}
-.button:hover{
-  box-shadow: 0 0 0 1px black;
-  transition: transform 200ms ease-out;
-  transform: translate(4px,-4px);
 }
 
 
@@ -244,21 +228,14 @@ a.active{
     margin: 10% 20% 2.5% 20%;
   }
   .wrapper {
-    margin: 0% 20% 5% 20%;
-    padding: 7.5% 0%;
+    margin: 0% 20% 0% 20%;
+    padding: 5% 0%;
     /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
-  }
-  .aboutme{
-   	margin: 10% 25% 20% 25%;
   }
   .social{
   	margin-top: 10px;
   	margin-left: 30%;
   	margin-right: 30%;
-	}
-  .aboutme p{
-	font-size: 24px;
-	line-height: 40px; 
 	}	
   p, li{
     font-size: 20px;
@@ -268,5 +245,9 @@ a.active{
   h2{
     font-size: 36px;
     letter-spacing: 0.03em;
+  }
+  h4{
+  	font-size: 18px;
+  	font-weight: 300;
   }
 }
