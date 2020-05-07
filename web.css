@@ -24,7 +24,7 @@ body {
   height: 10.5px;
 }
 .nav{
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85);
   padding: 2.5% 10% 0% 10%;
   margin:0px;
   display: grid;
@@ -39,7 +39,7 @@ body {
  right: 0;
  left: 0;
  z-index: 1000;
- backdrop-filter: blur(10px);
+ backdrop-filter: blur(5px);
 }
 .navLinks{
   font-size: 10px;
@@ -142,6 +142,9 @@ h3{
   font-size: 12px;
   line-height: 20px;
 }
+h4{
+	font-weight: 300;
+}
 a{
   color: #1b1b1b;
   text-decoration: none;
@@ -201,9 +204,9 @@ a.active{
     font-size: 16px;
     line-height: 26px;
   }
-  .header{
+ /* .header{
     margin: 10% 20%;
-  }
+  }*/
   h2{
     font-size: 24px;
   }
