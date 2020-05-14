@@ -43,7 +43,7 @@
 
   <div class="header">
     <h1>Reducing cart abandonment at Victoria's Secret</h1>
-    <h2>Designed a solution to reduce cart abandonment leading to an increase in conversion and revenue</h2>
+<!--     <h2>Designed a solution to reduce cart abandonment leading to an increase in conversion and revenue</h2> -->
   </div>
 
   <div>
@@ -53,13 +53,13 @@
   <div class="para">
     <div class="highlight">
       <ul>
-        <li><b>Goal</b>: To nudge users to check out items in their cart added in previous sessions</li>
+        <li><b>Goal</b>: To reduce cart abandonment and in turn capitalize on lost revenue</li>
         <li><b>What I did</b>: Sketching, prototyping, A/B testing and analyzing analytics</li>
         <li><b>Duration</b>: July 2019 - October 2019</li>
       </ul>
     </div>
     
-    <p>Research done over the years validated the industry-wide hypothesis that the shopping experience is non-linear. We had observed that a purchase would happen over multiple visits by the customer. There was no single reason behind this; it was simply a result of the culmination of various factors largely related to customer behavior. There was an opportunity to understand this behavior and improve conversion. </p> 
+    <p>Internal research done over the past few years validated the industry-wide hypothesis that the shopping experience is non-linear. We had observed that a purchase would happen over multiple visits by the customer. There was no single reason behind this; it was simply a result of the culmination of various factors largely related to customer behavior. There was an opportunity to understand this behavior and improve conversion. </p> 
   </div>
 
   <div class="para">
@@ -95,7 +95,7 @@
   </div>
 
   <div class="para">
-    <p>The image above shows clearly that Browsers' intent to purchase isn't as strong as the other three types of customers. In other words, Browsers were not contributing much to the revenue earned from online sales. Combining this with the fact that Product focused customers represented a minority of our daily visitors, it became evident that designing a solution that catered towards Researchers and Bargain hunters would deliver the maximum value and increase conversion. <!-- This was backed by the findings of a survey done in June, that found that 35% of the total cart abandonment instances were attributed to custmers waiting for price reductions (Bargain hunters) and customers who were simply checking product availability (Researchers). -->
+    <p>The image above shows that Browsers' intent to purchase isn't as strong as the other three types of customers. In other words, Browsers were not contributing much to the revenue earned from online sales. Combining this with the fact that Product focused customers represented a minority of our daily visitors, it became evident that designing a solution that catered towards Researchers and Bargain hunters would deliver the maximum value and increase conversion. <!-- This was backed by the findings of a survey done in June, that found that 35% of the total cart abandonment instances were attributed to custmers waiting for price reductions (Bargain hunters) and customers who were simply checking product availability (Researchers). -->
     </p>
   </div>
 
@@ -106,36 +106,37 @@
 
   <div class="para">
     <h5>Design</h5>
-    <h4>Initial Iterations</h4>  
-    <p>I decided to reuse an existing design pattern and retrofit the offers inside it to create a vertically oriented Offers drawer. This change not only allowed customers to scroll through offers in a more natural way but also opened up opportunities for us to improve the structure of the drawer. Changing the orientation of the drawer enabled us to bring the mobile and desktop offers experience a bit closer.
+    <h4>Initial Explorations</h4>  
+    <p>I explored a range of design solutions varying in fidelity, flexibility and functionality. A simple solution was to remind customers about items in their cart via an informational message. This message was intended to live in the form of a banner among the content but it also risked being overlooked by the customer. Another solution explored how we could show the actual products in any customer's cart. This solution provided the highest level of fidelity but it also required heavy backend integration for showing the exact product + swatch the customer had added to cart. A third solution was displaying a notification with an ephemeral nature such as a toast.
     </p>
   </div>
 
   <div class="paraimg">
     <img src="offerdrawer.png" alt="offer drawer with offer cards">
   </div>
+
+  <div class="para">
+    <p>An advantage of the toast was that it appeared on top of the content and thus it could work on any page the customer viewed. It also provided a lot of flexibility in implementation — the toast could either auto-dimiss or it could be dismissed by clicking/ tapping on a button, it could appear from the top or the bottom, etc. With all of these qualities, the toast emerged as a lean and flexible solution that could serve as the building block of a robust experience.</p>
+  </div>
   
 
   <div class="para">
-    <h5>Phase Three</h5>
-    <h4>Making offers easy to understand</h4>
-    <p>The way we presented offers to the customers had potential for some improvements. The hypothesis was that grouping offers would reduce extraneous cognitive load on customers, given that studies show humans have a limited working memory and that time to make a decision increases exponentially with the number of choices available. An optimal grouping strategy would also enable customers to easily discover offers suited to their needs. These benefits would in turn increase offer redemption and improve customer loyalty.</p>
+    <h5>Design</h5>
+    <h4>Ironing out the details</h4>
+    <p>For questions that could not be answered because of lack of data, we decided to approach them with a test-and-learn strategy. For example, when it came to deciding if the toast should dismiss after a customer intitated an action or if it should dismiss automatically, we decided to test both, one at a time, and then compare engagement. Since we were introducing new functionality, we wanted to cause minimum distraction. So we decided to roll with the auto dimiss variant with the plan to test a persistent toast, if engagement was low.</p>
     <br>
-    <p>To solve this issue, I decided to create brand-specific tabs and group offers into buckets. Not only would this create a logical segmentation of offers but also it could allow each brand to directly link customers to their own section inside the Offers drawer. Since each offer card was set up in the CMS with the brand it referred to, it required a very small effort on the front-end side to create the tab functionality.</p>
   </div>
 
   <div class="paraimg">
     <img src="offerdrawerfilter.png" alt="Offers drawer with brand-specific tabs">
   </div>
 
-    <div class="para">
-      <h4>Putting it all together</h4>
-      <p>Here is what an ideal state would look like with all of the aforementioned improvements in place. This step was necessary to ensure that all design decisions still made sense after putting it all together and looking at the entire end to end offer experience. </p>
+  <div class="para">
+    <p>We had to find a balance between distracting the customer and also getting them to engage with the toast. For this reason, I decided to make the toast slide in, after the page had loaded. The hypothesis was that the slight movement caused by the toast would serve as a nudge for the customer. The toast would then last on the screen for a total duration of 4 seconds. This timing was established after referring to WCAG best practices and ensuring that screen readers could parse through the toast contents.</p>
   </div>
 
   <div class="para">
-    <h4>Taking a pause...</h4>
-    <p>At this point, it was necessary to test our hypotheses and observe how customers would engage with the functionality we had developed so far. This step was crucial in making sure we had covered our bases, and most importantly, discovering areas where we could improve the design. I developed click-through protoypes for the desktop and mobile experience, and conducted moderated usability testing with a total of 12 participants. The usability test involved a couple of tasks with a pre and post test survey. </p>
+    <p>The next question we set out to answer was - how frequently should the toast be displayed? We took a look at the Analytics dashboard and found that most customers returned to the website in about 24 hours. This seemed like a good opportunity to capitalize on – remind customers about lingering items in their cart when they return via a new session. Thus, we decided to display the toast in every session that was initiated after a minimum of 24 hours from the latest session.  </p>
   </div>
 
   <div style="background-color: #f5f5f5;">
@@ -144,14 +145,15 @@
 
 
   <div class="para">
-    <h4>...continuing the momentum</h4>
-    <p>As I updated the container for the offers, another issue became apparent. Historically, sitewide offers were always prioritized over brand-specific offers. Since they were applicable to the entire website, they were visible under each brand-specific tab. So, if there were a couple of sitewide offers available, a customer switching between the brand tabs in the drawer would see the same few offers above the fold of the page. This could potentially lead to confusion at the customer's end. There was a potential to make the offer card design consistent and compact which would alleviate this issue while improving the customer experience. </p>
+    <h5>A/B Testing</h5>
+    <h4>Testing the toast</h4>
+    <p>The toast was tested across desktop, tablet, mobile and the VS app platforms using a 50-50 traffic split in March 2020. The two variants were labeled as enhancement (with toast) and control (without toast). Orders and Revenue were the primary metrics we monitored. A few secondary metrics we analyzed were Units per Transaction, Revenue per Visitor and Average Order Size. The results painted a clear picture but also brought up a couple of interesting questions. </p>
   </div>
     
 
   <div class="para">
-    <h4>Studying the offer cards</h4>
-    <p>Even though all offer cards were set up in a similar way in the CMS, their structure varied across brands and offer types. Due to lack of standards and the need for more flexibility, the brands used a variety of hacks to customize the look of their offer cards. Inconsistent designs made it slightly harder for a customer to understand the offers at a glance. There was a clear opportunity to make the offer cards consistent, with a well defined information hierarchy. A simplified offer card structure would also allow more offer cards to be visible in the drawer, at any given time.</p>
+    <h4>Analyzing the results</h4>
+    <p>The toast performed well on mobile, with the enhancement variant showing an increase of 3% in Orders. Surprisingly, the enhancement variant also had a 2% drop in Orders on desktop. On comparing the UPT metric, it was clear that the average items bought in a single purchase on desktop was more in the control variant (without toast). This pointed to an alternative hypothesis that perhaps the toast was too frequent on desktop, and maybe it interrupted customers while they built/ curated their cart. This interruption likely pushed customers to check out early with fewer items in their cart. There was also a lingering question — would removing the auto dismiss nature of the toast help it to be more prominent thus driving up engagement? </p>
   </div>
 
   <div class="paraimg">
@@ -160,9 +162,8 @@
 
 
   <div class="para">
-    <h5>Research</h5>
-    <h4>But what constitutes an ideal offer?</h4>
-    <p>To understand what constitutes an ideal offer card, I decided to set up a card sorting exercise. The goal of this exercise was to understand which components of an offer card were important to the customer, why they were important and how the delivery mechanism (web, mobile, email) influenced the ideal design. This exercise was done remotely over Figma, with participants dragging pieces of information into place based on their preferences. There were 4 themes to this exercise – lingerie, beauty, accessories and apparel. I chose to use generic examples to prevent customers' biases/ preferences from affecting their decisions/ true choices. </p>
+    <h4>So what happened next?</h4>
+    <p>Since the toast performed well on mobile, we released the enhancement variant to 100% of the traffic. I took away the findings of the test and the alternative hypotheses back to the drawing board. My main goal now was to make small tweaks to the implementation of the toast and tailor the experience for each platform (desktop, tablet, mobile). These changes would be put through an A/B test again to enable us to learn and incrementally inch towards delivering the best experience. As of today, I am currently working on designing the next set of improvements for the toast functionality. </p>
   </div>
 
   <div class="paraimg">

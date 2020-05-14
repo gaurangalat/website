@@ -3,8 +3,9 @@
 	margin-top: 5%;
 	margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 5%;
 	grid-gap: 5px;
-	grid-auto-rows: 160px;
+/*	grid-auto-rows: 160px;*/
 	grid-template-columns: 0.25fr 1fr;
 }
 h1{
@@ -21,7 +22,7 @@ h2{
 }
 h3{
 	font-family: "Open Sans", sans-serif;
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 20px;
 	font-weight: 300;
 }
@@ -35,7 +36,7 @@ h3{
 	margin-left: 10%;
     margin-right: 15%;
 	grid-gap: 5px;
-	grid-auto-rows: 150px;
+/*	grid-auto-rows: 150px;*/
 }
 h1{
 	font-size: 20px;
@@ -55,7 +56,7 @@ h3{
 	margin-left: 15%;
     margin-right: 15%;
 	grid-gap: 5px;
-	grid-auto-rows: 1fr;
+/*	grid-auto-rows: 1fr;*/
 }
 h1{
 	font-size: 24px;
