@@ -68,10 +68,6 @@
     <p>Customers typically built/ curated their cart over several browsing sessions. This behavior also led to cart abandonment scenarios where a customer added items to their cart but did not return to complete the purchase, leading to a loss in revenue. Items left in the cart for a prolonged period of time also risked becoming sold out/ not available leading to frustrations at the customer's end. Although the marketing department sent cart reminder emails to customers, most customer did not engage with the emails as seen by the low click through rate.</p>
   </div>
 
-  <div class="paraimg">
-    <img src="old_offerdrawer.png" alt="beta design">
-  </div>
-
   <div class="para">
     <h5>Research</h5>
     <h4>Understanding customer types</h4>
@@ -84,6 +80,10 @@
       </ul></p>
   </div>
 
+  <div class="paraimg">
+    <img src="customertype.png" alt="4 customer types and their intent to purchase">
+  </div>
+
   <div class="para">
     <h5>Research</h5>
     <h4>Identifying the target audience</h4>
@@ -91,16 +91,12 @@
   </div> 
 
   <div class="paraimg">
-    <img src="mobileoffersexperience.png" alt="Mobile Offers experience">
+    <img src="targetaudience.png" alt="Venn diagram showing target audience">
   </div>
 
   <div class="para">
-    <p>The image above shows that Browsers' intent to purchase isn't as strong as the other three types of customers. In other words, Browsers were not contributing much to the revenue earned from online sales. Combining this with the fact that Product focused customers represented a minority of our daily visitors, it became evident that designing a solution that catered towards Researchers and Bargain hunters would deliver the maximum value and increase conversion. <!-- This was backed by the findings of a survey done in June, that found that 35% of the total cart abandonment instances were attributed to custmers waiting for price reductions (Bargain hunters) and customers who were simply checking product availability (Researchers). -->
+    <p>We can clearly see that the Browsers' intent to purchase isn't as strong as the other three types of customers. In other words, Browsers were not contributing much to the revenue earned from online sales. Combining this with the fact that Product focused customers represented a minority of our daily visitors, it became evident that designing a solution that catered towards Researchers and Bargain hunters would deliver the maximum value and increase conversion. <!-- This was backed by the findings of a survey done in June, that found that 35% of the total cart abandonment instances were attributed to custmers waiting for price reductions (Bargain hunters) and customers who were simply checking product availability (Researchers). -->
     </p>
-  </div>
-
-  <div class="paraimg">
-    <img src="offertrigger.png" alt="offer bar with trigger">
   </div>
 
 
@@ -112,35 +108,38 @@
   </div>
 
   <div class="paraimg">
-    <img src="offerdrawer.png" alt="offer drawer with offer cards">
+    <img src="designexplorations.png" alt="Initial design explorations">
   </div>
 
   <div class="para">
     <p>An advantage of the toast was that it appeared on top of the content and thus it could work on any page the customer viewed. It also provided a lot of flexibility in implementation — the toast could either auto-dimiss or it could be dismissed by clicking/ tapping on a button, it could appear from the top or the bottom, etc. With all of these qualities, the toast emerged as a lean and flexible solution that could serve as the building block of a robust experience.</p>
   </div>
-  
+
+  <div class="paraimg">
+    <img src="toastexplorations.png" alt="various iterations for the toast">
+  </div>
 
   <div class="para">
     <h5>Design</h5>
     <h4>Ironing out the details</h4>
     <p>For questions that could not be answered because of lack of data, we decided to approach them with a test-and-learn strategy. For example, when it came to deciding if the toast should dismiss after a customer intitated an action or if it should dismiss automatically, we decided to test both, one at a time, and then compare engagement. Since we were introducing new functionality, we wanted to cause minimum distraction. So we decided to roll with the auto dimiss variant with the plan to test a persistent toast, if engagement was low.</p>
-    <br>
+  </div>
+
+
+  <div class="para">
+    <p>We had to find an optimal way of capturing the customers' attention without distracting them or disturbing their flow. For this reason, I decided to make the toast slide in, after the page had finished loading. The hypothesis being that the slight movement caused by the toast would catch a customer's eye. The toast would then last on the screen for a total duration of 4 seconds. This timing was established after referring to WCAG best practices and ensuring that screen readers could parse through the toast contents. These parameters were subject to change as we tested the toast experience.</p>
   </div>
 
   <div class="paraimg">
-    <img src="offerdrawerfilter.png" alt="Offers drawer with brand-specific tabs">
-  </div>
-
-  <div class="para">
-    <p>We had to find a balance between distracting the customer and also getting them to engage with the toast. For this reason, I decided to make the toast slide in, after the page had loaded. The hypothesis was that the slight movement caused by the toast would serve as a nudge for the customer. The toast would then last on the screen for a total duration of 4 seconds. This timing was established after referring to WCAG best practices and ensuring that screen readers could parse through the toast contents.</p>
+    <img src="toasttiming.png" alt="flow showing how the toast appeared/ disappeared">
   </div>
 
   <div class="para">
     <p>The next question we set out to answer was - how frequently should the toast be displayed? We took a look at the Analytics dashboard and found that most customers returned to the website in about 24 hours. This seemed like a good opportunity to capitalize on – remind customers about lingering items in their cart when they return via a new session. Thus, we decided to display the toast in every session that was initiated after a minimum of 24 hours from the latest session.  </p>
   </div>
 
-  <div style="background-color: #f5f5f5;">
-    <img src="finaloffers.gif" style="display:block; max-width: 800px; margin-left: auto; margin-right: auto;">
+  <div class="paraimg">
+    <img src="toastfrequency.png" alt="flow showing how the frequently the toast appeared">
   </div>
 
 
@@ -156,9 +155,9 @@
     <p>The toast performed well on mobile, with the enhancement variant showing an increase of 3% in Orders. Surprisingly, the enhancement variant also had a 2% drop in Orders on desktop. On comparing the UPT metric, it was clear that the average items bought in a single purchase on desktop was more in the control variant (without toast). This pointed to an alternative hypothesis that perhaps the toast was too frequent on desktop, and maybe it interrupted customers while they built/ curated their cart. This interruption likely pushed customers to check out early with fewer items in their cart. There was also a lingering question — would removing the auto dismiss nature of the toast help it to be more prominent thus driving up engagement? </p>
   </div>
 
-  <div class="paraimg">
+<!--   <div class="paraimg">
     <img src="offercardvariations.png" alt="Offer card variations">
-  </div>
+  </div> -->
 
 
   <div class="para">
@@ -166,46 +165,8 @@
     <p>Since the toast performed well on mobile, we released the enhancement variant to 100% of the traffic. I took away the findings of the test and the alternative hypotheses back to the drawing board. My main goal now was to make small tweaks to the implementation of the toast and tailor the experience for each platform (desktop, tablet, mobile). These changes would be put through an A/B test again to enable us to learn and incrementally inch towards delivering the best experience. As of today, I am currently working on designing the next set of improvements for the toast functionality. </p>
   </div>
 
-  <div class="paraimg">
-    <img src="Offercardsort.png">
-  </div>
+
   
-  <div class="para">
-    <h4>Card sort study insights</h4>
-    <p>
-      <ul>
-        <li>According to the test participants, the most important information in an offer card is - what is the offer, how do I redeem it and how long do I have to redeem it (Title, Offer Code, Label)</li>
-        <li>A tangible deadline is more compelling and invokes a sense of urgency (Ends Friday > Limited Time Offer)</li> 
-        <li>Images convey information about the product and fit but are not important in an offer</li>
-        <li>Offer code was deemed to be relatively more important than Click to Apply action</li>
-        <li>Shop Now provides a convenient way of redeeming an offer but is not an essential component in the offer card</li>
-        <li>Desired information density is dependent on the medium of offer delivery (website/ mobile/ email)</li>
-      </ul>
-    </p>
-  </div>
-
-
-  <div class="para">
-    <h5>Phase Four</h5>
-    <h4>Design explorations for new offer card</h4>
-    <p>The next step was to convert the actionable insights from the card sort exercise into tangible outputs. My goal was to design an offer card structure with a clear hierarchy of information dictated by customer needs, that could be used on mobile as well as the desktop website. I also explored a few high fidelity options to see if a single design structure could work for all brand-specific offers. 
-	</p>
-  </div>
-
-  <div>
-    <img src="offercards1.png">
-    <img src="offercards2.png">
-  </div>
-
-  <div class="para">
-  	<h4>Building out the experience</h4>
-  	<p>
-    My product team and I broke down this multi-phase project into testable outputs that could be achieved over several sprints. The team managed to complete the development of the new offer trigger (pink bar) and the vertical drawer late last year, achieveing half of the planned improvements.
-	<br>
-	<br>
-	As 2020 approached, I moved to the new Personalization team to lead the design efforts for multi-platform personalized experiences. So, I handed over the project to a couple of other designers who are currently making headway into creating the brand tab functionality.</p>
-  </div>
-
  <!--  <div class="bottomnavlinks right">
     <a href="google.html">Next Project &#x2192;</a> 
   </div> -->
