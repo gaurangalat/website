@@ -35,7 +35,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
       "Logo Logo Logo"
-      "AboutMe Portfolio Photography";}
+      "Portfolio AboutMe Photography";}
 .nav {
  position: fixed;
  top:0;
@@ -167,7 +167,7 @@ a.active{
     /*grid-template-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);*/
     grid-template-columns: 3fr 1fr 1fr 1fr;
     grid-template-areas:
-        "Logo AboutMe Portfolio Photography";
+        "Logo Portfolio AboutMe Photography";
   }
   .Logotext{
     display: inline;
@@ -230,7 +230,7 @@ a.active{
     grid-template-columns: 4fr 1fr 1fr 1fr;
     display: grid;
     grid-template-areas:
-      "Logo AboutMe Portfolio Photography";
+      "Logo Portfolio AboutMe Photography";
   }
   .header{
     margin: 10% 20% 2.5% 20%;
