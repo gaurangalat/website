@@ -71,7 +71,7 @@
   <div class="para">
     <h5>CHALLENGE</h5>
     <h4>Difficult to discover</h4>
-    <p>The only way to trigger the offer drawer on desktop was to click Today's Offers. This trigger was missed by a lot of customers, as seen in various research studies, mainly because it was not prominent enough. </p>
+    <p>The only way to trigger the offer drawer on desktop was to click Today's Offers. This trigger was missed by a lot of customers, as seen in various research studies, because it was not prominent enough. </p>
   </div>
 
   <div class="paraimg">
@@ -88,7 +88,9 @@
   </div>
 
   <div class="paraimg">
-      <img src="oldofferdrawer.gif" alt="beta design">
+      <div style="background-color: #f5f5f5; padding: 50px;">
+        <img src="oldofferdrawer.gif"  alt="beta design">
+      </div>  
   </div>
 
 
@@ -96,7 +98,7 @@
   <div class="para">
     <h5>CHALLENGE</h5>
     <h4>A costly diversion</h4>
-    <p>Offers on the mobile website were present on a dedicated Offers page. To view these offers, a customer had to navigate away from the page they were currently viewing. This diversion caused customers to navigate away from their shopping journey, which sometimes led to session abandonment and caused a loss in revenue. Moreover, the long list of offers on this page meant that a user had to scroll a lot to view all offers. The arrangement of offers on this page also did not provide any value to users looking for brand-specific or product-specific offers.</p>
+    <p>Offers on the mobile website were present on a dedicated Offers page. To view these offers, a customer had to navigate away from the page they were currently viewing. This diversion caused customers to navigate away from their shopping journey, which sometimes led to session abandonment and eventually caused a loss in revenue. Moreover, the long list of offers on this page meant that a user had to scroll a lot to view all offers. The arrangement of offers on this page also did not provide any value to users looking for brand-specific or product-specific offers.</p>
   </div> 
 
   <div class="paraimg">
@@ -107,14 +109,14 @@
   <div class="para">
     <h5>The Strategy</h5>
     <h4>Approaching the redesign process</h4>
-    <p>The redesign of the Offers drawer was planned to be a multi-phase project, where each phase aimed to achieve a specific outcome. The work was prioritized based on the level of effort required and the impact it would create. I planned to tackle low effort, high impact work first, working towards approaching an ideal state. This test-and-learn strategy enabled us to fully focus on achieving a single predetermined outcome at every step.</p>
+    <p>I opted to break down the monolithic redesign project into multiple phases, with each phase designed to achieve a specific outcome. The phases were prioritized based on the level of effort required and the impact they would create. I planned to tackle low effort, high impact work first, working towards approaching an ideal state. This test-and-learn strategy enabled us to fully focus on achieving a single predetermined outcome at every step.</p>
   </div>
 
 
   <div class="para">
     <h5>Phase One</h5>
     <h4>Improving discoverability</h4>
-    <p>The first step was to make the Offers drawer trigger more prominent. I had been working on a different project which involved making the sitewide offer (Free Shipping offer) more flexible. Based on the requirements, I had decided to move the offer to its own space above the global navigation. So I repurposed that space to also include the trigger for the Offers drawer. This space could potentially be used for showing multiple offers, personalized offers and contextual offers as well.
+    <p>The first step was to make the Offers drawer trigger more prominent. I had been working on a different project which involved making the sitewide offer (Free Shipping offer) more flexible. Based on the requirements, I had decided to move the offer to its own space above the global navigation. So I repurposed that space to also include the trigger for the Offers drawer. This space could now be used as a dedicated offers space for showing multiple offers, personalized offers and contextual offers.
     </p>
   </div>
 
@@ -126,7 +128,7 @@
   <div class="para">
     <h5>Phase Two</h5>
     <h4>Improving usability</h4>  
-    <p>I decided to reuse an existing design pattern and retrofit the offers inside it to create a vertically oriented Offers drawer. This change not only allowed customers to scroll through offers in a more natural way but also opened up opportunities for us to improve the structure of the drawer. Changing the orientation of the drawer enabled us to bring the mobile and desktop offers experience a bit closer.
+    <p>I decided to reuse an existing design pattern and retrofit the offers inside it to create a vertically oriented Offers drawer. This change not only allowed customers to scroll through offers in a more natural way but also opened up opportunities for us to improve the structure of the drawer. Changing the orientation of the drawer enabled us to unify the mobile and desktop offers experience. With an easily accessible drawer on mobile, customers could now view offers without navigating away from the shopping journey.
     </p>
   </div>
 
@@ -138,19 +140,19 @@
   <div class="para">
     <h5>Phase Three</h5>
     <h4>Making offers easy to understand</h4>
-    <p>The way we presented offers to the customers had potential for some improvements. The hypothesis was that grouping offers would reduce extraneous cognitive load on customers, given that studies show humans have a limited working memory and that time to make a decision increases exponentially with the number of choices available. An optimal grouping strategy would also enable customers to easily discover offers suited to their needs. These benefits would in turn increase offer redemption and improve customer loyalty.</p>
+    <p>Studies have shown that humans have a limited working memory (Miller's Law) and time needed to make a decision increases exponentially with the number of choices available (Hick's Law). I hypothesized that grouping offers would reduce extraneous cognitive load on customers and deliver a better experience. An optimal grouping strategy would also enable customers to easily discover offers suited to their needs. These benefits would in turn increase offer redemption and improve customer loyalty.</p>
     <br>
-    <p>To solve this issue, I decided to create brand-specific tabs and group offers into buckets. Not only would this create a logical segmentation of offers but also it could allow each brand to directly link customers to their own section inside the Offers drawer. Since each offer card was set up in the CMS with the brand it referred to, it required a very small effort on the front-end side to create the tab functionality.</p>
+    <p>In the CMS, each offer card was tagged with the brand(s) it referred to. Using this available data, I decided to group offers by brand and created brand-specific tabs for the customer. This logical segmentation of offers now allowed each brand to directly link customers to their own section inside the Offers drawer.</p>
   </div>
 
   <div class="paraimg">
     <img src="offerdrawerfilter.png" alt="Offers drawer with brand-specific tabs">
   </div>
 
-    <div class="para">
+<!--     <div class="para">
       <h4>Putting it all together</h4>
       <p>Here is what an ideal state would look like with all of the aforementioned improvements in place. This step was necessary to ensure that all design decisions still made sense after putting it all together and looking at the entire end to end offer experience. </p>
-  </div>
+  </div> -->
 
   <div class="para">
     <h4>Taking a pause...</h4>
@@ -164,7 +166,7 @@
 
   <div class="para">
     <h4>...continuing the momentum</h4>
-    <p>As I updated the container for the offers, another issue became apparent. Historically, sitewide offers were always prioritized over brand-specific offers. Since they were applicable to the entire website, they were visible under each brand-specific tab. So, if there were a couple of sitewide offers available, a customer switching between the brand tabs in the drawer would see the same few offers above the fold of the page. This could potentially lead to confusion at the customer's end. There was a potential to make the offer card design consistent and compact which would alleviate this issue while improving the customer experience. </p>
+    <p>As I updated the container for the offers, another issue became apparent. Historically, sitewide offers were always prioritized over brand-specific offers. Since they were applicable to the entire website, they were visible under each brand-specific tab. So, if there were a couple of sitewide offers available, a customer switching between the brand tabs in the drawer would see the same offers above the fold of the page. This would lead to confusion at the customer's end. I saw this as an opportunity to streamline the offer card design and make it uniform across all brands.</p>
   </div>
     
 
@@ -181,7 +183,7 @@
   <div class="para">
     <h5>Research</h5>
     <h4>But what constitutes an ideal offer?</h4>
-    <p>To understand what constitutes an ideal offer card, I decided to set up a card sorting exercise. The goal of this exercise was to understand which components of an offer card were important to the customer, why they were important and how the delivery mechanism (web, mobile, email) influenced the ideal design. This exercise was done remotely over Figma, with participants dragging pieces of information into place based on their preferences. There were 4 themes to this exercise – lingerie, beauty, accessories and apparel. I chose to use generic examples to prevent the participants' biases/ preferences from affecting their decisions/ true choices. </p>
+    <p>To understand what constitutes an ideal offer card, I decided to set up a card sorting exercise. The goal of this exercise was to understand which components of an offer card were important to the customer, why they were important and how the delivery mechanism (web, mobile, email) influenced the ideal design. This exercise was done remotely over Figma, with participants dragging pieces of information into place based on their preferences. There were 4 themes to this exercise – lingerie, beauty, accessories and apparel. I chose to use generic examples to prevent the participants' biases from affecting their decisions/ true choices. </p>
   </div>
 
   <div class="paraimg">
@@ -190,10 +192,9 @@
   
   <div class="para">
     <h4>Card sort study insights</h4>
-    <p>
+    <p> The card sorting exercise provided a lot of insights into customer needs. Here are a few notable ones:
       <ul>
         <li>According to the test participants, the most important information in an offer card is - what is the offer, how do I redeem it and how long do I have to redeem it (Title, Offer Code, Label)</li>
-        <li>A tangible deadline is more compelling and invokes a sense of urgency (Ends Friday > Limited Time Offer)</li> 
         <li>Images convey information about the product and fit but are not important in an offer</li>
         <li>Offer code was deemed to be relatively more important than Click to Apply action</li>
         <li>Shop Now provides a convenient way of redeeming an offer but is not an essential component in the offer card</li>
@@ -206,7 +207,7 @@
   <div class="para">
     <h5>Phase Four</h5>
     <h4>Design explorations for new offer card</h4>
-    <p>The next step was to convert the actionable insights from the card sort exercise into tangible outputs. My goal was to design an offer card structure with a clear hierarchy of information dictated by customer needs, that could be used on mobile as well as the desktop website. I also explored a few high fidelity options to see if a single design structure could work for all brand-specific offers. 
+    <p>The next step was to convert the actionable insights from the card sort exercise into tangible outputs. My goal was to design an offer card structure with a clear hierarchy of information dictated by customer needs, that could be used on mobile as well as the desktop website. I also explored a few high fidelity options to see if a single design structure could work for all brand-specific offers. I was unable to complete this phase as I moved to a new team soon after. 
 	</p>
   </div>
 

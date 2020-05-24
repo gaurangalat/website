@@ -51,9 +51,14 @@
     <h2>Improved conversion and increased revenue by reducing cart abandonment</h2>
   </div>
 
-  <div>
+  <video loop controls style="display: block;margin-left: auto; margin-right: auto; max-width: 75% ;">
+    <source src="toastiMovie.mp4" type="video/mp4">
+    Sorry! Looks like your browser does not support the video tag.
+  </video>
+
+  <!-- <div>
     <img src="toasthero.png" alt="glimpse of final design">
-  </div>
+  </div> -->
 
   <div class="para">
     <div class="highlight">
@@ -132,7 +137,7 @@
 
 
   <div class="para">
-    <p>We had to find an optimal way of capturing the customers' attention without distracting them or disturbing their flow. For this reason, I decided to make the toast slide in, after the page had finished loading. The hypothesis being that the slight movement caused by the toast would catch a customer's eye. The toast would then last on the screen for a total duration of 4 seconds. This timing was established after referring to WCAG best practices and ensuring that screen readers could parse through the toast contents. These parameters were subject to change as we tested the toast experience.</p>
+    <p>We had to find an optimal way of capturing the customers' attention without distracting them or disturbing their flow. For this reason, I decided to make the toast slide in, after the page had finished loading. The hypothesis was that the slight movement caused by the toast would catch a customer's eye. The toast would then last on the screen for a total duration of 4 seconds. This timing was established after referring to WCAG best practices and ensuring that screen readers could parse through the toast contents in that duration. These parameters were subject to change as we tested the toast experience.</p>
   </div>
 
   <div class="paraimg">
@@ -140,7 +145,7 @@
   </div>
 
   <div class="para">
-    <p>The next question we set out to answer was - how frequently should the toast be displayed? We took a look at the Analytics dashboard and found that most customers returned to the website in about 24 hours. This seemed like a good opportunity to capitalize on – remind customers about lingering items in their cart when they return via a new session. Thus, we decided to display the toast in every session that was initiated after a minimum of 24 hours from the latest session.  </p>
+    <p>The next question we set out to answer was - how frequently should the toast be displayed? We took a look at our analytics dashboard and found that most customers returned to the website in about 24-36 hours. This seemed like a good opportunity to capitalize on – remind customers about lingering items in their cart when they return via a new session. Thus, we decided to display the toast in every session that was initiated after a minimum of 24 hours from the latest session.  </p>
   </div>
 
   <div class="paraimg">
@@ -160,7 +165,10 @@
 
   <div class="para">
     <h4>Analyzing the results</h4>
-    <p>The toast performed well on mobile, with the enhancement variant showing an increase of 3% in Orders. Surprisingly, the enhancement variant had a 2% drop in Orders on desktop. On comparing the UPT metric, it was clear that the average items bought in a single purchase on desktop was more in the control variant (without toast). This pointed to an alternative hypothesis that perhaps the toast was too frequent on desktop, and maybe it interrupted customers while they built/ curated their cart. This interruption likely pushed customers to check out early with fewer items in their cart. There was also a lingering question — would removing the auto dismiss nature of the toast help it to be more prominent thus driving up engagement? </p>
+    <p>The toast performed well on mobile, with the enhancement variant showing an increase of 3% in Orders. Surprisingly, the enhancement variant had a 2% drop in Orders on desktop. Did this happen because customers missed out on seeing the toast? Would removing the auto dismiss nature of the toast help it to be more prominent thus driving up engagement and orders placed? 
+    <br> 
+    <br>
+    On comparing the UPT metric, it was clear that the average items bought in a single purchase on desktop was more in the control variant (without toast) than the enhancement variant. This pointed to an alternative hypothesis that perhaps the toast was too frequent on desktop, and maybe it interrupted customers as they were building a high-value cart. This premature interruption likely pushed customers to check out early, with fewer items in their cart. We decided to validate this hypothesis in another round of testing. </p>
   </div>
 
 <!--   <div class="paraimg">
