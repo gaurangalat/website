@@ -35,7 +35,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
       "Logo Logo Logo"
-      "Portfolio AboutMe Photography";}
+      "AboutMe Portfolio Photography";}
 .nav {
  position: fixed;
  top:0;
@@ -66,12 +66,17 @@ body {
 .header{
   margin: 25% 10% 0px 10%;
 }
+.header{
+  animation: MoveOnLoad 1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 .wrapper{
   margin: 10% 10% 20% 10%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 20px;
+  animation: MoveOnLoad 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
 }
 .card {
   background: white;
@@ -157,6 +162,16 @@ a.active{
  text-decoration: underline;
 }
 
+@keyframes MoveOnLoad {
+  0% {
+        opacity: 0;
+        transform: translateY(20px)
+  }
+  100% {
+        opacity: 1;
+        transform: translateY(0px)
+  }
+}
 
 @media only screen and (min-width: 480px) {
   .nav{
@@ -167,7 +182,7 @@ a.active{
     /*grid-template-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);*/
     grid-template-columns: 3fr 1fr 1fr 1fr;
     grid-template-areas:
-        "Logo Portfolio AboutMe Photography";
+        "Logo AboutMe Portfolio Photography";
   }
   .Logotext{
     display: inline;
@@ -230,7 +245,7 @@ a.active{
     grid-template-columns: 4fr 1fr 1fr 1fr;
     display: grid;
     grid-template-areas:
-      "Logo Portfolio AboutMe Photography";
+      "Logo AboutMe Portfolio Photography";
   }
   .header{
     margin: 10% 20% 2.5% 20%;
