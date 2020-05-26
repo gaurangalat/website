@@ -67,7 +67,7 @@ body {
   margin: 25% 10% 0px 10%;
 }
 .header{
-  animation: MoveOnLoad 1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: MoveOnLoad 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .wrapper{
   margin: 10% 10% 20% 10%;
@@ -75,7 +75,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 20px;
-  animation: MoveOnLoad 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: MoveOnLoad 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
 }
 .card {
