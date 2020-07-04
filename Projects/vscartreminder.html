@@ -75,19 +75,25 @@
   <div class="para">
     <h5>CHALLENGE</h5>
     <h4>High cart abandonment rate</h4>
-    <p>We had observed that customers curated their cart over several browsing sessions. This peculiar behavior led to cart abandonment scenarios where a customer added items to their cart but did not complete the purchase in that session, leading to a loss in revenue. Items left in the cart for a prolonged period of time also risked becoming sold out/ not available leading to frustrations at the customer's end. Although the marketing department sent cart reminder emails to customers periodically, most customers did not engage with the emails, as seen by the low click-through rate.</p>
+    <p>We observed that customers typically curated their cart over several browsing sessions. This peculiar behavior led to cart abandonment scenarios where a customer added items to their cart but did not complete the purchase in that session, leading to a loss in revenue from the business' perspective. Coupons sent to incentivize the purchase also reduced the profit margin. Items left in the cart for a prolonged period of time also risked becoming sold out/ not available leading to frustrations at the customer's end. </p>
+  </div>
+
+  <div class="paraimg">
+    <img src="CartCustomerflow.png" alt="Customer flow showing cart abandonment">
   </div>
 
   <div class="para">
     <h5>Research</h5>
     <h4>Understanding customer types</h4>
-    <p>Previous research had shown that there were 4 kinds of customers shopping with us. These were very similar to the 5 shopper types put together by the Nielsen Norman Group. These 4 types had distinct behaviors as shown below
+    <p>In order to design a functionality that delivers the maximum value, it was crucial to understand our target audience. Previous research had shown that there were 4 kinds of customers shopping with us. These were very similar to the 5 shopper types put together by the Nielsen Norman Group. These 4 types had distinct behaviors as shown below
     <ul>
         <li>Browsers: leisure shoppers who visit websites for checking new products or for inspiration</li>
         <li>Researchers: shoppers who carefully compare products, prices over multiple sessions</li>
         <li>Bargain–hunters: shoppers who are looking for good deals</li>
         <li>Product-focused: shoppers who know exactly what they want to buy</li>
       </ul></p>
+
+    <p>Combing through multiple qualitative research studies helped me understand the correlation between customer type and intent to purchase. The image below shows customer types arranged on a scale showing intent to purchase.</p>
   </div>
 
   <div class="paraimg">
@@ -97,7 +103,7 @@
   <div class="para">
     <h5>Research</h5>
     <h4>Identifying the target audience</h4>
-    <p>Checking analytics and comparing these types against visitor behavior, we found that the majority of our customers were either Browsers, Researchers or Bargain-hunters, with Product-focused customers representing a small set of daily visitors. Combing through multiple qualitative studies done by our researchers helped me understand the correlation between customer type and intent to purchase. The image below shows customer types being arranged on a scale showing intent to purchase. </p>
+    <p>Checking analytics and comparing these types against visitor behavior, we found that the majority of our customers were either Browsers, Researchers or Bargain-hunters, with Product-focused customers representing a small set of daily visitors.  </p>
   </div> 
 
   <div class="paraimg">
@@ -109,11 +115,25 @@
     </p>
   </div>
 
+  <div class="para">
+    <h5>Design</h5>
+    <h4>Design hypothesis</h4>  
+    <p>There was a potential to nudge the customer to completing their purchase as they visited the website in a new session. It was crucial that the customers were reminded on the very first page as they landed on the website to prevent losing them. With this in mind, I came up with the following hypothesis -  </p>  
+
+    <p>——</p>
+    <h3>We believe that notifying customers about lingering products in their cart, will enable them to get reminded about products they wish to buy and nudge them to purchase. We will know this is true when we see an increase in Orders.  </h3>
+    <p>——</p>
+
+  </div>
+
+  <div class="paraimg">
+    <img src="CartDesignflow.png" alt="Design solution proposed to reduce cart abandonment">
+  </div>
 
   <div class="para">
     <h5>Design</h5>
     <h4>Initial explorations</h4>  
-    <p>I explored a range of design solutions varying in fidelity, flexibility and functionality. A simple solution was to remind customers about items in their cart via an informational message. This message was intended to live in the form of a banner among the content but it also risked being overlooked by the customer. Another solution explored how we could show the actual products in any customer's cart. This solution provided the highest level of fidelity but it also required heavy backend integration for showing the exact product + swatch the customer had added to cart. A third solution was displaying a notification with an ephemeral nature such as a toast.
+    <p>I explored a range of design solutions varying in fidelity, flexibility and functionality. A simple solution was to remind customers about items in their cart via an inline message. This message was intended to live in the form of a banner among the content but it also risked being overlooked by the customer. Another solution explored how we could show the actual products in any customer's cart. This solution provided the highest level of fidelity but it also required heavy backend integration for showing the exact product and swatch the customer had added to cart. A third solution was displaying a notification with an ephemeral nature such as a toast.
     </p>
   </div>
 
