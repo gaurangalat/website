@@ -288,13 +288,11 @@ h5{
 /*_________desktop view___________*/
 @media only screen and (min-width: 991px){
 .wrapper{
-    /*margin: 7.5% 5% 5% 5%;*/
     margin: 5% 10% 5% 10%;
-/*    padding: 5% 0%;*/
   }
 
 .para{
-    margin: 7.5% 30% 2.5% 30%;
+    margin: 7.5% 27.5% 2.5% 27.5%;
     padding: 0px;
 }
 .paraimg{
@@ -303,12 +301,6 @@ h5{
 .header{
     margin: 5% 20% 2.5% 20%;
 }
-
-/*p, li{
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: 300;
-}*/
 .para p, li{
     font-size: 18px;
     line-height: 32px;
@@ -358,23 +350,10 @@ h5{
 .Photography{
   grid-area:Photography;
 }
-/*.nav{
-    padding: 20px 15% 0px 15%;
-    margin:0px; 
-    grid-auto-rows: 40px;
-    grid-template-columns: minmax(350px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
-    grid-template-columns: 4fr 1fr 1fr 1fr;
-    display: grid;
-    grid-template-areas:
-      "Logo AboutMe Portfolio Photography";
-}*/
+
 .nav{
   padding: 20px 15% 0px 15%;
-/*  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;*/
   grid-auto-rows: 80px;
-/*    grid-template-columns: minmax(350px,700px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);*/
   grid-template-columns: 4fr 1fr 1fr 1fr;
   grid-template-areas:
     "Logo AboutMe Portfolio Photography";
@@ -386,6 +365,5 @@ h5{
   color: black;
   font-weight: 500;
 }
-
 }
 
