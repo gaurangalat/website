@@ -76,7 +76,9 @@ body {
   grid-template-rows: auto;
   grid-gap: 20px;
   animation: MoveOnLoad 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-
+}
+.sideprojects{
+  margin: 10% 10% 20% 10%;
 }
 .card {
   background: white;
@@ -161,7 +163,10 @@ a.active{
  font-weight: 600;
  text-decoration: underline;
 }
-
+.tweet{
+  padding-right: 20px;
+  width: 33.33%;
+}
 @keyframes MoveOnLoad {
   0% {
         opacity: 0;
@@ -172,6 +177,7 @@ a.active{
         transform: translateY(0px)
   }
 }
+
 
 @media only screen and (min-width: 480px) {
   .nav{
@@ -250,7 +256,7 @@ a.active{
   .header{
     margin: 10% 20% 2.5% 20%;
   }
-  .wrapper {
+  .wrapper{
     margin: 0% 20% 0% 20%;
     padding: 5% 0%;
     /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
@@ -272,5 +278,17 @@ a.active{
   h4{
   	font-size: 18px;
   	font-weight: 300;
+  }
+  .sideprojects{
+    margin: 0% 0% 0% 20%;
+  }
+  .tweets{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
   }
 }
