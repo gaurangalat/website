@@ -238,6 +238,10 @@ a.active{
     font-size: 16px;
     line-height: 22px;
   }  
+  .tweet{
+  padding-right: 20px;
+/*  width: 33.33%;*/
+}
 }
 
 @media only screen and (min-width: 991px) {
