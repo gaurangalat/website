@@ -194,11 +194,16 @@
   </div>
 
   <div class="para">
-    <h4>Analyzing the results</h4>
-    <p>The toast performed well on mobile, with the enhancement variant showing an increase of 3% in Orders. Surprisingly, the enhancement variant had a 2% drop in Orders on desktop. Did this happen because customers missed out on seeing the toast? Would removing the auto dismiss nature of the toast help it to be more prominent thus driving up engagement and orders placed? 
+    <h5>A/B Testing</h5>
+    <h4>Impact</h4>
+    <p>The toast performed well on mobile, with the enhancement variant showing an increase of 3% in Orders. Surprisingly, the enhancement variant had a 2% drop in Orders on desktop.
     <br> 
     <br>
-    On comparing the UPT metric, it was clear that the average items bought in a single purchase on desktop was more in the control variant (without toast) than the enhancement variant. This pointed to an alternative hypothesis that perhaps the toast was too frequent on desktop, and maybe it interrupted customers as they were building a high-value cart. This premature interruption likely pushed customers to check out early, with fewer items in their cart. We decided to validate this hypothesis in another round of testing. </p>
+    On comparing the Units Per Transaction(UPT) metric, it was clear that the average items bought in a single purchase on desktop was more in the control variant (without toast) than the enhancement variant. This pointed to an alternative hypothesis that perhaps the toast was too frequent on desktop, and maybe it interrupted customers as they were building a high-value cart. This premature interruption likely pushed customers to not check out at all or check out early with fewer items in their cart. We decided to validate this hypothesis in a subsequent round of A/B testing. </p>
+  </div>
+
+  <div class="paraimg">
+    <img src="UPT.png" alt="comparison of metrics for desktop variants">
   </div>
 
 <!--   <div class="paraimg">
@@ -207,10 +212,23 @@
 
 
   <div class="para">
-    <h4>So what happened next?</h4>
+    <h4>Next Steps</h4>
     <p>Since the toast performed well on mobile, we released the enhancement variant to 100% of the traffic. I took away the findings of the test and the alternative hypotheses back to the drawing board. My main goal now was to make small tweaks to the implementation of the toast and tailor the experience for each platform (desktop, tablet, mobile). These changes would be put through an A/B test again to enable us to learn and incrementally inch towards delivering the best experience. As of today, I am currently working on designing the next set of improvements for the toast functionality. </p>
   </div>
 
+  <div class="paraimg">
+    <img src="Cart_Ship.png" alt="image showing that mobile variant was shipped but desktop and tablet variants were not">
+  </div>
+
+  <div class="para">
+    <h4>Reflection</h4>
+    <p>This was honestly a fun project to work on, given the limited resources we operated with. While the solution delivered results and achieved the objective, I personally think that there is scope for improving this experience. Here are a few thoughts on the shortcomings of this solution and how I would improve the experience if I had additional time and resources - 
+     <ul>
+        <li>Since this solution relies on cookies which are browser and device specific, this experience does not work as intended when a customer switches between devices or browsers.</li>
+        <li>The experience could be made better by showing the toast when a customer's cart has reached a certain threshold (value). This would prevent customers from checking out too early thus increasing the Average Order Value. </li>
+        <li>Building on my previous point, we could incentivize customers to check out by also notifying them of the available offers they qualify for, given their cart value and contents. </li>
+      </ul></p>
+  </div>
 
   <div class="bottomnavlinks right">
     <a href="vsoffers.html">Next Project &#x2192;</a> 

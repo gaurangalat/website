@@ -163,10 +163,19 @@ a.active{
  font-weight: 600;
  text-decoration: underline;
 }
-.tweet{
+/*.tweet{
   padding-right: 20px;
-/*  width: 33.33%;*/
-}
+}*/
+  .tweets {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow: auto;
+  }
+  .tweet {
+    flex: 0 0 auto;
+    max-width: 300px;
+    padding-right: 20px;
+  }
 @keyframes MoveOnLoad {
   0% {
         opacity: 0;
@@ -238,10 +247,6 @@ a.active{
     font-size: 16px;
     line-height: 22px;
   }  
-  .tweet{
-  padding-right: 20px;
-/*  width: 33.33%;*/
-}
 }
 
 @media only screen and (min-width: 991px) {
@@ -283,7 +288,7 @@ a.active{
   	font-size: 18px;
   	font-weight: 300;
   }
-  .sideprojects{
+/*  .sideprojects{
     margin: 0% 0% 0% 20%;
   }
   .tweets{
@@ -292,7 +297,24 @@ a.active{
     overflow-y: auto;
   }
   ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0px;  /* Remove scrollbar space 
+    background: transparent;  /* Optional: just make scrollbar invisible 
+  }*/
+  .sideprojects{
+/*    width: 1000px;*/
+    display: block;
+    margin: 0% 20% 0% 20%;
+    height: auto;
   }
+/*  .tweets {
+  display: flex;
+  flex-wrap: nowrap; 
+  overflow: auto;
+  }
+  .tweet {
+  flex: 0 0 auto;
+  max-width: 300px;
+  }*/
+
+
 }
