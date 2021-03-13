@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+ 
+  <title>Reducing cart abandonment at Victoria's Secret</title>  
+
+  <link href="stylesheet.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+<!-- Top Navigation -->
+<nav>
+  <div class="progress" >
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <div class="nav">
+    <div class="Logo">
+        <a href="http://gaurangalat.com" class="navLinks"><img src="logo.png" alt="logo" style="  width: 20px;height: 10.5px;">
+        <span class="Logotext">Gaurang Alat
+        </span></a>
+    </div>
+    <div class="AboutMe">
+        <a href="http://gaurangalat.com/about" class="navLinks">About</a>
+    </div>
+     <div class="Portfolio">
+        <a href="http://gaurangalat.com/#portfolio" class="navLinks">Work</a>
+    </div>
+    <div class="Photography">
+        <a href="http://gaurangalat.com/photography/" target="_blank" class="navLinks">Photo</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Main content -->
+
+<div class="wrapper">
+
+  <div class="header">
+    <h1>Reducing cart abandonment at Victoria's Secret</h1>
+    <h2>Increased Orders and recovered lost revenue by designing and shipping a cart reminder feature</h2>
+  </div>
+
+  <video loop controls style="display: block;margin-left: auto; margin-right: auto; max-width: 75% ;" preload="auto">
+    <source src="toastiMovie.mp4" type="video/mp4">
+    Sorry! Looks like your browser does not support the video tag.
+  </video>
+
+  <!-- <div>
+    <img src="toasthero.png" alt="glimpse of final design">
+  </div> -->
+
+  <div class="para">
+    <div class="highlight">
+      <ul>
+        <li><b>Goal</b>: To reduce cart abandonment and improve conversion</li>
+        <li><b>What I did</b>: Sketching, prototyping, A/B testing and analyzing data</li>
+        <li><b>Duration</b>: July 2019 - October 2019</li>
+      </ul>
+    </div>
+    
+    <p>Internal research done over the past few years validated the industry-wide hypothesis that the shopping experience is non-linear. We had observed that a purchase would happen over multiple visits by the customer. There was no single reason behind this; it was simply a result of the culmination of various factors largely related to customer behavior. There was an opportunity to understand this behavior and improve conversion. </p> 
+  </div>
+
+  <div class="para">
+    <h5>CHALLENGE</h5>
+    <h4>High cart abandonment rate</h4>
+    <p>We observed that customers typically curated their cart over several browsing sessions. This peculiar behavior led to cart abandonment scenarios where a customer added items to their cart but did not complete the purchase in that session, leading to a loss in revenue from the business' perspective. Coupons sent to incentivize the purchase also reduced the profit margin. Items left in the cart for a prolonged period of time also risked becoming sold out/ not available leading to frustrations at the customer's end. </p>
+  </div>
+
+  <div class="paraimg">
+    <img src="CartCustomerflow.png" alt="Customer flow showing cart abandonment">
+  </div>
+
+  <div class="para">
+    <h5>Research</h5>
+    <h4>Understanding customer types</h4>
+    <p>In order to design a functionality that delivers the maximum value, it was crucial to understand our target audience. Previous research had shown that there were 4 kinds of customers shopping with us. These were very similar to the 5 shopper types put together by the Nielsen Norman Group. These 4 types had distinct behaviors as shown below
+    <ul>
+        <li>Browsers: leisure shoppers who visit websites for checking new products or for inspiration</li>
+        <li>Researchers: shoppers who carefully compare products, prices over multiple sessions</li>
+        <li>Bargain–hunters: shoppers who are looking for good deals</li>
+        <li>Product-focused: shoppers who know exactly what they want to buy</li>
+      </ul></p>
+
+    <p>Combing through multiple qualitative research studies helped me understand the correlation between customer type and intent to purchase. The image below shows customer types arranged on a scale showing intent to purchase.</p>
+  </div>
+
+  <div class="paraimg">
+    <img src="customertype.png" alt="4 customer types and their intent to purchase">
+  </div>
+
+  <div class="para">
+    <h5>Research</h5>
+    <h4>Identifying the target audience</h4>
+    <p>Checking analytics and comparing these types against visitor behavior, we found that the majority of our customers were either Browsers, Researchers or Bargain-hunters, with Product-focused customers representing a small set of daily visitors.  </p>
+  </div> 
+
+  <div class="paraimg">
+    <img src="targetaudience.png" alt="Venn diagram showing target audience">
+  </div>
+
+  <div class="para">
+    <p>We can clearly see that the Browsers' intent to purchase isn't as high as the other three types of customers. In other words, Browsers were not contributing much to the revenue earned from online sales. Combining this with the fact that Product-focused customers represented a minority of our daily visitors, it became evident that designing a solution that catered towards Researchers and Bargain-hunters would deliver the maximum value and increase conversion. <!-- This was backed by the findings of a survey done in June, that found that 35% of the total cart abandonment instances were attributed to custmers waiting for price reductions (Bargain hunters) and customers who were simply checking product availability (Researchers). -->
+    </p>
+  </div>
+
+  <div class="para">
+    <h5>Design</h5>
+    <h4>Design hypothesis</h4>  
+    <p>There was a potential to nudge the customer to complete their purchase as they visited the website in a new session. It was crucial that the customers were reminded on the very first page as they landed on the website to prevent losing them. With this in mind, I came up with the following hypothesis -  </p>  
+
+    <p>——</p>
+    <h3>We believe that notifying customers about lingering products in their cart, will enable them to get reminded about products they wish to buy and nudge them to purchase. We will know this is true when we see an increase in Orders.  </h3>
+    <p>——</p>
+
+  </div>
+
+  <div class="paraimg">
+    <img src="CartDesignflow.png" alt="Design solution proposed to reduce cart abandonment">
+  </div>
+
+  <div class="para">
+    <h5>Design</h5>
+    <h4>Initial explorations</h4>  
+    <p>I explored a range of design solutions varying in fidelity, flexibility and functionality. A simple solution was to remind customers about items in their cart via an inline message. This message was intended to live in the form of a banner among the content but it also risked being overlooked by the customer. Another solution explored how we could show the actual products in any customer's cart. This solution provided the highest level of fidelity but it also required heavy backend integration for showing the exact product and swatch the customer had added to cart. A third solution was displaying a notification with an ephemeral nature such as a toast.
+    </p>
+  </div>
+
+  <div class="paraimg">
+    <img src="designexplorations.png" alt="Initial design explorations">
+  </div>
+
+  <div class="para">
+    <p>An advantage of the toast was that it appeared on top of the content and thus it could work on any page the customer viewed. It also provided a lot of flexibility in implementation — the toast could either auto-dimiss or it could be dismissed by clicking/ tapping on a button, it could appear from the top or the bottom, etc. With all of these qualities, the toast emerged as a lean and flexible solution that could serve as the building block of a robust experience.</p>
+  </div>
+
+  <div class="paraimg">
+    <img src="toastexplorations.png" alt="various iterations for the toast">
+  </div>
+
+  <div class="para">
+    <h5>Design</h5>
+    <h4>Ironing out the details</h4>
+    <p>For questions that could not be answered because of lack of data, we decided to approach them with a test-and-learn strategy. For example, when it came to deciding if the toast should dismiss after a customer intitated an action or if it should dismiss automatically, we decided to test both, one at a time, and then compare engagement. Since we were introducing new functionality, we wanted to cause minimum distraction. So we decided to roll with the auto dimiss variant with the plan to test a persistent toast, if engagement was low.</p>
+  </div>
+
+
+  <div class="para">
+    <p>We had to find an optimal way of capturing the customers' attention without distracting them or disturbing their flow. For this reason, I decided to make the toast slide in, after the page had finished loading. The hypothesis was that the slight movement caused by the toast would catch a customer's eye. The toast would then last on the screen for a total duration of 4 seconds. This timing was established after referring to WCAG best practices and ensuring that screen readers could parse through the toast contents in that duration. These parameters were subject to change as we tested the toast experience.</p>
+  </div>
+
+  <div class="paraimg">
+    <img src="toasttiming.png" alt="flow showing how the toast appeared/ disappeared">
+  </div>
+
+  <div class="para">
+    <p>The next question we set out to answer was - how frequently should the toast be displayed? We took a look at our analytics dashboard and found that most customers returned to the website in about 24-36 hours. This seemed like a good opportunity to capitalize on – remind customers about lingering items in their cart when they return via a new session. Thus, we decided to display the toast in every session that was initiated after a minimum of 24 hours from the latest session.  </p>
+  </div>
+
+  <div class="paraimg">
+    <img src="toastfrequency.png" alt="flow showing how the frequently the toast appeared">
+  </div>
+
+<div class="para">
+    <h5>Prototyping</h5>
+    <h4>Putting it all together</h4>
+    <p>At this point, it was necessary to prototype the interactions to get a feel of the experience. I brought all of the design decisions together and created a prototype in Origami Studio. This was a great way to validate the static mockups and ensure that the touch targets were proper and the entry/ exit animations felt right. It also gave me an opportunity to test the experience in various scenarios such as one handed usage and multi-tasking/ context switching. </p>
+  </div>
+
+  <div class="paraimg">
+    <img src="Origami_prototype.png" alt="Origami prototype">
+  </div>
+
+
+  <div class="para">
+    <h5>A/B Testing</h5>
+    <h4>Testing the toast</h4>
+    <p>The cart reminder toast was tested across desktop, tablet, mobile and the VS app platforms using a 50-50 traffic split in March 2020. The two variants were labeled as enhancement (with toast) and control (without toast). The success of this test was measured by monitoring two primary metrics- Orders and Revenue. A few secondary metrics we planned to analyze were Units per Transaction (UPT), Revenue per Visitor and Average Order Size (AOS). Capturing secondary metrics was important to validate alternative hypotheses and get granular data.</p>
+  </div>
+
+  <div class="paraimg">
+    <img src="ABtesting.png" alt="comparison of variants deployed for A/B testing">
+  </div>
+
+  <div class="para">
+    <h5>A/B Testing</h5>
+    <h4>Impact</h4>
+    <p>The toast performed well on mobile, with the enhancement variant showing an increase of 3% in Orders on mobile and 2% increase in Orders on desktop. Surprisingly, the Revenue per Visitor decreased by 4% on desktop enhancement variant as compared to the desktop control variant (without toast).
+    <br> 
+    <br>
+    On comparing the Units Per Transaction(UPT) metric, it was clear that the average items bought in a single purchase on desktop was more in the control variant than the enhancement variant. Basically – customers were placing more orders but they were buying less items. This pointed to an alternative hypothesis that perhaps the toast was too frequent on desktop, and maybe it interrupted customers as they were building a high-value cart. This premature interruption likely pushed customers to check out early with fewer items in their cart. We decided to validate this hypothesis in a subsequent round of A/B testing. </p>
+  </div>
+
+  <div class="paraimg">
+    <img src="UPT.png" alt="comparison of metrics for desktop variants">
+  </div>
+
+<!--   <div class="paraimg">
+    <img src="offercardvariations.png" alt="Offer card variations">
+  </div> -->
+
+
+  <div class="para">
+    <h4>Next Steps</h4>
+    <p>Since the toast performed well on mobile, we released the enhancement variant to 100% of the traffic. I took away the findings of the test and the alternative hypotheses back to the drawing board. My main goal now was to make small tweaks to the implementation of the toast and tailor the experience for each platform (desktop, tablet, mobile). These changes would be put through an A/B test again to enable us to learn and incrementally inch towards delivering the best experience. As of today, I am currently working on designing the next set of improvements for the toast functionality. </p>
+  </div>
+
+  <div class="paraimg">
+    <img src="Cart_Ship.png" alt="image showing that mobile variant was shipped but desktop and tablet variants were not">
+  </div>
+
+  <div class="para">
+    <h4>Reflection</h4>
+    <p>This was honestly a fun project to work on, given the limited resources we operated with. While the solution delivered results and achieved the objective, I personally think that there is scope for improving this experience. Here are a few thoughts on the shortcomings of this solution and how I would improve the experience if I had additional time and resources - 
+     <ul>
+        <li>Since this solution relies on cookies which are browser and device specific, this experience does not work as intended when a customer switches between devices or browsers.</li>
+        <li>The experience could be made better by showing the toast when a customer's cart has reached a certain threshold (value). This would prevent customers from checking out too early thus increasing the Average Order Value. </li>
+        <li>Building on my previous point, we could incentivize customers to check out by also notifying them of the available offers they qualify for, given their cart value and contents. </li>
+      </ul></p>
+  </div>
+
+  <div class="bottomnavlinks right">
+    <a href="vsoffers.html">Next Project &#x2192;</a> 
+  </div>
+    
+</div>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-90319665-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<!-- Hotjar Tracking Code for www.gaurangalat.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:661481,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+
+</body>
+</html>
