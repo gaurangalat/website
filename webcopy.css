@@ -229,7 +229,7 @@ a.active{
 
 @media only screen and (min-width: 991px) {
   .nav{
-    padding: 20px 20% 0px 20%;
+    padding: 20px 25% 0px 25%;
     margin:0px; 
     grid-auto-rows: 80px;
     grid-template-columns: minmax(350px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
