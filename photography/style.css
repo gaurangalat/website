@@ -1,38 +1,47 @@
 body {
   overflow-x: hidden;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #232323;
 }
 h2 {
-    margin-bottom: 15px;
-    font-size: 3em;
-    font-color:#fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0px 15px 15px 15px;
+    font-size: 28px;
+    color:#fff;
+}
+h3 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0px 15px 15px 15px;
+    font-size: 28px;
+    color:#fff;
+}
+section{
+  margin-top: 50px;
 }
 img {
     margin-bottom: 30px;
 }
 .test {
-	text-align: center;
+/*	text-align: center;*/
 	border-radius: 0;
 	background-clip: border-box;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	border: none;
 	min-height: 100%;
-	padding: 100px 0;
-	text-align: center;
+	padding-top: 100px;
 }
 top-text{
 	line-height: 2.75;
 	font-size: 16px;
-	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 p{
-	line-height: 1.75;
+	line-height: 1.6;
 }
 p.item-intro {
-    margin: 20px 0 30px;
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #fff;
+    margin: 20px 15px 30px 15px;
     font-size: 16px;
 }
 footer {
