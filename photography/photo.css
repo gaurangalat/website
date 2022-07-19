@@ -45,11 +45,11 @@ body {
 }
 
 
-@media screen and (max-width: 1024px) {
+/*@media screen and (max-width: 1024px) {
   .header{
     padding-right: 20%;
   }
-}
+}*/
 
 /* Responsive layout - two column layout */
 @media screen and (max-width: 800px) {
