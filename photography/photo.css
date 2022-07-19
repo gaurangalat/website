@@ -47,11 +47,6 @@ body {
 
 
 @media screen and (max-width: 1024px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
   .header{
     padding-right: 20%;
   }
