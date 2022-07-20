@@ -29,6 +29,16 @@ body {
   width: 100%;
 }
 
+.header {
+  padding-top: 20px;
+  padding-left: 4px;
+}
+
+.text h1{
+  font-size: 32px;
+  font-family: 'Bebas Neue', cursive;
+  padding-bottom: 0px;
+}
 
 /*@media screen and (max-width: 1024px) {
   .header{
