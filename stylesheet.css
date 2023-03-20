@@ -40,10 +40,10 @@ body {
 }
 .navLinks{
   font-size: 10px;
-  text-transform: uppercase;
+/*  text-transform: uppercase;*/
   text-decoration: none;
   color: black;
-  font-weight: 500;
+/*  font-weight: 500;*/
 }
 .AboutMe{
   text-align: center;
@@ -60,13 +60,13 @@ body {
 .header{
   margin: 25% 10% 0px 10%;
 }
-.wrapper{
+/*.wrapper{
   margin: 10%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 20px;
-}
+}*/
 .card {
   background: white;
   text-decoration: none;
@@ -125,7 +125,7 @@ body {
   grid-gap: 10px;
   grid-auto-columns: 3fr 3fr 3fr;
   grid-template-areas:
-  "linkedin dribbble twitter"    
+  "linkedin readcv twitter"    
 }
 p, li {
   font-weight: 300;
@@ -172,7 +172,7 @@ a.active{
     margin: 0px;
     display: grid;
     grid-template-rows: 40px;
-    grid-template-columns-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);
+/*    grid-template-columns-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);*/
     grid-template-areas:
         "Logo Portfolio AboutMe Photography";
   }
@@ -185,10 +185,10 @@ a.active{
   }
   .navLinks{
     font-size: 12px;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     text-decoration: none;
     color: black;
-    font-weight: 500;
+/*    font-weight: 500;*/
   }
   .AboutMe{
     text-align: right;
@@ -232,7 +232,7 @@ a.active{
     padding: 20px 25% 0px 25%;
     margin:0px; 
     grid-auto-rows: 80px;
-    grid-template-columns: minmax(350px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
+/*    grid-template-columns: minmax(350px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);*/
     display: grid;
     grid-template-areas:
       "Logo Portfolio AboutMe Photography";
@@ -260,7 +260,7 @@ a.active{
     letter-spacing: 0.03em;
   }
   h2{
-    font-size: 30px;
+    font-size: 18px;
     letter-spacing: 0.03em;
     line-height: 170%;
   }

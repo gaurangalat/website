@@ -1,0 +1,327 @@
+body {
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin-right: auto;
+  margin-left: auto;
+  max-width:900px;
+}
+
+.AboutMe{
+  grid-area:AboutMe;
+}
+.Portfolio{
+  grid-area:Portfolio;
+}
+.Logo{
+  grid-area:Logo;
+}
+.Photography{
+  grid-area:Photography;
+}
+/*.Logotext{
+  display: none;
+}*/
+.Logo img{
+  width: 20px;
+  height: 10.5px;
+}
+.nav{
+  background: rgba(255,255,255,0.85);
+  padding-top: 1%;
+  margin: 0 25% 0 25%;
+  max-width: 1200px;
+  display: grid;
+  grid-auto-rows: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+      "Logo Logo Logo"
+      "AboutMe Portfolio Photography";}
+.nav {
+  position: fixed;
+  top:0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+.navLinks{
+  font-size: 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.AboutMe{
+  text-align: center;
+}
+.Portfolio{
+  text-align: center;
+}
+.Photography{
+  text-align: center;
+}
+.Logo{
+  text-align: center;
+}
+.header{
+  margin: 25% 10% 0px 10%;
+}
+.header{
+  animation: MoveOnLoad 2s forwards cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.social{
+  animation: MoveOnLoad 2s forwards cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+/*.wrapper{
+  margin: 10% 10% 20% 10%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  animation: MoveOnLoad 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}*/
+/*.sideprojects{
+  margin: 10% 10% 20% 10%;
+}*/
+
+ 
+/* Card styling */
+
+/*.card {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+}
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+.card article {
+  padding: 15px 20px;
+}*/
+
+/*.card h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+}
+ 
+.card p { 
+  margin: 5px 0px 15px 0px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+ 
+.card span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+}
+.card .thumb {
+  padding-bottom: 75%;
+  background-size: cover;
+  background-position: center center;
+}*/
+.social{
+  display: grid;
+  text-align: center;
+  margin: 25px 15% 10px;
+  grid-gap: 10px;
+  grid-auto-columns: 3fr 3fr 3fr;
+  grid-template-areas:
+  "linkedin dribbble twitter"    
+}
+p, li {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+}
+h2{
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-color: #424850;
+  font-weight: 300;
+}
+h3{
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 20px;
+}
+h4{
+  font-weight: 300;
+}
+a{
+  color: #1b1b1b;
+  text-decoration: none;
+}
+a.active{
+ font-weight: 600;
+ text-decoration: underline;
+}
+/*.tweet{
+  padding-right: 20px;
+}
+  .tweets {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow: auto;
+  }
+  .tweet {
+    flex: 0 0 auto;
+    max-width: 300px;
+    padding-right: 20px;
+  }*/
+@keyframes MoveOnLoad {
+  0% {
+        opacity: 0;
+        transform: translateY(30px)
+  }
+  100% {
+        opacity: 1;
+        transform: translateY(0px)
+  }
+}
+
+
+@media only screen and (min-width: 480px) {
+  .nav{
+/*    padding: 20px 10% 0px 10%;*/
+    display: grid;
+    grid-template-rows: 40px;
+    /*grid-template-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);*/
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "Logo AboutMe Portfolio Photography";
+  }
+  .Logotext{
+    display: inline;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing:-0.5px;
+    margin-left: 5px;
+  }
+  .navLinks{
+    font-size: 14px;
+    text-decoration: none;
+    color: #171717;
+    font-weight: 300;
+  }
+  .AboutMe{
+    text-align: center;
+  }
+  .Portfolio{
+    text-align: center;
+  }
+  .Photography{
+    text-align: center;
+  }
+  .Logo{
+    text-align: left;
+  }
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .social{
+    margin-top: 60px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  p, li {
+    font-size: 16px;
+    line-height: 26px;
+  }
+ /* .header{
+    margin: 10% 20%;
+  }*/
+  h2{
+    font-size: 18px;
+    font-color": #171717;
+  }
+  h3{
+    font-size: 14px;
+    line-height: 22px;
+  }  
+}
+
+@media only screen and (min-width: 991px) {
+  .nav{
+/*    padding: 20px 15% 0px 15%;*/
+    margin: 0 25% 0 25%;
+    max-width: 1200px;
+    grid-auto-rows: 80px;
+    /*grid-template-columns: minmax(350px,700px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);*/
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-areas:
+      "Logo AboutMe Portfolio Photography";
+  }
+  .header{
+    margin: 15% 25% 2.5% 25%;
+  }
+  .wrapper{
+    margin: 0% 20% 0% 20%;
+    padding: 5% 0%;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+  }
+  .social{
+    margin-top: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+  } 
+  p, li{
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+  }
+  h2{
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 26px;
+    font-color: #424850;
+    font-weight: 300;
+  }
+  h4{
+    font-size: 18px;
+    font-weight: 300;
+  }
+/*  .sideprojects{
+    margin: 0% 0% 0% 20%;
+  }
+  .tweets{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space 
+    background: transparent;  /* Optional: just make scrollbar invisible 
+  }*/
+  .sideprojects{
+/*    width: 1000px;*/
+    display: block;
+    margin: 0% 20% 0% 20%;
+    height: auto;
+  }
+/*  .tweets {
+  display: flex;
+  flex-wrap: nowrap; 
+  overflow: auto;
+  }
+  .tweet {
+  flex: 0 0 auto;
+  max-width: 300px;
+  }*/
+
+
+}
