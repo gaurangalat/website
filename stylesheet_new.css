@@ -5,7 +5,9 @@ body {
   margin-left: auto;
   max-width:900px;
 }
-
+.header{
+  max-width:900px;
+}
 .AboutMe{
   grid-area:AboutMe;
 }
@@ -196,7 +198,7 @@ a.active{
 
 @media only screen and (min-width: 480px) {
   .nav{
-/*    padding: 20px 10% 0px 10%;*/
+  /*    padding: 20px 10% 0px 10%;*/
     display: grid;
     grid-template-rows: 40px;
     /*grid-template-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);*/
@@ -237,16 +239,23 @@ a.active{
     margin-left: 20%;
     margin-right: 20%;
   }
+.header{
+    margin: 15% 20% 2.5% 20%;
+    max-width: 900px;
+  }
   p, li {
     font-size: 16px;
     line-height: 26px;
   }
- /* .header{
+  /* .header{
     margin: 10% 20%;
   }*/
   h2{
-    font-size: 18px;
-    font-color": #171717;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 26px;
+    font-color: #424850;
+    font-weight: 300;
   }
   h3{
     font-size: 14px;
