@@ -1,0 +1,344 @@
+body {
+  /*background-color: #f5f5f5;*/
+  font-family: "Istok Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+  /*height: 1600px;*/
+  margin: 50px 10% 60px 10%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+
+/*Portfolio modal contents*/
+.box {
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 20px;
+/*  box-shadow: 4px 4px  4px #DCDCDC;*/
+}
+.highlight{
+  background-color: #f5f5f5;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+/*.links li{
+  display:inline;
+}*/
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+ /* padding-top: 05px;*/
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+ul{
+  padding-left:30px;
+  list-style-type: inside;
+}
+h1 {
+  font-style: medium;
+  font-size: 18px;
+  line-height: 28px;
+}
+h2{
+  margin-top: -10px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 200;
+  color: #565656;
+  letter-spacing: -0.15px;
+}
+p, li {
+  font-size: 14px;
+  line-height: 24px;
+  color: #2b2b2b;
+  font-family: "Lora", serif;
+}
+.contents img{
+  display: block;
+/*  margin-left: auto;
+  margin-right: auto;*/
+  width: 100%;
+  height: auto;
+}
+.bottomnavlinks a{
+  margin-top: 30px;
+  color: #565656;
+  font-size: 10px;
+  font-weight: 600;
+  border-bottom-style: none;
+  text-decoration: none;
+}
+.bottomnavlinksleft a{
+  float:left;
+}
+.bottomnavlinksright a{
+  float:right;
+}
+.bottomnavlinks a:hover{
+  text-decoration: underline;
+}
+.list-inline {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a.navLinks{
+  border-bottom-style: none;
+}
+a{
+  color:black;
+  text-decoration: none;
+  border-bottom-style: dotted;
+  border-width:1.4px;
+}
+p a:hover {
+  border-bottom-style: solid;
+}
+
+/*NAVBAR START*/
+.AboutMe{
+  grid-area:AboutMe;
+}
+.Portfolio{
+  grid-area:Portfolio;
+}
+.Logo{
+  padding-top: 5px;
+  grid-area:Logo;
+}
+.Photography{
+  grid-area:Photography;
+}
+.nav{
+  background: rgba(255,255,255,0.95);
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0px 10% 0px;
+  display: grid;
+  grid-auto-rows: 30px;
+  grid-template-areas:
+      "Logo Logo Logo"
+      "Portfolio AboutMe Photography";
+}
+.nav {
+ position:fixed;
+ top:0;
+ right: 0;
+ left: 0;
+ z-index: 1000;
+}
+.navLinks{
+  font-size: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.Logotext{
+  display: none;
+}
+.AboutMe{
+  text-align: center;
+}
+.Portfolio{
+  text-align: left;
+}
+.Photography{
+  text-align: right;
+}
+.Logo{
+  text-align: center;
+}
+/*.logoimg{
+  width: 20px;
+  height: 10.5px;
+}*/
+
+/*TABLET */
+@media only screen and (min-width: 480px) {
+  .wrapper {
+    margin-left: 50px;
+    margin-right: 50px;
+    grid-gap: 20px;
+    grid-auto-columns:1fr;
+}
+h1{
+  font-size: 24px;
+  line-height: 40px
+}
+h2{
+  margin-top: -15px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+}
+h4{
+  font-size: 18px;
+  font-weight: 600;
+}
+p, li {
+  font-size: 16px;
+  line-height: 28px;
+}
+.contents{
+  padding-left:20px;
+  padding-right:20px; 
+}
+.bottomnavlinks a{
+  margin-top: 40px;
+  font-size: 12px;
+}
+}
+
+/*TABLET/ DESKTOP */
+@media only screen and (min-width: 768px)  {
+.wrapper {
+    margin-left: 75px;
+    margin-right: 75px;
+    grid-gap: 20px;
+    grid-auto-columns:1fr;
+}
+.Logotext{
+  display: inline;
+}
+img{
+  width: 40px;
+  height: 21px;
+}
+.nav{
+  padding-top: 20px;
+  margin: 0px 6%;
+  display: grid;
+  grid-template-rows: 40px;
+  grid-template-columns-columns: minmax(200px,auto) minmax(103px,auto) minmax(103px,auto) minmax(103px,auto);
+  grid-template-areas:
+      "Logo Portfolio AboutMe Photography";
+}
+.navLinks{
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.AboutMe{
+  text-align: right;
+}
+.Portfolio{
+  text-align: right;
+}
+.Photography{
+  text-align: right;
+}
+.Logo{
+  text-align: left;
+}
+.Logotext{
+  display: inline;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing:-0.5px;
+  margin-left: 5px;
+}
+h1{
+  font-size: 36px;
+  line-height: 54px
+}
+h2{
+  margin-top: -15px;
+  font-size: 20px;
+  line-height: 30px;
+}
+h3{
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+}
+h4{
+  font-size: 20px;
+  font-weight: 600;
+}
+p, li {
+  font-size: 18px;
+  line-height: 36px;
+}
+.contents{
+  padding-left:50px;
+  padding-right:50px; 
+}
+.bottomnavlinks a{
+  margin-top: 50px;
+  font-size: 14px;
+}
+}
+
+
+/*DESKTOP */
+@media only screen and (min-width: 991px)  {
+.wrapper {
+    margin-left: 15%;
+    margin-right: 15%;
+    grid-gap: 20px;
+    grid-column:1fr;
+}
+.nav{
+  padding-top: 20px;
+/*  padding-left: 5px;
+  padding-right: 5px;*/
+  margin-left: 15%;
+  margin-right: 15%;
+  grid-auto-rows: 40px;
+  grid-template-columns: minmax(380px,400px) minmax(130px,1fr) minmax(130px,1fr) minmax(130px,1fr);
+  display: grid;
+  /*grid-auto-columns: minmax(500px,3fr) minmax(135px,1fr) minmax(135px,1fr);*/
+  grid-template-areas:
+      "Logo Portfolio AboutMe Photography";
+}
+.navLinks{
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+h1{
+  font-size: 32px;
+  line-height: 48px;
+}
+h2{
+  margin-top: -20px;
+  font-size: 20px;
+  line-height: 28px;
+  color:#565656;
+}
+h3{
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 700;
+}
+h4{
+  font-size: 18px;
+  font-weight: 600;
+}
+p, li{
+  font-size: 18px;
+  line-height: 40px;
+}
+.contents{
+  padding-left:70px;
+  padding-right:70px; 
+}
+}
