@@ -1,0 +1,44 @@
+{
+  "tags": [
+    { "id": "concept", "label": "Concept" },
+    { "id": "utilities", "label": "Utilities" },
+    { "id": "mobile", "label": "Mobile" }
+  ],
+  "projects": [
+    {
+      "title": "Stories with a preview scrubber",
+      "media": {
+        "src": "/photo/photography/FredAgain.webp",
+        "alt": "Placeholder image for the stories preview scrubber experiment"
+      },
+      "tags": ["concept", "mobile"],
+      "body": [
+        "Placeholder copy. A quick prototype exploring how you could skim through someone's stories with a thumbnail preview. Long press to bring up the preview panel, scroll to scrub, and tap to jump straight to a story.",
+        "Built in an afternoon to test whether a scrubber feels faster than tapping through one story at a time."
+      ]
+    },
+    {
+      "title": "Mini player for desktop music",
+      "media": {
+        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        "alt": "Placeholder video for the desktop mini player experiment"
+      },
+      "tags": ["concept", "utilities"],
+      "body": [
+        "Placeholder copy. A compact always-on-top player that keeps controls within reach without taking over the screen. Hover to reveal the queue, drag to dock it to any corner.",
+        "A short exploration of how much of the full app can collapse into a single floating card."
+      ]
+    },
+    {
+      "title": "Exposure slider for a camera app",
+      "media": {
+        "src": "/photo/photography/Bonobo7.webp",
+        "alt": "Placeholder image for the camera exposure slider experiment"
+      },
+      "tags": ["mobile"],
+      "body": [
+        "Placeholder copy. Mocking up a manual exposure control with layered black and white overlays at variable opacity. Long press the exposure icon to switch back to auto-exposure."
+      ]
+    }
+  ]
+}

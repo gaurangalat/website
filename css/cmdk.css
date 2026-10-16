@@ -1,0 +1,190 @@
+/* Cmd+K palette */
+.cmdk-trigger,
+.cmdk-overlay {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.page-tools {
+  position: fixed;
+  bottom: 20px;
+  left: 24px;
+  z-index: 1001;
+  display: flex;
+  gap: 8px;
+}
+.cmdk-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #6b6b6b;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease;
+}
+.cmdk-trigger:hover {
+  color: #1b1b1b;
+  border-color: rgba(0,0,0,0.18);
+}
+.cmdk-trigger kbd {
+  font: inherit;
+  letter-spacing: 0.04em;
+}
+.cmdk-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: calc(18vh + 100px);
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .15s ease, visibility 0s linear .15s;
+}
+.cmdk-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .15s ease;
+}
+.cmdk {
+  width: min(420px, calc(100% - 32px));
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.10);
+  overflow: hidden;
+  transform: translateY(8px) scale(0.98);
+  transition: transform .25s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.cmdk-overlay.is-open .cmdk {
+  transform: none;
+}
+.cmdk-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.cmdk-search svg {
+  flex: none;
+  color: #9a9a9a;
+}
+.cmdk-field {
+  position: relative;
+  flex: 1;
+}
+.cmdk-input,
+.cmdk-ghost {
+  font: inherit;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 26px;
+  padding: 0;
+  margin: 0;
+}
+.cmdk-input {
+  position: relative;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #1b1b1b;
+}
+.cmdk-input::placeholder {
+  color: #b0b0b0;
+}
+.cmdk-ghost {
+  position: absolute;
+  inset: 0;
+  color: #b8b8b8;
+  white-space: pre;
+  pointer-events: none;
+  overflow: hidden;
+}
+.cmdk-ghost-typed {
+  color: transparent;
+}
+.cmdk-kbd {
+  flex: none;
+  font: inherit;
+  font-size: 11px;
+  color: #9a9a9a;
+  padding: 2px 6px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+.cmdk-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.cmdk-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  color: #1b1b1b;
+  cursor: pointer;
+}
+.cmdk-item mark {
+  background: none;
+  color: inherit;
+  font-weight: 500;
+}
+.cmdk-item-hint {
+  font-size: 12px;
+  color: #a0a0a0;
+}
+.cmdk-item.is-active {
+  background: #f3f3f3;
+}
+.cmdk-item.is-active .cmdk-item-hint {
+  color: #6b6b6b;
+}
+.cmdk-empty {
+  padding: 18px 20px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #9a9a9a;
+}
+.cmdk-footer {
+  display: flex;
+  gap: 16px;
+  padding: 10px 18px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 11px;
+  font-weight: 300;
+  color: #9a9a9a;
+}
+.cmdk-footer kbd {
+  font: inherit;
+  color: #6b6b6b;
+  margin-right: 4px;
+}
+@media (hover: none) {
+  .cmdk-footer {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cmdk-overlay,
+  .cmdk {
+    transition: none;
+  }
+}

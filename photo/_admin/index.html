@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo admin</title>
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --surface: #fff;
+      --ink: #232323;
+      --muted: #7a7a7a;
+      --line: #e4e4e4;
+      --accent: #2f5bff;
+      --accent-soft: #e8edff;
+      --danger: #d93838;
+      --radius: 10px;
+      --col: 260px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    button, input, select { font: inherit; color: inherit; }
+
+    header {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 24px;
+      background: rgba(245, 245, 245, .92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    header h1 { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -.2px; }
+    #status { color: var(--muted); font-size: 13px; }
+    #status.dirty { color: var(--accent); }
+    #status.error { color: var(--danger); }
+    .spacer { flex: 1; }
+    .zoom { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; }
+    .zoom input { width: 110px; accent-color: var(--accent); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      height: 34px; padding: 0 14px;
+      border: 1px solid var(--line); border-radius: 8px;
+      background: var(--surface); cursor: pointer; text-decoration: none;
+      font-weight: 500;
+    }
+    .btn:hover { border-color: #cfcfcf; }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn.primary:hover { filter: brightness(1.08); }
+    .btn:disabled { opacity: .5; cursor: default; filter: none; }
+
+    main {
+      display: flex; align-items: flex-start; gap: 24px;
+      padding: 20px 24px 80px;
+    }
+    .columns { display: flex; gap: 8px; align-items: flex-start; }
+    .column { width: var(--col); }
+    .col-head {
+      position: sticky; top: 59px; z-index: 5;
+      padding: 8px 2px; background: var(--bg);
+      font-size: 12px; color: var(--muted);
+    }
+    .col-head strong { color: var(--ink); font-weight: 600; }
+    .meter { height: 4px; margin-top: 6px; border-radius: 2px; background: var(--line); overflow: hidden; }
+    .meter span { display: block; height: 100%; background: var(--accent); border-radius: 2px; transition: width .2s; }
+
+    .list { min-height: 120px; padding-bottom: 40px; border-radius: var(--radius); transition: background .15s; }
+    .list.over { background: var(--accent-soft); }
+
+    .card {
+      position: relative; margin-top: 8px;
+      border-radius: 6px; overflow: hidden;
+      background: #e9e9e9; cursor: grab;
+    }
+    .card img { display: block; width: 100%; min-height: 40px; pointer-events: none; }
+    .card.dragging { opacity: .3; }
+    .card.hidden img { opacity: .3; filter: grayscale(1); }
+    .card.fresh { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .card .badge {
+      position: absolute; top: 6px; left: 6px;
+      padding: 2px 7px; border-radius: 99px;
+      background: var(--ink); color: #fff; font-size: 11px; font-weight: 500;
+    }
+    .card .bar {
+      position: absolute; inset: auto 0 0 0;
+      display: flex; align-items: center; gap: 4px;
+      padding: 18px 6px 6px;
+      background: linear-gradient(transparent, rgba(0,0,0,.65));
+      color: #fff; font-size: 12px;
+      opacity: 0; transition: opacity .12s;
+    }
+    .card:hover .bar, .card:focus-within .bar { opacity: 1; }
+    .card .name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-left: 2px; }
+    .icon {
+      width: 26px; height: 26px; display: grid; place-items: center;
+      border: 0; border-radius: 6px; background: rgba(255,255,255,.16);
+      color: #fff; cursor: pointer; font-size: 13px; line-height: 1;
+    }
+    .icon:hover { background: rgba(255,255,255,.32); }
+
+    .placeholder { height: 4px; margin-top: 8px; border-radius: 2px; background: var(--accent); }
+
+    aside {
+      position: sticky; top: 79px;
+      width: 220px; flex-shrink: 0;
+      max-height: calc(100vh - 100px); overflow: auto;
+      padding: 14px; border-radius: var(--radius);
+      background: var(--surface); border: 1px solid var(--line);
+    }
+    aside h2 { margin: 0 0 2px; font-size: 13px; font-weight: 600; }
+    aside p { margin: 0 0 6px; font-size: 12px; color: var(--muted); }
+    aside .list { min-height: 160px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; align-content: start; padding: 4px; margin: 0 -4px; }
+    aside .card { margin-top: 0; aspect-ratio: 1; }
+    aside .card img { height: 100%; object-fit: cover; }
+    aside .card .bar { padding: 4px; justify-content: flex-end; }
+    aside .card .name { display: none; }
+    aside .placeholder { display: none; }
+    .empty { grid-column: 1 / -1; padding: 24px 8px; text-align: center; color: var(--muted); font-size: 12px; border: 1px dashed var(--line); border-radius: 8px; }
+
+    dialog {
+      width: min(560px, calc(100vw - 32px)); padding: 0;
+      border: 0; border-radius: 14px; background: var(--surface);
+      box-shadow: 0 20px 60px rgba(0,0,0,.18);
+    }
+    dialog::backdrop { background: rgba(0,0,0,.3); }
+    .dlg-head { padding: 18px 20px 4px; }
+    .dlg-head h2 { margin: 0; font-size: 16px; font-weight: 600; }
+    .dlg-head p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+    .uploads { max-height: 50vh; overflow: auto; padding: 8px 20px; }
+    .up-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+    .up-row:last-child { border-bottom: 0; }
+    .up-row .thumb { width: 52px; height: 52px; flex-shrink: 0; border-radius: 6px; background: #eee center/cover; }
+    .up-row label { flex: 1; display: grid; gap: 2px; font-size: 12px; color: var(--muted); }
+    .up-row input { height: 32px; padding: 0 10px; border: 1px solid var(--line); border-radius: 7px; color: var(--ink); font-size: 14px; }
+    .up-row input:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+    .up-row .state { width: 74px; text-align: right; font-size: 12px; color: var(--muted); }
+    .up-row .state.ok { color: #1f9d55; }
+    .up-row .state.err { color: var(--danger); }
+    .dlg-foot { display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--line); }
+    .dlg-foot select { height: 34px; padding: 0 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+    .dlg-foot .where { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+
+    #drop-hint {
+      position: fixed; inset: 0; z-index: 20; pointer-events: none;
+      display: none; place-items: end center; padding-bottom: 28px;
+    }
+    #drop-hint span { padding: 10px 16px; border-radius: 99px; background: var(--ink); color: #fff; font-size: 13px; }
+    body.file-drag #drop-hint { display: grid; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Photo admin</h1>
+    <span id="status">Loading…</span>
+    <div class="spacer"></div>
+    <label class="zoom">Size <input id="zoom" type="range" min="140" max="420" step="10"></label>
+    <a class="btn" href="/photo/" target="_blank">Preview ↗</a>
+    <button class="btn" id="add">Add photos</button>
+    <button class="btn primary" id="save" disabled>Save</button>
+    <input id="file" type="file" accept="image/*,.heic,.heif" multiple hidden>
+  </header>
+
+  <main>
+    <div class="columns" id="columns"></div>
+    <aside>
+      <h2>Not on page</h2>
+      <p>Files in <code>photography/</code> that aren't shown. Drag here to remove a photo from the page.</p>
+      <div class="list" id="tray" data-col="tray"></div>
+    </aside>
+  </main>
+
+  <dialog id="dialog">
+    <form method="dialog" id="upload-form">
+      <div class="dlg-head">
+        <h2>Add photos</h2>
+        <p>Converted to WebP (max 2400px) and saved to <code>photography/</code>.</p>
+      </div>
+      <div class="uploads" id="uploads"></div>
+      <div class="dlg-foot">
+        <div class="where" id="where">
+          <select id="up-col"></select>
+          <select id="up-pos">
+            <option value="top">at top</option>
+            <option value="bottom">at bottom</option>
+          </select>
+        </div>
+        <div class="spacer"></div>
+        <button class="btn" type="button" id="up-cancel">Cancel</button>
+        <button class="btn primary" id="up-go" value="go">Upload</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="drop-hint"><span>Drop onto a column to add photos there</span></div>
+
+  <script>
+    const state = { columns: [], unused: [], version: null, dirty: false, saving: false };
+    const cards = new Map();
+    const ratios = new Map();
+    const $ = (id) => document.getElementById(id);
+    const els = { columns: $('columns'), tray: $('tray'), status: $('status'), save: $('save') };
+    const placeholder = Object.assign(document.createElement('div'), { className: 'placeholder' });
+    let dragSrc = null;
+
+    const fileName = (src) => src.split('/').pop();
+    const imgUrl = (src) => '/photo/' + src.split('/').map(encodeURIComponent).join('/');
+
+    // ---------- data ----------
+
+    async function api(method, url, body, headers) {
+      const res = await fetch(url, { method, body, headers: { ...headers, 'X-Photo-Admin': '1' } });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || res.statusText);
+      return data;
+    }
+
+    async function load() {
+      apply(await api('GET', '/api/layout'));
+      setDirty(false);
+    }
+
+    function apply(data) {
+      state.columns = data.columns;
+      state.unused = data.unused;
+      state.version = data.version;
+      render();
+    }
+
+    async function save() {
+      if (!state.dirty || state.saving) return;
+      state.saving = true;
+      setStatus('Saving…');
+      try {
+        const data = await api('POST', '/api/layout',
+          JSON.stringify({ columns: state.columns, version: state.version }),
+          { 'Content-Type': 'application/json' });
+        state.version = data.version;
+        state.unused = data.unused;
+        document.querySelectorAll('.card.fresh').forEach((c) => c.classList.remove('fresh'));
+        setDirty(false);
+        render();
+      } catch (err) {
+        setStatus(err.message, 'error');
+      } finally {
+        state.saving = false;
+      }
+    }
+
+    function locate(src) {
+      for (let c = 0; c < state.columns.length; c++) {
+        const i = state.columns[c].findIndex((item) => item.src === src);
+        if (i !== -1) return { col: c, index: i, item: state.columns[c][i] };
+      }
+      const i = state.unused.indexOf(src);
+      return i === -1 ? null : { col: 'tray', index: i, item: { src, hidden: false } };
+    }
+
+    function move(src, col, index) {
+      const from = locate(src);
+      if (!from) return;
+      const list = from.col === 'tray' ? state.unused : state.columns[from.col];
+      list.splice(from.index, 1);
+      if (col === 'tray') {
+        state.unused.push(src);
+        state.unused.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+      } else {
+        state.columns[col].splice(index, 0, { src, hidden: from.item.hidden });
+      }
+      setDirty(true);
+      render();
+    }
+
+    function toggleHidden(src) {
+      const loc = locate(src);
+      if (!loc || loc.col === 'tray') return;
+      loc.item.hidden = !loc.item.hidden;
+      setDirty(true);
+      render();
+    }
+
+    function shortestColumn() {
+      const heights = state.columns.map(columnHeight);
+      return heights.indexOf(Math.min(...heights));
+    }
+
+    function columnHeight(items) {
+      return items.filter((i) => !i.hidden).reduce((sum, i) => sum + (ratios.get(i.src) || 1), 0);
+    }
+
+    // ---------- rendering ----------
+
+    function card(src) {
+      if (cards.has(src)) return cards.get(src);
+      const el = document.createElement('div');
+      el.className = 'card';
+      el.draggable = true;
+      el.dataset.src = src;
+      el.innerHTML = `
+        <img alt="" decoding="async">
+        <div class="bar">
+          <span class="name"></span>
+          <button class="icon" data-act="hide" title="Hide / show on page">◐</button>
+          <button class="icon" data-act="remove" title="Remove from page">✕</button>
+        </div>`;
+      const img = el.querySelector('img');
+      img.src = imgUrl(src);
+      img.addEventListener('load', () => {
+        ratios.set(src, img.naturalHeight / img.naturalWidth);
+        renderMeters();
+      });
+      el.querySelector('.name').textContent = fileName(src);
+      el.title = fileName(src);
+      el.addEventListener('dragstart', (e) => {
+        dragSrc = src;
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/plain', src);
+        requestAnimationFrame(() => el.classList.add('dragging'));
+      });
+      el.addEventListener('dragend', () => {
+        dragSrc = null;
+        el.classList.remove('dragging');
+        clearDropState();
+      });
+      el.addEventListener('click', (e) => {
+        const act = e.target.closest('[data-act]')?.dataset.act;
+        if (act === 'hide') toggleHidden(src);
+        if (act === 'remove') move(src, 'tray');
+      });
+      cards.set(src, el);
+      return el;
+    }
+
+    function render() {
+      if (els.columns.children.length !== state.columns.length) {
+        els.columns.innerHTML = '';
+        state.columns.forEach((_, c) => {
+          const col = document.createElement('section');
+          col.className = 'column';
+          col.innerHTML = `
+            <div class="col-head"><strong>Column ${c + 1}</strong> · <span class="count"></span>
+              <div class="meter"><span></span></div></div>
+            <div class="list" data-col="${c}"></div>`;
+          els.columns.appendChild(col);
+          wireDropTarget(col.querySelector('.list'));
+        });
+      }
+
+      state.columns.forEach((items, c) => {
+        const list = els.columns.children[c].querySelector('.list');
+        const nodes = items.map(({ src, hidden }) => {
+          const el = card(src);
+          el.classList.toggle('hidden', hidden);
+          const hideBtn = el.querySelector('[data-act="hide"]');
+          hideBtn.title = hidden ? 'Show on page' : 'Hide on page';
+          hideBtn.hidden = false;
+          el.querySelector('[data-act="remove"]').hidden = false;
+          let badge = el.querySelector('.badge');
+          if (hidden && !badge) el.insertAdjacentHTML('afterbegin', '<span class="badge">Hidden</span>');
+          if (!hidden && badge) badge.remove();
+          return el;
+        });
+        syncChildren(list, nodes);
+        const shown = items.filter((i) => !i.hidden).length;
+        els.columns.children[c].querySelector('.count').textContent =
+          `${shown} photo${shown === 1 ? '' : 's'}` + (shown !== items.length ? ` (+${items.length - shown} hidden)` : '');
+      });
+
+      const trayNodes = state.unused.map((src) => {
+        const el = card(src);
+        el.classList.remove('hidden');
+        el.querySelector('.badge')?.remove();
+        el.querySelector('[data-act="hide"]').hidden = true;
+        el.querySelector('[data-act="remove"]').hidden = true;
+        return el;
+      });
+      if (!trayNodes.length) {
+        const empty = Object.assign(document.createElement('div'), { className: 'empty', textContent: 'Every photo is on the page.' });
+        trayNodes.push(empty);
+      }
+      syncChildren(els.tray, trayNodes);
+      renderMeters();
+    }
+
+    function syncChildren(parent, nodes) {
+      nodes.forEach((node, i) => {
+        if (parent.children[i] !== node) parent.insertBefore(node, parent.children[i] || null);
+      });
+      while (parent.children.length > nodes.length) parent.lastChild.remove();
+    }
+
+    function renderMeters() {
+      const heights = state.columns.map(columnHeight);
+      const max = Math.max(...heights, 1);
+      heights.forEach((h, c) => {
+        const col = els.columns.children[c];
+        if (col) col.querySelector('.meter span').style.width = `${(h / max) * 100}%`;
+      });
+    }
+
+    function setStatus(text, kind = '') {
+      els.status.textContent = text;
+      els.status.className = kind;
+    }
+
+    function setDirty(dirty) {
+      state.dirty = dirty;
+      els.save.disabled = !dirty;
+      setStatus(dirty ? 'Unsaved changes' : 'All changes saved', dirty ? 'dirty' : '');
+    }
+
+    // ---------- drag & drop ----------
+
+    const hasFiles = (e) => [...e.dataTransfer.types].includes('Files');
+
+    function dropIndex(list, y) {
+      const items = [...list.querySelectorAll('.card:not(.dragging)')];
+      const i = items.findIndex((el) => {
+        const r = el.getBoundingClientRect();
+        return y < r.top + r.height / 2;
+      });
+      return i === -1 ? items.length : i;
+    }
+
+    function clearDropState() {
+      placeholder.remove();
+      document.querySelectorAll('.list.over').forEach((l) => l.classList.remove('over'));
+      document.body.classList.remove('file-drag');
+    }
+
+    function wireDropTarget(list) {
+      list.addEventListener('dragover', (e) => {
+        if (!dragSrc && !hasFiles(e)) return;
+        e.preventDefault();
+        e.dataTransfer.dropEffect = dragSrc ? 'move' : 'copy';
+        document.querySelectorAll('.list.over').forEach((l) => l !== list && l.classList.remove('over'));
+        list.classList.add('over');
+        if (list.dataset.col === 'tray') return placeholder.remove();
+        const cardsInList = [...list.querySelectorAll('.card:not(.dragging)')];
+        const i = dropIndex(list, e.clientY);
+        const ref = cardsInList[i] || null;
+        if (placeholder.nextSibling !== ref || placeholder.parentNode !== list) list.insertBefore(placeholder, ref);
+      });
+      list.addEventListener('dragleave', (e) => {
+        if (!list.contains(e.relatedTarget)) {
+          list.classList.remove('over');
+          if (placeholder.parentNode === list) placeholder.remove();
+        }
+      });
+      list.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const col = list.dataset.col === 'tray' ? 'tray' : Number(list.dataset.col);
+        const index = col === 'tray' ? 0 : dropIndex(list, e.clientY);
+        clearDropState();
+        if (dragSrc) return move(dragSrc, col, index);
+        const files = [...e.dataTransfer.files].filter(isImage);
+        if (files.length && col !== 'tray') openUpload(files, { col, index });
+      });
+    }
+
+    let fileDragDepth = 0;
+    window.addEventListener('dragenter', (e) => {
+      if (hasFiles(e) && !dragSrc && ++fileDragDepth === 1) document.body.classList.add('file-drag');
+    });
+    window.addEventListener('dragleave', (e) => {
+      if (hasFiles(e) && !dragSrc && --fileDragDepth <= 0) { fileDragDepth = 0; clearDropState(); }
+    });
+    window.addEventListener('drop', () => { fileDragDepth = 0; clearDropState(); });
+    window.addEventListener('dragover', (e) => { if (hasFiles(e)) e.preventDefault(); });
+
+    // ---------- uploads ----------
+
+    const isImage = (f) => f.type.startsWith('image/') || /\.(heic|heif)$/i.test(f.name);
+    const cleanName = (n) => n.replace(/\.[a-z0-9]+$/i, '').replace(/[^A-Za-z0-9_-]+/g, '');
+    let pending = null;
+
+    function openUpload(files, target) {
+      pending = { files, target };
+      const rows = $('uploads');
+      rows.innerHTML = '';
+      files.forEach((file, i) => {
+        const row = document.createElement('div');
+        row.className = 'up-row';
+        row.innerHTML = `
+          <div class="thumb"></div>
+          <label>File name<input required pattern="[A-Za-z0-9_\\-]+" title="Letters, numbers, - and _ only"></label>
+          <span class="state">${(file.size / 1048576).toFixed(1)} MB</span>`;
+        row.querySelector('.thumb').style.backgroundImage = `url("${URL.createObjectURL(file)}")`;
+        const input = row.querySelector('input');
+        input.value = cleanName(file.name) || 'Photo';
+        input.addEventListener('input', () => { input.value = input.value.replace(/[^A-Za-z0-9_-]+/g, ''); });
+        rows.appendChild(row);
+      });
+
+      const colSelect = $('up-col');
+      colSelect.innerHTML = `<option value="auto">Shortest column</option>` +
+        state.columns.map((_, c) => `<option value="${c}">Column ${c + 1}</option>`).join('');
+      $('where').style.display = target ? 'none' : '';
+      $('up-go').disabled = false;
+      $('up-go').textContent = `Upload ${files.length} photo${files.length === 1 ? '' : 's'}`;
+      $('dialog').showModal();
+      rows.querySelector('input')?.select();
+    }
+
+    $('upload-form').addEventListener('submit', async (e) => {
+      if (e.submitter?.value !== 'go') return;
+      e.preventDefault();
+      const go = $('up-go');
+      go.disabled = true;
+      $('up-cancel').disabled = true;
+
+      const { files, target } = pending;
+      const pos = $('up-pos').value;
+      const colChoice = $('up-col').value;
+      const rows = [...$('uploads').children];
+      let insertAt = target ? target.index : null;
+      let failures = 0;
+
+      for (let i = 0; i < files.length; i++) {
+        const stateEl = rows[i].querySelector('.state');
+        const name = rows[i].querySelector('input').value;
+        stateEl.className = 'state';
+        stateEl.textContent = 'Uploading…';
+        try {
+          const qs = new URLSearchParams({ filename: files[i].name, name });
+          const { src } = await api('POST', `/api/upload?${qs}`, files[i]);
+          const col = target ? target.col : colChoice === 'auto' ? shortestColumn() : Number(colChoice);
+          const list = state.columns[col];
+          const at = target ? insertAt++ : pos === 'top' ? 0 : list.length;
+          list.splice(at, 0, { src, hidden: false });
+          ratios.set(src, 1.5);
+          card(src).classList.add('fresh');
+          stateEl.className = 'state ok';
+          stateEl.textContent = 'Added';
+          setDirty(true);
+          render();
+        } catch (err) {
+          failures++;
+          stateEl.className = 'state err';
+          stateEl.textContent = 'Failed';
+          stateEl.title = err.message;
+        }
+      }
+
+      $('up-cancel').disabled = false;
+      if (failures) {
+        go.textContent = 'Done';
+        go.disabled = false;
+        go.value = 'cancel';
+        setStatus(`${failures} upload${failures === 1 ? '' : 's'} failed — hover “Failed” for details`, 'error');
+      } else {
+        $('dialog').close();
+      }
+    });
+
+    $('up-cancel').addEventListener('click', () => $('dialog').close());
+    $('dialog').addEventListener('close', () => {
+      $('up-go').value = 'go';
+      $('uploads').querySelectorAll('.thumb').forEach((t) => URL.revokeObjectURL(t.style.backgroundImage.slice(5, -2)));
+    });
+
+    // ---------- wiring ----------
+
+    $('add').addEventListener('click', () => $('file').click());
+    $('file').addEventListener('change', (e) => {
+      const files = [...e.target.files].filter(isImage);
+      e.target.value = '';
+      if (files.length) openUpload(files, null);
+    });
+    els.save.addEventListener('click', save);
+    wireDropTarget(els.tray);
+
+    const zoom = $('zoom');
+    zoom.value = localStorage.getItem('photo-admin-zoom') || 240;
+    const applyZoom = () => {
+      document.documentElement.style.setProperty('--col', zoom.value + 'px');
+      localStorage.setItem('photo-admin-zoom', zoom.value);
+    };
+    zoom.addEventListener('input', applyZoom);
+    applyZoom();
+
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 's') { e.preventDefault(); save(); }
+    });
+    window.addEventListener('beforeunload', (e) => { if (state.dirty) e.preventDefault(); });
+
+    load().catch((err) => setStatus(`Couldn't load layout: ${err.message}`, 'error'));
+  </script>
+</body>
+</html>
