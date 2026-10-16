@@ -15,7 +15,7 @@
     },
     victoriassecret: {
       name: "Victoria's Secret",
-      meta: '2019 – 2021',
+      meta: '2018 – 2021',
       body: 'American retailer specializing in women’s lingerie, sleepwear, beauty products, and fragrances.'
     }
   };
