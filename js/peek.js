@@ -6,7 +6,7 @@
     rakuten: {
       name: 'Rakuten',
       meta: '2023 – Present',
-      body: 'Rakuten is a free online shopping and rewards platform that lets you earn a percentage of your money back when you shop at thousands of partner stores'
+      body: 'An online shopping and rewards platform that lets you earn a percentage of your money back when you shop at thousands of partner stores'
     },
     thumbtack: {
       name: 'Thumbtack',
