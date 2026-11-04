@@ -1,0 +1,366 @@
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: #f3efe8;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.back {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  color: #6b6b6b;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.back:hover {
+  color: #1a1a1a;
+}
+
+.back:focus-visible,
+.vend:focus-visible,
+.print:focus-visible,
+.print-actions a:focus-visible,
+.print-actions button:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 3px;
+}
+
+.stage {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  padding: 72px 16px 64px;
+  box-sizing: border-box;
+}
+
+.machine {
+  width: min(420px, 100%);
+}
+
+.shell {
+  position: relative;
+  background: #d31224;
+  border-radius: 10px;
+  border-bottom: 5px solid #b10e1c;
+  padding: 18px 16px 16px;
+}
+
+.screw {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #f4f1ea;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.screw.tl { top: 8px; left: 8px; }
+.screw.tr { top: 8px; right: 8px; }
+.screw.bl { bottom: 10px; left: 8px; }
+.screw.br { bottom: 10px; right: 8px; }
+
+.sign {
+  background: #fffdf8;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 26px 18px 20px;
+}
+
+.sign h1 {
+  margin: 0;
+  font-family: "Patrick Hand", "Chalkboard SE", "Comic Sans MS", cursive;
+  font-size: clamp(28px, 8vw, 36px);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 0.95;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sign h1 span {
+  display: block;
+}
+
+.art {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: end;
+  gap: 6px 4px;
+  margin: 22px 0 4px;
+}
+
+.art svg {
+  width: 78px;
+  height: 86px;
+  overflow: visible;
+}
+
+.art .lemon {
+  width: 96px;
+}
+
+.deal {
+  margin: 16px 0 14px;
+  font-family: "Patrick Hand", "Chalkboard SE", "Comic Sans MS", cursive;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.badge {
+  width: 92px;
+  height: auto;
+}
+
+.badge text {
+  font-family: "Patrick Hand", "Chalkboard SE", cursive;
+  font-size: 13px;
+  fill: #1a1a1a;
+  letter-spacing: 0.04em;
+}
+
+.brand-x {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.rosemary {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.rail {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 18px 8px 12px;
+}
+
+.vend {
+  width: 72px;
+  height: 44px;
+  padding: 0;
+  border: 3px solid #1a1a1a;
+  border-radius: 8px;
+  background: #fffdf8;
+  cursor: pointer;
+  transition: translate 0.12s ease-out;
+}
+
+.vend:active {
+  translate: 0 3px;
+}
+
+.vend[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.slot {
+  width: 58%;
+  height: 8px;
+  margin: 0 auto;
+  border-radius: 2px;
+  background: #1a1a1a;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 12px;
+}
+
+.sheet {
+  width: 100%;
+}
+
+.sheet-clip {
+  overflow: hidden;
+}
+
+.print {
+  display: block;
+  width: min(210px, 68%);
+  margin: 0 auto;
+  padding: 7px 7px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  cursor: pointer;
+  translate: 0 -100%;
+  transition: translate 2.2s linear;
+}
+
+.sheet.is-out .print {
+  translate: 0 0;
+}
+
+.print img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #eceae6;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+dialog {
+  width: min(92vw, 720px);
+  max-height: min(92dvh, 900px);
+  margin: auto;
+  padding: 12px;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+  color: #1a1a1a;
+  font: inherit;
+  overflow: auto;
+  opacity: 0;
+  transform: scale(0.96);
+  transition-property: opacity, transform, display, overlay;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-behavior: allow-discrete;
+}
+
+:is(dialog[open]):where(:not([data-closing])) {
+  opacity: 1;
+  transform: scale(1);
+
+  @starting-style {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  &::backdrop {
+    background-color: rgb(0 0 0 / 0.72);
+
+    @starting-style {
+      background-color: transparent;
+    }
+  }
+}
+
+dialog::backdrop {
+  background-color: transparent;
+  transition-property: background-color, display, overlay;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-behavior: allow-discrete;
+}
+
+#print-modal img {
+  display: block;
+  width: 100%;
+  max-height: min(72dvh, 760px);
+  object-fit: contain;
+  background: #f3f3f3;
+}
+
+.print-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.print-actions a,
+.print-actions button {
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1a1a1a;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.print-actions a:hover,
+.print-actions button:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-height: 820px) {
+  .sign {
+    padding: 18px 14px 14px;
+  }
+
+  .art {
+    margin-top: 14px;
+  }
+
+  .art svg {
+    width: 64px;
+    height: 72px;
+  }
+
+  .art .lemon {
+    width: 78px;
+  }
+
+  .deal {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vend,
+  .print {
+    transition: none;
+  }
+
+  .vend:active {
+    translate: none;
+  }
+
+  dialog {
+    transform: none;
+    transition-duration: 0.1s;
+  }
+
+  dialog::backdrop {
+    transition-duration: 0.1s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @starting-style {
+    dialog[open] {
+      transform: none;
+    }
+  }
+}
