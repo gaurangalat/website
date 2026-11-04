@@ -540,6 +540,80 @@ a.active{
   }
 }
 
+/* Mixes page — uses .header margins from index */
+.header.mixes {
+  margin-bottom: 20%;
+}
+.mixes-back {
+  margin: 0 0 32px;
+}
+.mixes-back a {
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 20px;
+  color: #6b6b6b;
+  border-bottom: none;
+}
+.mixes-back a:hover {
+  color: #1b1b1b;
+}
+.mixes-title {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 26px;
+  font-weight: 300;
+  color: #424850;
+  margin: 0 0 32px;
+}
+.mixes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.mix-embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+.mix-credit {
+  margin: 10px 0 0;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #6b6b6b;
+}
+.mix-credit a {
+  color: inherit;
+  border-bottom-style: dotted;
+  border-width: 1px;
+}
+.mix-credit a:hover {
+  color: #1b1b1b;
+}
+@media only screen and (min-width: 480px) {
+  .mixes-back a {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .mixes-title {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+  .mixes-list {
+    gap: 48px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .mixes-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .mixes-list {
+    gap: 56px;
+  }
+}
+
 /* Recently */
 .recently {
   margin-top: 72px;
