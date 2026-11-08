@@ -1,10 +1,10 @@
 (function () {
   var filters = document.querySelector('.labs-filters');
   var list = document.querySelector('.labs-list');
-  var count = document.querySelector('.labs-count');
   var empty = document.querySelector('.labs-empty');
   var chips = [];
   var labs = [];
+  var labels = {};
 
   function el(tag, className, text) {
     var node = document.createElement(tag);
@@ -13,43 +13,34 @@
     return node;
   }
 
-  function isVideo(src) {
-    return /\.(mp4|webm|mov|m4v)(\?|#|$)/i.test(src);
-  }
-
-  function renderMedia(media) {
-    var figure = el('figure', 'lab-media');
-    var node;
-    if (isVideo(media.src)) {
-      node = el('video');
-      node.muted = true;
-      node.autoplay = true;
-      node.loop = true;
-      node.playsInline = true;
-      node.controls = true;
-      node.preload = 'metadata';
-      if (media.poster) node.poster = media.poster;
-      if (media.alt) node.setAttribute('aria-label', media.alt);
-    } else {
-      node = el('img');
-      node.alt = media.alt || '';
-      node.loading = 'lazy';
-    }
-    node.src = media.src;
-    figure.appendChild(node);
-    return figure;
-  }
-
   function renderProject(project) {
     var article = el('article', 'lab');
-    article.dataset.tags = (project.tags || []).join(' ');
-    if (project.media && project.media.src) article.appendChild(renderMedia(project.media));
-    article.appendChild(el('h1', 'lab-title', project.title));
+    var tags = project.tags || [];
+    article.dataset.tags = tags.join(' ');
+    article.appendChild(el('h2', 'lab-title', project.title));
+
     var body = el('div', 'lab-body');
     (project.body || []).forEach(function (paragraph) {
       body.appendChild(el('p', null, paragraph));
     });
     article.appendChild(body);
+
+    if (tags.length) {
+      var tagList = el('ul', 'lab-tags');
+      tags.forEach(function (id) {
+        var item = el('li');
+        var button = el('button', 'lab-tag', labels[id] || id);
+        button.type = 'button';
+        button.dataset.filter = id;
+        button.addEventListener('click', function () {
+          apply(id);
+        });
+        item.appendChild(button);
+        tagList.appendChild(item);
+      });
+      article.appendChild(tagList);
+    }
+
     return article;
   }
 
@@ -75,23 +66,22 @@
     labs.forEach(function (lab) {
       var tags = lab.dataset.tags.split(' ');
       var show = filter === 'all' || tags.indexOf(filter) > -1;
-      var video = lab.querySelector('video');
       lab.hidden = !show;
       if (show) visible++;
-      if (video && !show) video.pause();
-      else if (video && video.autoplay) video.play().catch(function () {});
     });
 
-    count.textContent = visible + (visible === 1 ? ' experiment' : ' experiments');
     empty.hidden = visible > 0;
   }
 
-  fetch('/lab/projects.json')
+  fetch('/lab/projects.json?v=20261107b')
     .then(function (res) {
       if (!res.ok) throw new Error(res.status);
       return res.json();
     })
     .then(function (data) {
+      (data.tags || []).forEach(function (tag) {
+        labels[tag.id] = tag.label;
+      });
       chips.push(renderChip('all', 'All'));
       (data.tags || []).forEach(function (tag) {
         chips.push(renderChip(tag.id, tag.label));

@@ -1,43 +1,64 @@
 {
   "tags": [
     { "id": "concept", "label": "Concept" },
-    { "id": "utilities", "label": "Utilities" },
-    { "id": "mobile", "label": "Mobile" }
+    { "id": "plugin", "label": "Plugin" },
+    { "id": "extension", "label": "Extension" }
   ],
   "projects": [
+
     {
-      "title": "Stories with a preview scrubber",
+      "title": "Annotatr Chrome extension",
       "media": {
         "src": "/photo/photography/FredAgain.webp",
-        "alt": "Placeholder image for the stories preview scrubber experiment"
+        "alt": "Placeholder image"
       },
-      "tags": ["concept", "mobile"],
+      "tags": ["extension"],
       "body": [
-        "Placeholder copy. A quick prototype exploring how you could skim through someone's stories with a thumbnail preview. Long press to bring up the preview panel, scroll to scrub, and tap to jump straight to a story.",
-        "Built in an afternoon to test whether a scrubber feels faster than tapping through one story at a time."
+        "(Internal) Chrome extension that allows you to annotate elements on localhost files during development with AI agents. Annotations are packaged in a single prompt and sent to the AI agent for processing. 2026"
       ]
     },
     {
-      "title": "Mini player for desktop music",
+      "title": "Flok Chrome extension",
+      "media": {
+        "src": "/photo/photography/FredAgain.webp",
+        "alt": "Placeholder image"
+      },
+      "tags": ["extension"],
+      "body": [
+        "A Chrome extension that serves as an address book and allows you to save notes to an X user's profile. 2026"
+      ]
+    },
+    {
+      "title": "Prototypr Claude skill",
       "media": {
         "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-        "alt": "Placeholder video for the desktop mini player experiment"
+        "alt": "Placeholder image"
       },
-      "tags": ["concept", "utilities"],
+      "tags": ["plugin"],
       "body": [
-        "Placeholder copy. A compact always-on-top player that keeps controls within reach without taking over the screen. Hover to reveal the queue, drag to dock it to any corner.",
-        "A short exploration of how much of the full app can collapse into a single floating card."
+        "(Internal) Claude skill to generate 4 diverse animation explorations for rapid protoyping ideation. 2026"
       ]
     },
     {
-      "title": "Exposure slider for a camera app",
+      "title": "Mise-en-place",
+      "media": {
+        "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        "alt": "Placeholder image"
+      },
+      "tags": ["plugin"],
+      "body": [
+        "(Internal) Figma plugin to set up a file structure for a new project in one click. 2024"
+      ]
+    },
+    {
+      "title": "ToDo or Not ToDo",
       "media": {
         "src": "/photo/photography/Bonobo7.webp",
-        "alt": "Placeholder image for the camera exposure slider experiment"
+        "alt": "Placeholder image"
       },
-      "tags": ["mobile"],
+      "tags": ["plugin"],
       "body": [
-        "Placeholder copy. Mocking up a manual exposure control with layered black and white overlays at variable opacity. Long press the exposure icon to switch back to auto-exposure."
+        "(Internal) Figma plugin to create a to-do/ task list based off Figma comments. 2025" 
       ]
     }
   ]
